@@ -1,10 +1,14 @@
+$mint: #6dbfb8;
+$white: #F8F5EC;
+$bg_dark: #262E34;
+
 * {
     scroll-behavior: smooth;
     margin: 0;
-    color: #F8F5EC;
+    color: $white;
     font-family: "Anta";
 }
 
 body {
-    background-color: #262E34;
+    background-color: $bg_dark;
 }

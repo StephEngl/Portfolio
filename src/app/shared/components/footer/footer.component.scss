@@ -1,8 +1,12 @@
+@import '../../../styles/fonts.scss';
+@import '../../../../styles.scss';
+@import '../../../styles/mixins.scss';
+
 footer {
   font-family: "Anta";
   width: 100vw;
   height: 214px;
-  background-color: #6dbfb8;
+  background-color: $mint;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,9 +15,7 @@ footer {
 .content {
   max-width: 1440px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  @include dFlex($jc:space-between, $ai: flex-end);
   padding: 0 80px;
 
   a {
@@ -23,8 +25,7 @@ footer {
 }
 
 .social_media_buttons {
-  display: flex;
-  gap: 16px;
+    @include dFlex($g: 16px);
 
   > a {
     width: 30px;
@@ -32,7 +33,6 @@ footer {
     background-size: cover;
     transition: background-image 0.3s ease;
 
-    // GitHub-Button
     &:nth-child(1) {
       background-image: url("../../../../assets/icons/sm_button_github_dark.png");
       &:hover {
@@ -40,7 +40,6 @@ footer {
       }
     }
 
-    // Mail-Button
     &:nth-child(2) {
       background-image: url("../../../../assets/icons/sm_button_mail_dark.png");
       &:hover {
@@ -48,7 +47,6 @@ footer {
       }
     }
 
-    // LinkedIn-Button
     &:nth-child(3) {
       background-image: url("../../../../assets/icons/sm_button_li_dark.svg");
       &:hover {
