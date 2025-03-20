@@ -1,18 +1,59 @@
 footer {
-    width: 100vw;
-    height: 214px;
-    background-color: #6dbfb8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-family: "Anta";
+  width: 100vw;
+  height: 214px;
+  background-color: #6dbfb8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content {
-    max-width: 1440px;
-    display: flex;
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 80px;
 
-    a {
-        text-decoration: none;
-        color: #F8F5EC;
+  a {
+    text-decoration: none;
+    color: #f8f5ec;
+  }
+}
+
+.social_media_buttons {
+  display: flex;
+  gap: 16px;
+
+  > a {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    transition: background-image 0.3s ease;
+
+    // GitHub-Button
+    &:nth-child(1) {
+      background-image: url("../../../../assets/icons/sm_button_github_dark.png");
+      &:hover {
+        background-image: url("../../../../assets/icons/sm_button_github_white.svg");
+      }
     }
+
+    // Mail-Button
+    &:nth-child(2) {
+      background-image: url("../../../../assets/icons/sm_button_mail_dark.png");
+      &:hover {
+        background-image: url("../../../../assets/icons/sm_button_mail_white.svg");
+      }
+    }
+
+    // LinkedIn-Button
+    &:nth-child(3) {
+      background-image: url("../../../../assets/icons/sm_button_li_dark.svg");
+      &:hover {
+        background-image: url("../../../../assets/icons/sm_button_li_white.svg");
+      }
+    }
+  }
 }
