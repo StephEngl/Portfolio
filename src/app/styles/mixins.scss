@@ -9,6 +9,6 @@
   gap: $g;
 }
 
-@mixin paddingMaxWidth() {
-  padding: 50 80;
+@mixin marginMaxWidth() {
+  margin: 0 80px;
 }

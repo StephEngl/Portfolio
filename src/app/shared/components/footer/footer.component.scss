@@ -16,7 +16,7 @@ footer {
   max-width: 1440px;
   width: 100%;
   @include dFlex($jc:space-between, $ai: flex-end);
-  padding: 0 80px;
+  @include marginMaxWidth();
 
   a {
     text-decoration: none;

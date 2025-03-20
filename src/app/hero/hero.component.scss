@@ -1,0 +1,85 @@
+@import "../styles/fonts.scss";
+@import "../../styles.scss";
+@import "../styles/mixins.scss";
+
+.atf {
+  width: 100vw;
+  height: 70vw;
+  @include marginMaxWidth();
+
+  > .hero {
+    @include dFlex($jc: space-between);
+    max-width: 1440px;
+    // width: 100%;
+
+    > .hero_img {
+      background-image: url("../../assets/img/shape_hero.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 400px;
+      height: 425px;
+      @include dFlex($ai: flex-end);
+      transform: rotate(-45deg);
+
+      > img {
+        height: 500px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.infos {
+  @include dFlex($g: 16px);
+  flex-direction: column;
+  > .hero_logo {
+    height: 75px;
+    width: 95px;
+    background-image: url("../../assets/img/logo_default.png");
+    background-size: contain;
+    background-position: center;
+    transition: background-image 0.3s ease;
+
+    &:hover {
+      background-image: url("../../assets/img/logo_hover.png");
+    }
+  }
+  > img {
+  }
+}
+
+.social_media_buttons {
+  @include dFlex($g: 16px);
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  > a {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    transition: background-image 0.3s ease;
+
+    &:nth-child(1) {
+      background-image: url("../../assets/icons/sm_button_github_default.png");
+      &:hover {
+        background-image: url("../../assets/icons/sm_button_github_hover_mint.svg");
+      }
+    }
+
+    &:nth-child(2) {
+      background-image: url("../../assets/icons/sm_button_mail_default.png");
+      &:hover {
+        background-image: url("../../assets/icons/sm_button_mail_hover_mint.svg");
+      }
+    }
+
+    &:nth-child(3) {
+      background-image: url("../../assets/icons/sm_button_li_default.svg");
+      &:hover {
+        background-image: url("../../assets/icons/sm_button_li_hover_mint.svg");
+      }
+    }
+  }
+}
