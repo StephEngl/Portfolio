@@ -1,0 +1,53 @@
+@import "../styles/fonts.scss";
+@import "../../styles.scss";
+@import "../styles/mixins.scss";
+
+section {
+  @include dFlex();
+  flex-direction: column;
+  max-width: 1440px;
+  //   width: 100%;
+  @include marginMaxWidth();
+
+  > .content {
+    @include dFlex($g: 16px);
+  }
+}
+.typing_effect {
+  @include dFlex($g: 16px);
+  > .typing_img {
+    width: 74px;
+    height: 63px;
+    background-image: url("../../assets/icons/icon_location.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  p {
+    font-size: 30px;
+    font-family: "Josefin Sans";
+  }
+
+  > .typing_static {
+    color: $mint;
+    font-weight: 700;
+  }
+}
+
+.about_me_text_and_btn {
+  width: 50%;
+  padding-left: 40px;
+
+  p {
+    font-family: "Josefin Sans";
+    font-size: 18px;
+  }
+
+  button {
+    background-color: transparent;
+    border: 1px solid $mint;
+    border-radius: 30px;
+    padding: 12px 24px;
+  }
+}

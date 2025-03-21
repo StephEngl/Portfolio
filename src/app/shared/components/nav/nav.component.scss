@@ -1,0 +1,43 @@
+@import "../../../styles/fonts.scss";
+@import "../../../../styles.scss";
+@import "../../../styles/mixins.scss";
+
+nav {
+  font-family: "Anta";
+  width: 100%;
+  height: 104px;
+  background-color: $mint;
+  @include dFlex();
+
+  > div {
+    width: 100%;
+    max-width: 1440px;
+    @include marginMaxWidth();
+    @include dFlex($jc: space-between);
+
+    > .nav_links {
+      @include dFlex($g: 80px);
+
+      a {
+        transition: all 0.3s;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+
+    > .change_language_btns {
+      @include dFlex($g: 12px);
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  font-size: 26px;
+  font-family: "Josefin Sans";
+  color: $bg_dark;
+}

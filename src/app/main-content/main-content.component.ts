@@ -4,7 +4,7 @@ import { AboutComponent } from '../about/about.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ContactComponent } from '../contact/contact.component';
-import { NavComponent } from '../nav/nav.component';
+import { NavComponent } from '../shared/components/nav/nav.component';
 
 @Component({
   selector: 'app-main-content',

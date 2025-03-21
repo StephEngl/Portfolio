@@ -1,0 +1,6 @@
+@import "../styles/mixins.scss";
+
+div {
+  padding-top: 50px;
+  @include dFlex();
+}
