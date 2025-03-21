@@ -1,0 +1,24 @@
+@import "../styles/fonts.scss";
+@import "../../styles.scss";
+@import "../styles/mixins.scss";
+
+nav {
+  font-family: "Anta";
+  width: 100%;
+  height: 104px;
+  background-color: $mint;
+  @include dFlex();
+  > div {
+    width: 100%;
+    max-width: 1440px;
+    @include dFlex($jc:space-between);
+
+  }
+  > .nav_links {
+    @include dFlex($g: 32px);
+  }
+
+  > .change_language_btns {
+    display: flex;
+  }
+}

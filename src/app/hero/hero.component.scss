@@ -3,21 +3,20 @@
 @import "../styles/mixins.scss";
 
 .atf {
-  width: 100vw;
-  height: 70vw;
   @include marginMaxWidth();
+  margin-top: 112px;
+
 
   > .hero {
-    @include dFlex($jc: space-between);
+    position: relative;
+    @include dFlex();
     max-width: 1440px;
-    // width: 100%;
+    width: 100%;
 
     > .hero_img {
       background-image: url("../../assets/img/shape_hero.png");
       background-size: cover;
       background-repeat: no-repeat;
-      width: 400px;
-      height: 425px;
       @include dFlex($ai: flex-end);
       transform: rotate(-45deg);
 
@@ -32,6 +31,8 @@
 .infos {
   @include dFlex($g: 16px);
   flex-direction: column;
+  width: 50%;
+
   > .hero_logo {
     height: 75px;
     width: 95px;
@@ -45,6 +46,9 @@
     }
   }
   > img {
+    &:hover {
+      background-color: grey;
+    }
   }
 }
 
