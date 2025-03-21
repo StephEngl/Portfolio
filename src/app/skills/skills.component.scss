@@ -11,9 +11,16 @@ section {
 
     > .skill_set {
       width: 40%;
-      display: flex;
+      @include dFlex($jc: space-between, $g: 24px);
       flex-wrap: wrap;
-      gap: 40px;
+
+      img {
+        transition: transform 0.3s ease; // Smooth transition for the bounce effect
+
+        &:hover {
+          transform: translateY(-10px); // This moves only the hovered icon up
+        }
+      }
     }
 
     > .currently_learning {
