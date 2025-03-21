@@ -6,32 +6,54 @@
   @include marginMaxWidth();
   margin-top: 112px;
 
-
   > .hero {
     position: relative;
-    @include dFlex();
+    @include dFlex($jc: space-between);
     max-width: 1440px;
     width: 100%;
+    height: 600px;
 
     > .hero_img {
-      background-image: url("../../assets/img/shape_hero.png");
-      background-size: cover;
-      background-repeat: no-repeat;
       @include dFlex($ai: flex-end);
-      transform: rotate(-45deg);
+      flex-grow: 1;
+      position: relative;
 
-      > img {
+      > .hero_img_bg {
+        width: 80%;
         height: 500px;
-        transform: rotate(45deg);
+        transform: rotate(-45deg);
+        background-image: url("../../assets/img/shape_hero.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        opacity: 1;
+        transition: transform 0.4s;
+      }
+
+      &:hover > .hero_img_bg {
+        opacity: 0.9;
+        transform: rotate(-27deg);
+      }
+
+      > .profile_img {
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+
+        > img {
+          height: 500px;
+        }
       }
     }
   }
 }
 
 .infos {
-  @include dFlex($g: 16px);
+  position: relative;
+  @include dFlex();
   flex-direction: column;
   width: 50%;
+  height: 100%;
 
   > .hero_logo {
     height: 75px;
@@ -39,15 +61,29 @@
     background-image: url("../../assets/img/logo_default.png");
     background-size: contain;
     background-position: center;
-    transition: background-image 0.3s ease;
+    transition: background-image 0.4s ease;
 
     &:hover {
       background-image: url("../../assets/img/logo_hover.png");
     }
   }
-  > img {
-    &:hover {
-      background-color: grey;
+
+  > a {
+    padding-top: 100px;
+
+    > svg {
+      rect {
+        transition: fill 0.4s ease;
+        fill: transparent;
+      }
+      &:hover {
+        rect {
+          fill: rgba(255, 255, 255, 0.1);
+        }
+        path {
+          fill: #6dbfb8;
+        }
+      }
     }
   }
 }
@@ -86,4 +122,15 @@
       }
     }
   }
+}
+
+h1 {
+  padding-top: 36px;
+}
+
+h2 {
+  padding-top: 24px;
+  font-family: "Josefin Sans";
+  font-size: 36px;
+  font-weight: 200;
 }
