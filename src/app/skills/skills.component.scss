@@ -1,0 +1,28 @@
+@import "../styles/fonts.scss";
+@import "../../styles.scss";
+@import "../styles/mixins.scss";
+
+section {
+  @include dFlex();
+  flex-direction: column;
+
+  .content {
+    @include dFlex($g: 40px);
+
+    > .skill_set {
+      width: 40%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    > .currently_learning {
+      height: 400px;
+      width: 40%;
+      background-image: url("../../assets/img/ellipse_skills.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
