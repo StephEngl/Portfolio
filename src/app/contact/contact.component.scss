@@ -1,0 +1,138 @@
+@import "../styles/fonts.scss";
+@import "../../styles.scss";
+@import "../styles/mixins.scss";
+
+section {
+  @include dFlex();
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+  padding-bottom: 180px;
+}
+
+.contact_information {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  .contact_information_wrapper {
+    @include dFlex($g: 20px);
+    height: 124px;
+
+    p {
+      font-size: 18px;
+    }
+
+    .mail_and_phone {
+      width: 50%;
+      @include dFlex($jc: flex-start, $ai: flex-start, $g: 16px);
+      flex-direction: column;
+
+      p {
+        @include dFlex($g: 20px);
+        font-size: 20px;
+      }
+
+      img {
+        width: 30px;
+      }
+    }
+  }
+}
+
+form {
+  @include dFlex($g: 21px);
+  flex-direction: column;
+  width: 100%;
+
+  .contact_wrapper {
+    display: flex;
+    width: 100%;
+    gap: 21px;
+  }
+
+  .your_contact {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .your_message {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .input {
+    border: 1px solid $mint;
+    border-radius: 30px;
+    height: 60px;
+    background-color: transparent;
+    padding-left: 23px;
+
+    &:hover {
+      background-color: $bg_light;
+    }
+
+    &:focus-visible {
+      border-color: $mint;
+      background-color: $bg_light;
+    }
+  }
+
+  textarea {
+    padding: 25px 0 0 25px;
+  }
+
+  .privacy_policy_wrapper {
+    position: relative;
+    height: 80px;
+    width: 100%;
+    @include dFlex($jc: space-between, $ai: flex-start);
+
+    button {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  label {
+    color: $mint;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 27px;
+  }
+}
+
+.privacy_policy_label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-image: url("../../assets/icons/radio_button_default.png");
+    transition: all 300ms ease-out;
+  }
+
+  &:hover input ~ .checkmark {
+    background-image: url("../../assets/icons/radio_button_hover.png");
+  }
+
+  input:checked ~ .checkmark {
+    background-image: url("../../assets/icons/radio_button_checked.png");
+  }
+}

@@ -1,4 +1,56 @@
 <section>
-    <h2>Contact</h2>
-    
-  </section>
+  <h2>Contact</h2>
+  <div class="contact_information">
+    <div class="contact_information_wrapper">
+      <p>
+        Feel free to get in touch with job offers or opportunities such as: ...
+      </p>
+      <div class="mail_and_phone">
+        <div>
+          <p>
+            <img src="../../assets/icons/icon _email.svg" alt="Mail Icon" />
+            E-Mail: <a href="#mail">"stephanie.koebich ät aol.com"</a>
+          </p>
+        </div>
+        <div>
+          <p>
+            <img src="../../assets/icons/icon _phone.svg" alt="Phone Icon" />
+            Tel: <a href="#tel">0162 71 19 349</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <form>
+      <div class="contact_wrapper">
+        <div class="your_contact">
+          <label for="fname">Your Name</label>
+          <input type="text" class="input" id="fname" name="firstname" />
+        </div>
+
+        <div class="your_contact">
+          <label for="mail">Your Email</label>
+          <input type="text" class="input" id="mail" name="email" />
+        </div>
+      </div>
+
+      <div class="your_message">
+        <label for="subject">Your Message</label>
+        <textarea
+          class="input"
+          id="subject"
+          name="subject"
+          style="height: 200px"
+        ></textarea>
+      </div>
+      <div class="privacy_policy_wrapper">
+        <label class="privacy_policy_label">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          I've read the <a href="">privacy policy</a> and agree to the
+          processing of my data as outlined.
+        </label>
+        <button type="button" disabled>Send</button>
+      </div>
+    </form>
+  </div>
+</section>
