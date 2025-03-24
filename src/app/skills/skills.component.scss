@@ -30,6 +30,17 @@ section {
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
+      @include dFlex($g: 16px);
+      flex-direction: column;
+
+      >img {
+        padding-bottom: 16px;
+      }
+
+      .highlight {
+        color: $mint;
+        font-weight: 700;
+      }
     }
   }
 }

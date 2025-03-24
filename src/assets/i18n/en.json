@@ -1,6 +1,6 @@
 {
     "about-me": {
-      "hello": "hello {{value}}",
+      "hello": "Good morning, {{name}}",
       "title": "Translation Demo"
     }
   }

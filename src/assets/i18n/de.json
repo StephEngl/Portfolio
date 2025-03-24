@@ -1,6 +1,6 @@
 {
     "about-me": {
-      "hello": "Guten Tag {{value}}",
+      "hello": "Guten Morgen, {{name}}",
       "title": "Übersetzung Deutsch"
     }
   }
