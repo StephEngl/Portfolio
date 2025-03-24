@@ -1,0 +1,53 @@
+@import "../styles/fonts.scss";
+@import "../../styles.scss";
+@import "../styles/mixins.scss";
+
+h3 {
+  color: $mint;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.reference_section {
+  @include dFlex($g: 56px);
+  flex-direction: column;
+}
+
+.references {
+  @include dFlex($jc: space-between, $g: 16px);
+  width: 100%;
+  max-width: 1440px;
+
+  .reference {
+    width: 400px;
+    height: 400px;
+    padding: 44px;
+    @include dFlex();
+    background-image: url("../../assets/img/ellipse_references.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 500ms ease;
+
+    &:hover {
+      background-image: url("../../assets/img/ellipse_references_hover.png");
+    }
+
+    .reference_text {
+      @include dFlex($g: 19px);
+      flex-direction: column;
+
+      p > a {
+        text-decoration: none;
+      }
+
+      a {
+        color: $mint;
+      }
+
+      p,
+      a {
+        font-family: "Josefin Sans", sans-serif;
+      }
+    }
+  }
+}
