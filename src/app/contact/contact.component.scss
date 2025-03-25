@@ -74,9 +74,10 @@ form {
       background-color: $bg_light;
     }
 
-    &:focus-visible {
+    &:focus {
       border-color: $mint;
       background-color: $bg_light;
+      outline: none;
     }
   }
 
