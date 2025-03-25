@@ -8,11 +8,17 @@ section {
 
   .content {
     @include dFlex($g: 40px);
+    width: 100%;
 
     > .skill_set {
-      width: 40%;
-      @include dFlex($jc: space-between, $g: 24px);
-      flex-wrap: wrap;
+      width: 50%;
+      @include dFlex();
+      
+      .image_wrapper {
+        width: 50%;
+        @include dFlex($jc: space-between, $g: 24px);
+        flex-wrap: wrap;
+      }
 
       img {
         transition: transform 0.3s ease; // Smooth transition for the bounce effect
@@ -25,7 +31,7 @@ section {
 
     > .currently_learning {
       height: 400px;
-      width: 40%;
+      width: 50%;
       background-image: url("../../assets/img/ellipse_skills.png");
       background-position: center;
       background-size: contain;

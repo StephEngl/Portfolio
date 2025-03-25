@@ -28,6 +28,11 @@ section {
       @include dFlex($jc: flex-start, $ai: flex-start, $g: 16px);
       flex-direction: column;
 
+      .email_container:hover {
+        cursor: pointer;
+        color: $mint;
+      }
+
       p {
         @include dFlex($g: 20px);
         font-size: 20px;
@@ -112,7 +117,15 @@ form {
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
-  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: $mint;
+
+    &:hover {
+      color: $white;
+    }
+  }
 
   input {
     position: absolute;
@@ -120,6 +133,7 @@ form {
   }
 
   .checkmark {
+    cursor: pointer;
     position: absolute;
     top: 0;
     left: 0;
