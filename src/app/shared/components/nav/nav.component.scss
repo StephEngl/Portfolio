@@ -8,6 +8,8 @@ nav {
   height: 104px;
   background-color: $mint;
   @include dFlex();
+  position: sticky;
+  top: 0;
 
   > div {
     width: 100%;
