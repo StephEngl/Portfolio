@@ -5,9 +5,29 @@
 section {
   @include dFlex();
   flex-direction: column;
-  width: 100%;
+  position: relative;
+  width: 991px;
   max-width: 1440px;
   padding-bottom: 180px;
+
+  .arrow_back {
+    height: 88px;
+    width: 37px;
+    position: absolute;
+    right: -114px;
+    top: 12px;
+
+    &:hover {
+      cursor: pointer;
+
+      rect {
+        fill: rgba(255, 255, 255, 0.1);
+      }
+      path {
+        fill: #6dbfb8;
+      }
+    }
+  }
 }
 
 .contact_information {
@@ -24,22 +44,39 @@ section {
     }
 
     .mail_and_phone {
-      width: 50%;
+      width: 445px;
       @include dFlex($jc: flex-start, $ai: flex-start, $g: 16px);
       flex-direction: column;
-
-      .email_container:hover {
-        cursor: pointer;
-        color: $mint;
-      }
 
       p {
         @include dFlex($g: 20px);
         font-size: 20px;
       }
 
-      img {
-        width: 30px;
+      svg {
+        stroke: green;
+      }
+    }
+  }
+}
+
+.email_container,
+.phone_container {
+  p,
+  a {
+    text-decoration: none;
+  }
+
+  &:hover {
+    p,
+    a {
+      color: $mint;
+      cursor: default;
+    }
+
+    svg {
+      path {
+        stroke: $mint;
       }
     }
   }
@@ -140,6 +177,7 @@ form {
     height: 24px;
     width: 24px;
     background-image: url("../../assets/icons/radio_button_default.png");
+    background-repeat: no-repeat;
     transition: all 300ms ease-out;
   }
 
