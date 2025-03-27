@@ -10,7 +10,6 @@ $bg_projects: #2D3840;
     color: $white;
     font-family: "Anta";
     box-sizing: border-box;
-
 }
 
 body {
@@ -20,6 +19,7 @@ body {
 h1 {
     font-size: 50px;
     font-weight: 120;
+    text-align: center;
 }
 
 h2 {
@@ -27,6 +27,7 @@ h2 {
     font-weight: 100;
     color: $mint;
     padding-bottom: 80px;
+    text-align: center;
 }
 
 h3 {

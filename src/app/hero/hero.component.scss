@@ -10,41 +10,37 @@
     position: relative;
     @include dFlex($jc: space-between);
     max-width: 1440px;
-    width: 100%;
+    width: 1200px;
     height: 600px;
+  }
+}
 
-    > .hero_img {
-      flex-grow: 1;
-      position: relative;
+.hero_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 700px;
 
-      > .hero_img_bg {
-        width: 80%;
-        height: 500px;
-        transform: rotate(-45deg);
-        background-image: url("../../assets/img/shape_hero.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-        opacity: 1;
-        transition: all 0.3s;
-      }
+  > .hero_img_bg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg);
+    background-image: url("../../assets/img/shape_hero.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 1;
+  }
 
-      &:hover > .hero_img_bg {
-        opacity: 0.9;
-        transform: rotate(-27deg);
-      }
+  > img {
+    filter: grayscale(100);
+    position: absolute;
+  }
 
-      > .profile_img {
-        position: absolute;
-        filter: grayscale(100);
-        bottom: 0;
-        left: 10%;
-
-        > img {
-          height: 500px;
-        }
-      }
-    }
+  &:hover > .hero_img_bg {
+    opacity: 0.9;
+    transform: rotate(-27deg);
   }
 }
 
@@ -70,7 +66,7 @@
 
   > .bouncing_link {
     padding-top: 100px;
-    display: inline-block; 
+    display: inline-block;
 
     > svg {
       rect {
@@ -99,8 +95,6 @@
     }
   }
 }
-
-
 
 .social_media_buttons {
   @include dFlex($g: 16px);
@@ -147,4 +141,15 @@ h2 {
   font-family: "Josefin Sans";
   font-size: 36px;
   font-weight: 200;
+}
+
+@media (max-width: 1270px) {
+  .hero {
+    width: 90%;
+  }
+
+  .hero_img {
+    width: 500px;
+    height: 600px;
+  }
 }

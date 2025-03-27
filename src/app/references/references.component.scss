@@ -10,15 +10,21 @@ h3 {
 .reference_section {
   @include dFlex($g: 56px);
   flex-direction: column;
+  overflow: hidden;
 }
 
 .references {
   @include dFlex($jc: space-between, $g: 16px);
   width: 100%;
   max-width: 1440px;
+  // max-width: 100%; // Erlaubt Überbreite
+  overflow-x: auto; // Ermöglicht horizontales Scrollen
+  -webkit-overflow-scrolling: touch; // Für besseres Scrollverhalten auf iOS
+  scroll-snap-type: x mandatory; // Für präzises Snapping beim Sliden
+  padding-bottom: 20px; // Platz für Scrollbar
 
   .reference {
-    width: 400px;
+    min-width: 300px;
     height: 400px;
     padding: 44px;
     @include dFlex();
