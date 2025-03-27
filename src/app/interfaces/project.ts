@@ -5,4 +5,8 @@ export interface Project {
   organization: string;
   experience: string;
   groupExperience: string;
+  technologies: string[],
+  screenshot: string,
+  linkLiveTest: string,
+  linkGitHub: string,
 }

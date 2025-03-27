@@ -1,0 +1,119 @@
+@import "../styles/fonts.scss";
+@import "../../styles.scss";
+@import "../styles/mixins.scss";
+
+section {
+  @include dFlex();
+  flex-direction: column;
+  width: 100%;
+
+  .projects_wrapper {
+    @include dFlex();
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .project_tabs_container {
+    @include dFlex($jc: flex-start);
+    height: 100px;
+    width: 100%;
+    max-width: 1440px;
+    
+    
+    .project_tabs {
+      @include dFlex($jc: flex-start, $g:36px);
+      max-width: 1440px;
+      padding-left: 120px;
+    }
+
+    h3 {
+      cursor: pointer;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .projects_information_wrapper {
+    width: 100%;
+    background-color: $bg_projects;
+    @include dFlex();
+
+  }
+
+  .project_information {
+    max-width: 1440px;
+    padding: 30px 120px 0 120px;
+    display: flex;
+    gap: 56px;
+
+    .info_section {
+      padding-bottom: 32px;
+
+      .title {
+        @include dFlex($jc: flex-start, $g: 16px);
+        padding-bottom: 16px;
+      }
+
+      .duration {
+        padding-top: 8px;
+      }
+    }
+  }
+
+  .project_information_right {
+    @include dFlex();
+    flex-direction: column;
+
+    .technologies {
+      @include dFlex($g: 12px);
+      flex-direction: column;
+
+      .technology_icons {
+        display: flex;
+        gap: 32px;
+      }
+    }
+
+    .screenshot {
+      width: 450px;
+      height: 312px;
+      object-fit: cover;
+      border-radius: 30px;
+      padding: 16px 0;
+    }
+
+    .button_container {
+      @include dFlex($g: 40px);
+      padding-bottom: 28px;
+
+      .btn_live_test {
+        background-color: $mint;
+        > a {
+          color: $bg_dark;
+        }
+        &:hover {
+          background-color: $white;
+          border-color: $white;
+        }
+      }
+    }
+  }
+}
+
+h3 {
+  color: $mint;
+  font-size: 30px;
+  font-family: "Josefin Sans";
+  font-weight: 500;
+}
+
+p, span {
+  font-family: "Josefin Sans";
+  font-size: 18px;
+}
+
+.active {
+  color: $white;
+}

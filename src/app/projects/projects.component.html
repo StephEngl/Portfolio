@@ -1,10 +1,70 @@
 <section>
-    <h2>My Projects</h2>
-    <div class="projects">
-      <p>1. DA Bubble</p>
-      <p>2. Elara</p>
-      <p>3. Join</p>
-      <p>4. Pokédex</p>
+  <h2>My Projects</h2>
+  <div class="projects_wrapper">
+    <div class="project_tabs_container">
+      <div class="project_tabs">
+        @for (project of projects; track $index) {
+        <h3
+          [class.active]="selectedProject === $index"
+          (click)="selectedProject = $index"
+        >
+          {{ $index + 1 }}. {{ project.name }}
+        </h3>
+        }
+      </div>
     </div>
-
-  </section>
+    <div class="projects_information_wrapper">
+      <div class="project_information">
+        <div class="project_information_left">
+          @for (label of projectsInfoLabels; track $index) { @if ($index < 3) {
+          <div class="info_section">
+            <div class="title">
+              <img src="../../assets/img/ellipse_project_details.png" alt="" />
+              <h3>
+                @if ($index === 2 && projects[selectedProject].experience) {
+                  What I have learned } @else {
+                    {{ label }}
+                  }
+                </h3>
+              </div>
+              <p>{{ getProjectInfo(selectedProject, $index) }}</p>
+              @if ($index === 0) {
+                <p class="duration">
+                  Duration: <span>{{ projects[selectedProject].duration }}</span>
+                </p>
+              }
+          </div>
+          } }
+        </div>
+        <div class="project_information_right">
+          <div class="technologies">
+            <p>Technologies</p>
+            <div class="technology_icons">
+              @for (technology of projects[selectedProject].technologies; track
+              $index) {
+              <img src="{{ technology }}" alt="" />
+              }
+            </div>
+          </div>
+          <img
+            class="screenshot"
+            src="{{ projects[selectedProject].screenshot }}"
+            alt="Screenshot Project"
+          />
+          <div class="button_container">
+            <button class="btn_live_test">
+              <a href="{{ projects[selectedProject].linkLiveTest }}" target="_blank"
+                >Live Test</a
+              >
+            </button>
+            <button>
+              <a href="{{ projects[selectedProject].linkGitHub }}" target="_blank"
+                >GitHub</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
