@@ -38,8 +38,29 @@ nav {
 
     .change_language_btns {
       @include dFlex($g: 12px);
-      &:hover {
+      p {
         cursor: pointer;
+        color: black;
+        padding: 5px 10px;
+        transition: all 0.3s ease;
+
+        &.active {
+          color: $white;
+          background-image: url("../../../../assets/img/ellipse_language_active.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          pointer-events: none;
+        }
+
+        &:not(.active):hover {
+          color: $white;
+
+          & + .active {
+            color: $bg_dark;
+            background-image: none;
+          }
+        }
       }
     }
 
@@ -66,38 +87,38 @@ nav {
     @media (max-width: 800px) {
       margin: 0 36px;
 
-        .nav_links,
-        .change_language_btns {
-          display: none;
-        }
-
-        .burger_menu {
-          display: flex;
-        }
+      .nav_links,
+      .change_language_btns {
+        display: none;
       }
 
-      &.menu_open {
-        height: auto;
+      .burger_menu {
+        display: flex;
+      }
+    }
 
-        .nav_container {
+    &.menu_open {
+      height: auto;
+
+      .nav_container {
+        flex-direction: column;
+
+        .nav_links,
+        .change_language_btns {
+          display: flex;
           flex-direction: column;
+          align-items: center;
+          width: 100%;
+          padding: 20px 0;
+        }
 
-          .nav_links,
-          .change_language_btns {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            padding: 20px 0;
-          }
-
-          .nav_links {
-            gap: 20px;
-          }
+        .nav_links {
+          gap: 20px;
         }
       }
     }
   }
+}
 
 a {
   text-decoration: none;

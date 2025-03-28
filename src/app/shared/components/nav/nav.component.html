@@ -8,8 +8,8 @@
       <a href="#contact">Contact</a>
     </div>
     <div class="change_language_btns">
-      <p>DE</p>
-      <p>EN</p>
+      <p [class.active]="currentLang  === 'de'" (click)="changeLanguage('de')">DE</p>
+      <p [class.active]="currentLang  === 'en'" (click)="changeLanguage('en')">EN</p>
     </div>
     <button class="burger_menu" (click)="toggleMenu()">
         <span></span>
