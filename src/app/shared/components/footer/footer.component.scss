@@ -1,6 +1,6 @@
-@import '../../../styles/fonts.scss';
-@import '../../../../styles.scss';
-@import '../../../styles/mixins.scss';
+@import "../../../styles/fonts.scss";
+@import "../../../../styles.scss";
+@import "../../../styles/mixins.scss";
 
 footer {
   font-family: "Anta";
@@ -10,22 +10,64 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 600px) {
+  height: auto;
+  }
 }
 
 .content {
   width: 100%;
   max-width: 1440px;
-  @include dFlex($jc:space-between, $ai: flex-end);
+  @include dFlex($jc: space-between, $ai: flex-end);
   @include marginMaxWidth();
 
   a {
     text-decoration: none;
     color: #f8f5ec;
   }
+
+  @media (max-width: 800px) {
+    @include marginMobile();
+  }
+  
+  @media (max-width: 600px) {
+    padding: 30px 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+
+    a,
+    p {
+      color: $bg_dark;
+    }
+
+    .logo {
+      order: 0;
+    }
+
+    .social_media_buttons {
+      order: 1;
+    }
+
+    .footer_info {
+      order: 2;
+      display: flex;
+      gap: 32px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .footer_info {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
 }
 
 .social_media_buttons {
-    @include dFlex($g: 16px);
+  @include dFlex($g: 16px);
 
   > a {
     width: 30px;
@@ -50,6 +92,20 @@ footer {
     &:nth-child(3) {
       background-image: url("../../../../assets/icons/sm_button_li_dark.svg");
       &:hover {
+        background-image: url("../../../../assets/icons/sm_button_li_white.svg");
+      }
+    }
+
+    @media (max-width: 600px) {
+      &:nth-child(1) {
+        background-image: url("../../../../assets/icons/sm_button_github_white.svg");
+      }
+
+      &:nth-child(2) {
+        background-image: url("../../../../assets/icons/sm_button_mail_white.svg");
+      }
+
+      &:nth-child(3) {
         background-image: url("../../../../assets/icons/sm_button_li_white.svg");
       }
     }
