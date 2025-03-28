@@ -16,6 +16,7 @@
   "skills": {
     "title": "Meine Kenntnisse",
     "learning": "Gerade lerne ich:",
+    "learningMobile": "Was ich gerade lerne",
     "lookingFor": "Interesse an ",
     "anotherSkill": "weiteren Fähigkeiten",
     "button": "Lass uns reden"

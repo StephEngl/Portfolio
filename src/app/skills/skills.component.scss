@@ -10,13 +10,13 @@ section {
     @include dFlex($g: 80px);
     width: 100%;
 
-    > .skill_set {
+    .skill_set {
       width: 410px;
       height: 380px;
       @include dFlex();
-      
+
       .image_wrapper {
-        @include dFlex($jc: space-between, $g: 24px);
+        @include dFlex($jc: space-between, $ai: flex-start, $g: 24px);
         flex-wrap: wrap;
       }
 
@@ -24,12 +24,36 @@ section {
         transition: transform 0.3s ease; // Smooth transition for the bounce effect
 
         &:hover {
-          transform: translateY(-10px); // This moves only the hovered icon up
+          transform: translateY(-10px);
         }
+      }
+
+      @media (max-width: 550px) {
+        width: 350px;
+        height: auto;
+      }
+
+      @media (max-width: 450px) {
+        width: 280px;
       }
     }
 
-    > .currently_learning {
+    @media (max-width: 900px) {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 40px;
+    }
+
+    @media (max-width: 650px) {
+      @include marginMobile();
+    }
+
+    @media (max-width: 550px) {
+      margin: 0;
+    }
+
+    .currently_learning {
       height: 390px;
       width: 375px;
       background-image: url("../../assets/img/ellipse_skills.png");
@@ -39,11 +63,11 @@ section {
       @include dFlex($g: 16px);
       flex-direction: column;
 
-      >img {
+      > img {
         padding-bottom: 16px;
       }
 
-      >h3 {
+      > h3 {
         font-size: 26px;
         text-align: center;
       }
@@ -52,6 +76,105 @@ section {
         color: $mint;
         font-weight: 700;
       }
+
+      @media (max-width: 450px) {
+        width: 300px;
+        gap: 12px;
+
+        > img {
+          padding-bottom: 0;
+        }
+      }
+
+      @media (max-width: 350px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.currently_learning_mobile {
+  @include dFlex($g: 16px);
+  flex-direction: column;
+  text-align: center;
+  display: none;
+
+  .bg_img {
+    width: 100px;
+    height: 100px;
+    background-image: url("../../assets/img/ellipse_skills.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include dFlex();
+  }
+
+  h3 {
+    font-size: 18px;
+
+    > span {
+      color: $mint;
+    }
+  }
+
+  @media (max-width: 350px) {
+    display: flex;
+  }
+}
+
+@media (max-width: 550px) {
+  .skill_set {
+    img {
+      &:nth-child(1) {
+        content: url("../../assets/icons/icon_project_angular.svg");
+      }
+
+      &:nth-child(2) {
+        content: url("../../assets/icons/icon_project_typescript.svg");
+      }
+
+      &:nth-child(3) {
+        content: url("../../assets/icons/icon_project_javascript.svg");
+      }
+
+      &:nth-child(4) {
+        content: url("../../assets/icons/icon_project_html.svg");
+      }
+
+      &:nth-child(5) {
+        content: url("../../assets/icons/icon_project_css.svg");
+      }
+
+      &:nth-child(6) {
+        content: url("../../assets/icons/icon_project_api.svg");
+      }
+
+      &:nth-child(7) {
+        content: url("../../assets/icons/icon_project_firebase.svg");
+      }
+
+      &:nth-child(8) {
+        content: url("../../assets/icons/icon_project_git.svg");
+      }
+
+      &:nth-child(9) {
+        content: url("../../assets/icons/icon_project_bootstrap.svg");
+      }
+
+      &:nth-child(10) {
+        content: url("../../assets/icons/icon_project_md.svg");
+      }
+
+      &:nth-child(11) {
+        content: url("../../assets/icons/icon_project_vb.svg");
+      }
+
+      &:nth-child(12) {
+        content: url("../../assets/icons/icon_project_scrum.svg");
+      }
+
+      width: 45px;
+      height: 45px;
     }
   }
 }

@@ -16,6 +16,7 @@
   "skills": {
     "title": "My skills",
     "learning": "I am currently learning:",
+    "learningMobile": "What I am currently learning",
     "lookingFor": "Looking for ",
     "anotherSkill": "another skill",
     "button": "Get in touch"
