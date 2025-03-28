@@ -1,16 +1,27 @@
 {
+  "nav": {
+    "link1": "Über mich",
+    "link2": "Kentnisse",
+    "link3": "Projekte",
+    "link4": "Kontakt"
+  },
   "about-me": {
     "hello": "Guten Morgen, {{name}}",
     "title": "Über mich",
     "location1": "Ich bin",
     "location2": "wohnhaft in Weinstadt...",
     "text": "Als passionierte Entwicklerin gehe ich sehr struktuiert vor und liebe die endlosen Möglichkeiten des Programmierens. Durch meine Fähigkeit logisch und rational zu denken, entwickle ich mich stetig weiter. Meine Planungs- und analytischen Fähigkeiten helfen mir dabei, Herausforderungen zu bestehen. Ich bin eine loyale Partnerin und ehrliche Kommunikatorin, während ich die Herausforderungen des Lebens (und des Programmierens) meistere.",
-    "wantContact": "Lass uns sprechen"
+    "wantContact": "Los geht's"
   },
-  "nav": {
-    "link1": "Über mich",
-    "link2": "Kentnisse",
-    "link3": "Projekte",
-    "link4": "Kontakt"
+  "skills": {
+    "title": "Meine Kenntnisse",
+    "learning": "Gerade lerne ich:",
+    "lookingFor": "Interesse an ",
+    "anotherSkill": "weiteren Fähigkeiten",
+    "button": "Lass uns reden"
+  },
+
+  "footer": {
+    "imprint": "Impressun"
   }
 }
