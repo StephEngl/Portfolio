@@ -1,38 +1,49 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 interface Reference {
   name: string;
   project: string;
-  text: string;
+  translationKey: string;
   linkedInPath: string;
 }
 
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './references.component.html',
   styleUrl: './references.component.scss',
 })
-export class ReferencesComponent {
-  references:Reference[] = [
-    {
-      name: 'Mia Mausezahn',
-      project: 'Join',
-      text: 'Stephi had to develop, format and deliver content in collaboration with the team members. She is a reliable and friendly person.',
-      linkedInPath: '',
-    },
-    {
-      name: 'Leo Löwenherz',
-      project: 'Kochwelt',
-      text: 'Stephi had to develop, format and deliver content in collaboration with the team members. She is a reliable and friendly person.',
-      linkedInPath: '',
-    },
-    {
-      name: 'Lara Lockenhaupt',
-      project: 'DA Bubble',
-      text: 'Stephi had to develop, format and deliver content in collaboration with the team members. She is a reliable and friendly person.',
-      linkedInPath: '',
-    },
-  ];
+export class ReferencesComponent implements OnInit {
+  references: Reference[] = [];
+
+  constructor(private translate: TranslateService) {}
+
+  ngOnInit() {
+    this.initializeReferences();
+  }
+
+  initializeReferences() {
+    this.references = [
+      {
+        name: 'Mia Mausezahn',
+        project: 'Join',
+        translationKey: "text1",
+        linkedInPath: '',
+      },
+      {
+        name: 'Leo Löwenherz',
+        project: 'Kochwelt',
+        translationKey: "text2",
+        linkedInPath: '',
+      },
+      {
+        name: 'Lara Lockenhaupt',
+        project: 'DA Bubble',
+        translationKey: "text3",
+        linkedInPath: '',
+      },
+    ];
+  }
 }

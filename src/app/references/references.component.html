@@ -1,15 +1,21 @@
 <div class="reference_section">
-  <h3>Need a teamplayer? Here what my colleagues said about me</h3>
+  <h3>{{
+    "references.title" | translate
+  }}</h3>
   <div class="references">
     @for (reference of references; track $index) {
     <div class="reference">
       <div class="reference_text">
         <h3>{{ reference.name }}</h3>
         <p>
-          Project: <a href="">{{ reference.project }}</a>
+          {{
+            "references.project" | translate
+          }}: <a href="">{{ reference.project }}</a>
         </p>
-        <p>"{{ reference.text }}"</p>
-        <a href="{{ reference.linkedInPath }}">Linked In Profile</a>
+        <p>"{{ "references." + reference.translationKey | translate}}"</p>
+        <a href="{{ reference.linkedInPath }}">{{
+          "references.profileLink" | translate
+        }}</a>
       </div>
     </div>
     }

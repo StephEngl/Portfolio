@@ -21,6 +21,14 @@
     "anotherSkill": "another skill",
     "button": "Get in touch"
   },
+  "references": {
+    "title": "Need a teamplayer? Here what my colleagues said about me",
+    "project": "Project",
+    "text1": "Stephi had to develop, format and deliver content in collaboration with the team members. She is a reliable and friendly person",
+    "text2": "Stephi had to develop, format and deliver content in collaboration with the team members. She is a reliable and friendly person",
+    "text3": "Stephi had to develop, format and deliver content in collaboration with the team members. She is a reliable and friendly person",
+    "profileLink": "Linked in Profile"
+  },
 
   "footer": {
     "imprint": "Imprint"

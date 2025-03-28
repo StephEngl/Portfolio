@@ -11,6 +11,7 @@ h3 {
   @include dFlex($g: 56px);
   flex-direction: column;
   overflow: hidden;
+  text-align: center;
 }
 
 .references {
