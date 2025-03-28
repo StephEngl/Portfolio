@@ -10,15 +10,23 @@ nav {
   @include dFlex();
   position: sticky;
   top: 0;
+  z-index: 500;
 
-  > div {
+  .nav_container {
     width: 100%;
     max-width: 1440px;
     @include marginMaxWidth();
     @include dFlex($jc: space-between);
 
-    > .nav_links {
+    .nav_links {
       @include dFlex($g: 80px);
+
+      @media (max-width: 1050px) {
+        gap: 40px;
+      }
+      @media (max-width: 860px) {
+        gap: 20px;
+      }
 
       a {
         transition: all 0.3s;
@@ -28,18 +36,84 @@ nav {
       }
     }
 
-    > .change_language_btns {
+    .change_language_btns {
       @include dFlex($g: 12px);
       &:hover {
         cursor: pointer;
       }
     }
+
+    .burger_menu {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 30px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-top: 0;
+
+      span {
+        width: 30px;
+        height: 2px;
+        background-color: $white;
+        transition: all 0.3s linear;
+      }
+    }
+
+    @media (max-width: 800px) {
+      margin: 0 36px;
+
+        .nav_links,
+        .change_language_btns {
+          display: none;
+        }
+
+        .burger_menu {
+          display: flex;
+        }
+      }
+
+      &.menu_open {
+        height: auto;
+
+        .nav_container {
+          flex-direction: column;
+
+          .nav_links,
+          .change_language_btns {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 20px 0;
+          }
+
+          .nav_links {
+            gap: 20px;
+          }
+        }
+      }
+    }
   }
-}
 
 a {
   text-decoration: none;
   font-size: 26px;
   font-family: "Josefin Sans";
   color: $bg_dark;
+}
+
+@media (max-width: 800px) {
+  nav {
+    height: 120px;
+    background-color: $bg_dark;
+    .nav_container {
+      .logo {
+        content: url("../../../../assets/img/logo_mobile.png");
+      }
+    }
+  }
 }

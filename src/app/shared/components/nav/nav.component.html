@@ -1,16 +1,20 @@
-<nav>
-    <div>
-        <img src="../../assets/img/logo_mobile_dark.png" alt="Logo">
-        <div class="nav_links">
-            <a href="#about">Why me</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="change_language_btns">
-            <p>DE</p>
-            <p>EN</p>
-        </div>
+<nav [class.menu_open]="isMenuOpen">
+  <div class="nav_container"v>
+    <img class="logo" src="../../assets/img/logo_mobile_dark.png" alt="Logo" />
+    <div class="nav_links">
+      <a href="#about">Why me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </div>
-    
+    <div class="change_language_btns">
+      <p>DE</p>
+      <p>EN</p>
+    </div>
+    <button class="burger_menu" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+  </div>
 </nav>

@@ -3,42 +3,58 @@
 @import "../styles/mixins.scss";
 
 .atf {
-  margin-top: 112px;
+  margin-top: 40px;
   @include dFlex();
 
   > .hero {
     position: relative;
     @include dFlex($jc: space-between);
     max-width: 1440px;
-    width: 1200px;
-    height: 600px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
   }
 }
 
-.hero_img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 600px;
-  height: 700px;
+.hero_img_container {
+  position: relative;
+  padding-bottom: 50%;
+  overflow: hidden;
 
-  > .hero_img_bg {
-    width: 100%;
-    height: 100%;
+  .hero_img_bg {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 85%;
+    height: 110%;
     transform: rotate(-45deg);
     background-image: url("../../assets/img/shape_hero.png");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     opacity: 1;
   }
 
-  > img {
-    filter: grayscale(100);
+  .hero_img {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      filter: grayscale(100);
+    }
   }
 
-  &:hover > .hero_img_bg {
+  &:hover .hero_img_bg {
     opacity: 0.9;
     transform: rotate(-27deg);
   }
@@ -57,7 +73,9 @@
     background-image: url("../../assets/img/logo_default.png");
     background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     transition: background-image 0.4s ease;
+    margin-top: 54px;
 
     &:hover {
       background-image: url("../../assets/img/logo_hover.png");
@@ -65,7 +83,7 @@
   }
 
   > .bouncing_link {
-    padding-top: 100px;
+    padding-top: 50px;
     display: inline-block;
 
     > svg {
@@ -144,12 +162,65 @@ h2 {
 }
 
 @media (max-width: 1270px) {
-  .hero {
-    width: 90%;
+  .hero_img_container,
+  .infos {
+    width: 100%;
+    max-width: 600px;
   }
 
-  .hero_img {
-    width: 500px;
-    height: 600px;
+  .hero_img_container {
+    margin-bottom: 36px;
+    min-height: 370px;
+  }
+}
+
+@media (max-width: 1050px) {
+  h2 {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .atf {
+    margin: 0;
+  }
+
+  .hero_img_container {
+    overflow: visible;
+
+    .hero_img_bg {
+      background-image: url("../../assets/img/shape_hero_mobile.png");
+      transform: none;
+      width: 100%;
+      height: 100%;
+      left: 0;
+    }
+
+    &:hover .hero_img_bg {
+      transform: none;
+    }
+
+    .bouncing_link {
+      padding-top: 0;
+    }
+  }
+
+  .social_media_buttons,
+  .hero_logo {
+    display: none;
+  }
+
+  .bouncing_link {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 545px) {
+  h1 {
+    padding: 0;
   }
 }
