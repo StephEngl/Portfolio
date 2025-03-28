@@ -2,10 +2,10 @@
   <div class="nav_container"v>
     <img class="logo" src="../../assets/img/logo_mobile_dark.png" alt="Logo" />
     <div class="nav_links">
-      <a href="#about">Why me</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#about">{{"nav.link1" | translate}}</a>
+      <a href="#skills">{{"nav.link2" | translate}}</a>
+      <a href="#projects">{{"nav.link3" | translate}}</a>
+      <a href="#contact">{{"nav.link4" | translate}}</a>
     </div>
     <div class="change_language_btns">
       <p [class.active]="currentLang  === 'de'" (click)="changeLanguage('de')">DE</p>

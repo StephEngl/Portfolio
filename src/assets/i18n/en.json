@@ -6,5 +6,11 @@
     "location2": "located in Weinstadt...",
     "text": "I'm a passionate coder with a structured approach, loving the endless possibilities of programming. As a lifelong learner and rational thinker, I constantly seek knowledge and self-improvement. My analytical skills and planning help me grow personally. I'm a loyal partner and honest communicator, while solving life's (coding) challenges",
     "wantContact": "Let's talk"
+  },
+  "nav": {
+    "link1": "Why me",
+    "link2": "Skills",
+    "link3": "Projekts",
+    "link4": "Contact"
   }
 }

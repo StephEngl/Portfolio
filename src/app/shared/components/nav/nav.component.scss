@@ -85,7 +85,7 @@ nav {
     }
 
     @media (max-width: 800px) {
-      margin: 0 36px;
+      @include marginMobile();
 
       .nav_links,
       .change_language_btns {

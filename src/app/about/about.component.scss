@@ -11,11 +11,23 @@ section {
   > .content {
     @include dFlex($jc: space-between, $ai: flex-start, $g: 50px);
     width: 860px;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 650px) {
+    @include marginMobile();
   }
 }
+
 .typing_effect {
   @include dFlex($g: 8px);
-  > .typing_img {
+
+  .typing_img {
     width: 74px;
     height: 63px;
     background-image: url("../../assets/icons/icon_location.svg");
@@ -24,7 +36,7 @@ section {
     background-repeat: no-repeat;
   }
 
-  p {
+  p, span {
     font-size: 26px;
     font-family: "Josefin Sans";
   }
@@ -32,6 +44,28 @@ section {
   .highlight {
     color: $mint;
     font-weight: 700;
+  }
+
+  @media (max-width: 800px) {
+    .typing_img {
+      width: 42px;
+      height: 50px;
+    }
+
+    p, span {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .typing_img {
+      width: 32px;
+      height: 40px;
+    }
+
+    p, span {
+      font-size: 18px;
+    }
   }
 }
 
@@ -46,5 +80,14 @@ section {
     font-family: "Josefin Sans";
     font-size: 18px;
     text-align: start;
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
+    align-items: center;
+
+    p {
+      text-align: center;
+    }
   }
 }

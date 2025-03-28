@@ -12,3 +12,7 @@
 @mixin marginMaxWidth() {
   margin: 0 112px;
 }
+
+@mixin marginMobile() {
+  margin: 0 36px;
+}

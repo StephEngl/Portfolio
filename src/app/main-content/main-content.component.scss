@@ -3,6 +3,10 @@
 div {
   @include dFlex();
   padding-top: 90px;
+
+  @media (max-width: 800px) {
+    padding-top: 80px;
+  }
 }
 
 .app-container {

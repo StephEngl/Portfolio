@@ -28,6 +28,11 @@ h2 {
     color: $mint;
     padding-bottom: 80px;
     text-align: center;
+
+    @media (max-width: 900px) {
+      padding-bottom: 32px;
+      font-size: 32px;
+    }
 }
 
 h3 {
