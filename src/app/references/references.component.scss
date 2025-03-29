@@ -2,7 +2,9 @@
 @import "../../styles.scss";
 @import "../styles/mixins.scss";
 
-h3 {
+h3,
+.title_part1,
+.title_part2 {
   color: $mint;
   font-family: "Josefin Sans", sans-serif;
 }
@@ -11,21 +13,16 @@ h3 {
   @include dFlex($g: 56px);
   flex-direction: column;
   overflow: hidden;
-  text-align: center;
+  margin: 0 24px;
 }
 
 .references {
   @include dFlex($jc: space-between, $g: 16px);
   width: 100%;
   max-width: 1440px;
-  // max-width: 100%; // Erlaubt Überbreite
-  overflow-x: auto; // Ermöglicht horizontales Scrollen
-  -webkit-overflow-scrolling: touch; // Für besseres Scrollverhalten auf iOS
-  scroll-snap-type: x mandatory; // Für präzises Snapping beim Sliden
-  padding-bottom: 20px; // Platz für Scrollbar
 
   .reference {
-    min-width: 300px;
+    min-width: 290px;
     height: 400px;
     padding: 44px;
     @include dFlex();
@@ -39,12 +36,30 @@ h3 {
       background-image: url("../../assets/img/ellipse_references_hover.png");
     }
 
+    @media (max-width: 1300px) {
+      height: 350px;
+    }
+
+    @media (max-width: 1100px) {
+      height: 290px;
+      padding: 0 30px 0 60px;
+      background-image: url("../../assets/img/ellipse_references_mobile.png");
+    }
+
     .reference_text {
       @include dFlex($g: 19px);
       flex-direction: column;
 
-      p > a {
+      .reference_project,
+      .reference_project > a {
+        font-size: 18px;
         text-decoration: none;
+
+        @media (max-width: 1100px) {
+          > a {
+            font-weight: 700;
+          }
+        }
       }
 
       a {
@@ -56,6 +71,46 @@ h3 {
         font-family: "Josefin Sans", sans-serif;
         text-align: center;
       }
+
+      @media (max-width: 1300px) {
+        h3 {
+          font-size: 24px;
+        }
+      }
+
+      @media (max-width: 1100px) {
+        align-items: flex-start;
+        gap: 8px;
+
+        h3 {
+          color: $white;
+        }
+
+        p,
+        a {
+          text-align: start;
+        }
+
+        .text {
+          margin: 8px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .title_container {
+    @include dFlex($g: 8px);
+    flex-direction: column;
+
+    .title_part1 {
+      font-family: "Anta";
+      font-size: 32px;
+    }
+
+    .title_part2 {
+      color: $white;
     }
   }
 }
