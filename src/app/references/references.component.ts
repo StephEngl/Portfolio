@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-
-interface Reference {
-  name: string;
-  project: string;
-  translationKey: string;
-  linkedInPath: string;
-}
+import { Reference } from "../interfaces/reference";
 
 @Component({
   selector: 'app-references',

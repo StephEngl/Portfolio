@@ -30,7 +30,9 @@
     "text3": "Stephi had to develop, format and deliver content in collaboration with the team members. She is a reliable and friendly person",
     "profileLink": "Linked in Profile"
   },
-
+  "contact": {
+    "text": "Interested in collaborating? I look forward to hearing from you and developing innovative solutions together."
+  },
   "footer": {
     "imprint": "Imprint"
   }
