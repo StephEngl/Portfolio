@@ -31,7 +31,10 @@
     "profileLink": "Linked in Profil"
   },
   "contact": {
-    "text": "Interessiert an einer Zusammenarbeit? Ich freue mich darauf, von Ihnen zu hören und gemeinsam innovative Lösungen zu entwickeln."
+    "text": "Interessiert an einer Zusammenarbeit? Ich freue mich darauf, von Ihnen zu hören und gemeinsam innovative Lösungen zu entwickeln.",
+    "privacy1": "Ich habe die",
+    "privacy2": " Datenschutzerklärung ",
+    "privacy3": "gelesen und stimme der Verarbeitung meiner Daten gemäß den darin beschriebenen Richtlinien zu."
   },
   "footer": {
     "imprint": "Impressun"

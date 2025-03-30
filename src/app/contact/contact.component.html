@@ -28,7 +28,7 @@
   <div class="contact_information">
     <div class="contact_information_wrapper">
       <p>
-        Feel free to get in touch with job offers or opportunities such as: ...
+        {{ "contact.text" | translate }}
       </p>
       <div class="mail_and_phone">
         <div class="email_container">
@@ -78,26 +78,53 @@
         </div>
       </div>
     </div>
-    <form (ngSubmit)="onSubmit()">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="contact_wrapper">
         <div class="your_contact">
-          <label for="fname">Your Name</label>
-          <input type="text" class="input" id="fname" name="firstname" />
+          <label for="fname">@if (!fname.valid && fname.touched) { Your name is required }
+            @else {Your Name}</label>
+          <input #fname="ngModel"
+            [(ngModel)]="contactData.name"
+            type="text"
+            class="input"
+            id="fname"
+            name="firstname"
+            required
+          />
         </div>
 
         <div class="your_contact">
-          <label for="mail">Your Email</label>
-          <input type="text" class="input" id="mail" name="email" />
+          <label for="mail"
+            >@if (!email.valid && email.touched) { Your email is required }
+            @else {Your Email}</label
+          >
+          <input
+            #email="ngModel"
+            [(ngModel)]="contactData.email"
+            type="text"
+            class="input"
+            id="mail"
+            name="email"
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          />
         </div>
       </div>
 
       <div class="your_message">
-        <label for="subject">Your Message</label>
+        <label for="subject">
+          @if (!message.valid && message.touched) { Your message is required }
+          @else {Your Message}</label
+        >
         <textarea
+          #message="ngModel"
+          minlength="5"
+          [(ngModel)]="contactData.message"
           class="input"
           id="subject"
           name="subject"
           style="height: 200px"
+          required
         ></textarea>
       </div>
       <div class="privacy_policy_wrapper">
@@ -105,11 +132,12 @@
           <input type="checkbox" />
           <span class="checkmark"></span>
           <p>
-            I've read the <a href="">privacy policy</a> and agree to the
-            processing of my data as outlined.
+            {{ "contact.privacy1" | translate
+            }}<a href="">{{ "contact.privacy2" | translate }}</a
+            >{{ "contact.privacy3" | translate }}
           </p>
         </label>
-        <button type="button" disabled>Send</button>
+        <button type="submit">Send</button>
       </div>
     </form>
   </div>
