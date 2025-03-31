@@ -6,7 +6,6 @@ import {
 } from "@ngx-translate/core";
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './shared/components/footer/footer.component';
-import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -23,16 +22,6 @@ export class AppComponent {
     this.translate.setDefaultLang('en');
     this.translate.use('en');
 }
-
-  ngOnInit(){
-    AOS.init();
-  }
-
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      AOS.refresh();
-    }, 500);
-  }
 }
 
 

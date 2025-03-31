@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { Reference } from "../interfaces/reference";
+import { Reference } from '../interfaces/reference';
 
 @Component({
   selector: 'app-references',
@@ -23,21 +23,28 @@ export class ReferencesComponent implements OnInit {
       {
         name: 'Mia Mausezahn',
         project: 'Join',
-        translationKey: "text1",
+        translationKey: 'text1',
         linkedInPath: '',
       },
       {
         name: 'Leo Löwenherz',
         project: 'Kochwelt',
-        translationKey: "text2",
+        translationKey: 'text2',
         linkedInPath: '',
       },
       {
         name: 'Lara Lockenhaupt',
         project: 'DA Bubble',
-        translationKey: "text3",
+        translationKey: 'text3',
         linkedInPath: '',
       },
     ];
+  }
+
+  onPointerMove(event: PointerEvent): void {
+    const container = event.currentTarget as HTMLElement;
+    if (event.pressure > 0) {
+      container.scrollLeft -= event.movementX * 40;
+    }
   }
 }
