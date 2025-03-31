@@ -6,15 +6,16 @@ section {
   @include dFlex();
   flex-direction: column;
   position: relative;
-  width: 991px;
+  width: 100%;
   max-width: 1440px;
   padding-bottom: 180px;
+  @include marginMaxWidth();
 
   .arrow_back {
     height: 88px;
     width: 37px;
     position: absolute;
-    right: -115px;
+    right: -110px;
     top: 12px;
 
     &:hover {
@@ -33,8 +34,23 @@ section {
     }
 
     @media (max-width: 1150px) {
-      right: 0;
+      right: 50%;
+      bottom: 10%;
+      transform: translateX(50%);
+      top: auto;
     }
+  }
+
+  @media (max-width: 1150px) {
+    padding-bottom: 250px;
+  }
+
+  @media (max-width: 750px) {
+    @include marginMobile();
+  }
+
+  @media (max-width: 350px) {
+    margin: 0 16px;
   }
 }
 
@@ -45,28 +61,53 @@ section {
 
   .contact_information_wrapper {
     @include dFlex($jc: space-between, $g: 20px);
-    height: 124px;
 
     .contact_text {
-      width: 45%;
-    }
+      width: 50%;
 
-    p {
-      font-size: 18px;
+      p {
+        font-size: 18px;
+        font-family: "Josefin Sans", sans-serif;
+      }
+
+      @media (max-width: 500px) {
+        p {
+          font-size: 16px;
+        }
+      }
     }
 
     .mail_and_phone {
-      width: 445px;
       @include dFlex($jc: flex-start, $ai: flex-start, $g: 16px);
       flex-direction: column;
+      width: 50%;
 
       p {
         @include dFlex($g: 20px);
+        font-family: "Josefin Sans", sans-serif;
         font-size: 20px;
       }
 
-      svg {
-        stroke: green;
+      @media (max-width: 500px) {
+        gap: 4px;
+
+        p {
+          gap: 8px;
+          font-size: 18px;
+        }
+
+        // Text "E-Mail:" and "Tel:" fade out
+        // SVG and links show
+        .email_container p,
+        .phone_container p {
+          font-size: 0;
+
+          svg,
+          a {
+            font-size: 18px;
+            opacity: 1;
+          }
+        }
       }
     }
   }
@@ -94,6 +135,36 @@ section {
   }
 }
 
+@media (max-width: 1050px) {
+  .contact_information_wrapper,
+  .contact_wrapper {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .your_contact,
+  .contact_text,
+  .mail_and_phone {
+    width: 100% !important;
+  }
+}
+
+.claim {
+  @include dFlex();
+  display: none;
+
+  p {
+    color: $mint;
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  @media (max-width:750px) {
+    display: flex;
+  }
+}
+
+// Form
 form {
   @include dFlex($g: 21px);
   flex-direction: column;
@@ -137,6 +208,10 @@ form {
         background-color: $bg_light;
         outline: none;
       }
+
+      &.ng-invalid.ng-touched {
+        border-color: #e44c36 !important;
+      }
     }
 
     .valid-icon {
@@ -176,6 +251,10 @@ form {
       position: absolute;
       bottom: 0;
       right: 0;
+
+      @media (max-width: 500px) {
+        bottom: -20px;
+      }
     }
   }
 

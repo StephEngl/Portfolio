@@ -1,5 +1,5 @@
 <section>
-  <h2>{{"contact.title" | translate }} </h2>
+  <h2>{{ "contact.title" | translate }}</h2>
   <div class="arrow_back">
     <a href="#about">
       <svg
@@ -54,7 +54,7 @@
                 stroke-linecap="round"
               />
             </svg>
-            E-Mail:
+            E-mail:
             <a href="mailto:stephaniekoebich@aol.com"
               >stephaniekoebich&#64;aol.com</a
             >
@@ -81,6 +81,10 @@
       </div>
     </div>
 
+    <div class="claim">
+      <p>{{ "contact.claim" | translate }}</p>
+    </div>
+
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="contact_wrapper">
         <div class="your_contact">
@@ -93,19 +97,19 @@
             <span> {{ "contact.name" | translate }} </span>}</label
           >
           <div class="input-container">
-          <input
-            #fname="ngModel"
-            [(ngModel)]="contactData.name"
-            type="text"
-            class="input"
-            id="fname"
-            name="fullname"
-            required
-            pattern="\b\w{2,}\b\s+\b\w{2,}\b"
-          />
-          <span class="valid-icon"></span>
+            <input
+              #fname="ngModel"
+              [(ngModel)]="contactData.name"
+              type="text"
+              class="input"
+              id="fname"
+              name="fullname"
+              required
+              pattern="\b\w{2,}\b\s+\b\w{2,}\b"
+            />
+            <span class="valid-icon"></span>
+          </div>
         </div>
-      </div>
 
         <div class="your_contact">
           <label for="mail"
@@ -118,18 +122,18 @@
             }</label
           >
           <div class="input-container">
-          <input
-            #email="ngModel"
-            [(ngModel)]="contactData.email"
-            type="text"
-            class="input"
-            id="mail"
-            name="email"
-            required
-            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-          />
-          <span class="valid-icon"></span>
-        </div>
+            <input
+              #email="ngModel"
+              [(ngModel)]="contactData.email"
+              type="text"
+              class="input"
+              id="mail"
+              name="email"
+              required
+              pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            />
+            <span class="valid-icon"></span>
+          </div>
         </div>
       </div>
 
@@ -142,18 +146,18 @@
           >}</label
         >
         <div class="input-container">
-        <textarea
-          #message="ngModel"
-          minlength="5"
-          [(ngModel)]="contactData.message"
-          class="input"
-          id="subject"
-          name="subject"
-          style="height: 200px"
-          required
-        ></textarea>
-        <span class="valid-icon"></span>
-      </div>
+          <textarea
+            #message="ngModel"
+            minlength="5"
+            [(ngModel)]="contactData.message"
+            class="input"
+            id="subject"
+            name="subject"
+            style="height: 200px"
+            required
+          ></textarea>
+          <span class="valid-icon"></span>
+        </div>
       </div>
       <div class="privacy_policy_wrapper">
         <label class="privacy_policy_label">

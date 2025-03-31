@@ -33,6 +33,7 @@
   "contact": {
     "title": "Contact me",
     "text": "Interested in collaborating? I look forward to hearing from you and developing innovative solutions together.",
+    "claim": "Let us work together!",
     "name": "Your Name",
     "nameError": "Your name is required.",
     "mail": "Your Email",
