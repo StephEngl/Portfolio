@@ -14,14 +14,15 @@ import { HttpClient } from '@angular/common/http';
 export class ContactComponent {
 
   http = inject(HttpClient);
+  isPrivacyAccepted = false;
+  formSubmitted = false;
+  mailTest = true;
 
   contactData: ContactData= {
     name: '',
     email: '',
     message: '',
   };
-
-  mailTest = true;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -35,7 +36,8 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    this.formSubmitted = true;
+    if (ngForm.submitted && ngForm.form.valid && this.isPrivacyAccepted && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -47,10 +49,10 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    } else if (ngForm.submitted && ngForm.form.valid && this.isPrivacyAccepted && this.mailTest) {
 
       ngForm.resetForm();
     }
-    
   }
+
 }

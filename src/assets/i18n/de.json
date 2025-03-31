@@ -31,12 +31,20 @@
     "profileLink": "Linked in Profil"
   },
   "contact": {
+    "title": "Kontakt",
     "text": "Interessiert an einer Zusammenarbeit? Ich freue mich darauf, von Ihnen zu hören und gemeinsam innovative Lösungen zu entwickeln.",
+    "name": "Name",
+    "nameError": "Bitte Namen eingeben.",
+    "mail": "E-mail",
+    "mailError": "Bitte E-Mail-Adresse eingeben.",
+    "message": "Nachricht",
+    "messageError": "Bitte Nachricht eingeben.",
     "privacy1": "Ich habe die",
     "privacy2": " Datenschutzerklärung ",
-    "privacy3": "gelesen und stimme der Verarbeitung meiner Daten gemäß den darin beschriebenen Richtlinien zu."
+    "privacy3": "gelesen und stimme der Verarbeitung meiner Daten gemäß den darin beschriebenen Richtlinien zu.",
+    "privacyNotAccepted": "Bitte die Datenschutzerklärung akzeptieren."
   },
   "footer": {
-    "imprint": "Impressun"
+    "imprint": "Impressum"
   }
 }
