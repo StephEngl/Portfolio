@@ -113,12 +113,13 @@ section {
   }
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .email_container,
 .phone_container {
-  p,
-  a {
-    text-decoration: none;
-  }
 
   &:hover {
     p,
