@@ -1,64 +1,75 @@
 $mint: #6dbfb8;
-$white: #F8F5EC;
-$bg_dark: #262E34;
-$bg_light: #323F48;
-$bg_projects: #2D3840;
-$color_alert: #E44C36;
+$white: #f8f5ec;
+$bg_dark: #262e34;
+$bg_light: #323f48;
+$bg_projects: #2d3840;
+$color_alert: #e44c36;
 
 * {
-    scroll-behavior: smooth;
-    margin: 0;
-    color: $white;
-    font-family: "Anta";
-    box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  color: $white;
+  font-family: "Anta";
+  box-sizing: border-box;
 }
 
 body {
-    background-color: $bg_dark;
+  background-color: $bg_dark;
 }
 
 h1 {
-    font-size: 50px;
-    font-weight: 120;
-    text-align: center;
+  font-size: 50px;
+  font-weight: 120;
+  text-align: center;
 }
 
 h2 {
-    font-size: 60px;
-    font-weight: 100;
-    color: $mint;
-    padding-bottom: 80px;
-    text-align: center;
+  font-size: 60px;
+  font-weight: 100;
+  color: $mint;
+  padding-bottom: 80px;
+  text-align: center;
 
-    @media (max-width: 900px) {
-      padding-bottom: 32px;
-      font-size: 32px;
-    }
+  @media (max-width: 900px) {
+    padding-bottom: 32px;
+    font-size: 32px;
+  }
 }
 
 h3 {
-font-size: 30px;
+  font-size: 30px;
 }
 
 button {
-    background-color: transparent;
-    cursor: pointer;
-    border: 1px solid $mint;
-    border-radius: 30px;
-    padding: 12px 24px;
-    margin-top: 16px;
-    transition: all 0.4s ease;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid $mint;
+  border-radius: 30px;
+  padding: 12px 24px;
+  margin-top: 16px;
+  transition: all 0.4s ease;
 
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    &:disabled {
-      background-color: transparent;
-      border-color: $white;
-      color: $white;  }
-
-    a {
-      text-decoration: none;
-    }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
   }
+
+  &:disabled {
+    background-color: transparent;
+    border-color: $white;
+    color: $white;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+app-imprint {
+  display: flex;
+  height: calc(100vh - 214px);
+}
+
+app-privacy-policy {
+  display: flex;
+  justify-content: center;
+}

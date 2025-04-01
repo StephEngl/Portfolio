@@ -32,10 +32,10 @@
   },
   "contact": {
     "title": "Kontakt",
-    "text": "Interessiert an einer Zusammenarbeit? Ich freue mich darauf, von Ihnen zu hören und gemeinsam innovative Lösungen zu entwickeln.",
+    "text": "Interessiert an einer Zusammenarbeit? Ich freue mich auf Anfragen, um gemeinsam innovative Lösungen zu entwickeln.",
     "claim": "Interesse an einer Zusammenarbeit?",
     "name": "Name",
-    "nameError": "Bitte Namen eingeben.",
+    "nameError": "Bitte Vor- und Nachnamen eingeben.",
     "mail": "E-mail",
     "mailError": "Bitte E-Mail-Adresse eingeben.",
     "message": "Nachricht",
@@ -44,6 +44,11 @@
     "privacy2": " Datenschutzerklärung ",
     "privacy3": "gelesen und stimme der Verarbeitung meiner Daten gemäß den darin beschriebenen Richtlinien zu.",
     "privacyNotAccepted": "Bitte die Datenschutzerklärung akzeptieren."
+  },
+  "imprint": {
+    "title": "Impressum",
+    "contact": "Kontakt",
+    "source": "Quelle:"
   },
   "footer": {
     "imprint": "Impressum"
