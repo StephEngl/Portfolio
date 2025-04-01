@@ -11,7 +11,9 @@ div {
 
 .app-container {
   flex-direction: column;
+  justify-content: flex-end;
   padding-top: 0;
+  height: 100vh;
 }
 
 app-nav, app-hero {

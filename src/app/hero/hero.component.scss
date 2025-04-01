@@ -5,7 +5,7 @@
 .atf {
   margin-top: 40px;
   @include dFlex();
-  height: 100vh;
+  // height: 100vh;
 
   > .hero {
     position: relative;
@@ -14,6 +14,11 @@
     max-width: 1440px;
     width: 100%;
     height: auto;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      @include marginMobile();
+    }
   }
 }
 
@@ -177,20 +182,17 @@ h2 {
 }
 
 @media (max-width: 1050px) {
+  h1 {
+    font-size: 40px;
+  }
+
   h2 {
     padding-bottom: 0;
+    font-size: 30px;
   }
 }
+
 @media (max-width: 800px) {
-  .hero {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .atf {
-    margin: 0;
-  }
-
   .hero_img_container {
     overflow: visible;
 
@@ -223,6 +225,11 @@ h2 {
 
 @media (max-width: 545px) {
   h1 {
+    font-size: 30px;
     padding: 0;
+  }
+
+  h2 {
+    font-size: 24px;
   }
 }
