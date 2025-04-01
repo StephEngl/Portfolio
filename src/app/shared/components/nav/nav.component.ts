@@ -31,6 +31,9 @@ export class NavComponent {
     this.translate.use(lang);
     this.currentLang = lang;
     this.saveToLocalStorage();
+    if (this.isMenuOpen) {
+      this.toggleMenu();
+    }
   }
 
   saveToLocalStorage() {

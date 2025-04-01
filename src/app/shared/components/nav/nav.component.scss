@@ -96,27 +96,6 @@ nav {
         display: flex;
       }
     }
-
-    &.menu_open {
-      height: auto;
-
-      .nav_container {
-        flex-direction: column;
-
-        .nav_links,
-        .change_language_btns {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-          padding: 20px 0;
-        }
-
-        .nav_links {
-          gap: 20px;
-        }
-      }
-    }
   }
 }
 
@@ -134,6 +113,83 @@ a {
     .nav_container {
       .logo {
         content: url("../../../../assets/img/logo_mobile.png");
+      }
+    }
+  }
+}
+
+nav.menu_open {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); // Dunkler Hintergrund für das Overlay
+  z-index: 1000;
+
+  .nav_container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../../../assets/img/ellipse_bg_menu.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 385px;
+    width: 360px;
+
+    .nav_links {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      a {
+        font-size: 24px;
+        color: $bg_dark;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $white;
+        }
+
+        & + .active {
+          color: $bg_dark;
+          background-image: none;
+        }
+      }
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .change_language_btns {
+      display: flex;
+      margin-top: 40px;
+
+      p {
+        font-size: 18px;
+        color: $bg_dark;
+        cursor: pointer;
+
+        &.active {
+          color: $white;
+        }
+
+        &:hover:not(.active) {
+          color: $white;
+        }
+      }
+    }
+
+    .burger_menu {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+      span {
+        background-color: $white; // Weiß für die Linien im Menü-Button
       }
     }
   }

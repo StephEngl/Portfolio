@@ -1,5 +1,5 @@
 <nav [class.menu_open]="isMenuOpen">
-  <div class="nav_container"v>
+  <div class="nav_container">
     <img class="logo" src="../../assets/img/logo_mobile_dark.png" alt="Logo" />
     <div class="nav_links">
       <a href="#about">{{"nav.link1" | translate}}</a>
@@ -11,6 +11,7 @@
       <p [class.active]="currentLang  === 'de'" (click)="changeLanguage('de')">DE</p>
       <p [class.active]="currentLang  === 'en'" (click)="changeLanguage('en')">EN</p>
     </div>
+
     <button class="burger_menu" (click)="toggleMenu()">
         <span></span>
         <span></span>
