@@ -5,10 +5,12 @@
 .atf {
   margin-top: 40px;
   @include dFlex();
+  height: 100vh;
 
   > .hero {
     position: relative;
     @include dFlex($jc: space-between);
+    @include marginMaxWidth();
     max-width: 1440px;
     width: 100%;
     height: auto;
