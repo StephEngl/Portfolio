@@ -8,7 +8,7 @@ import {HttpClient} from '@angular/common/http';
 import { routes } from './app.routes';
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: HttpClient) =>
-  new TranslateHttpLoader(http, '../assets/i18n/', '.json');
+  new TranslateHttpLoader(http, './assets/i18n/', '.json');
 
 export const appConfig: ApplicationConfig = {
   providers: [
