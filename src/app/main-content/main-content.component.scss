@@ -26,5 +26,6 @@ app-nav, app-hero {
 
 app-contact, app-references, app-about {
   display: flex;
+  justify-content: center;
   width: 100%;
 }
