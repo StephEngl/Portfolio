@@ -7,8 +7,9 @@ section {
     max-width: 1440px;
     padding: 76px 0;
     @include marginMaxWidth();
-
+    
     @media (max-width:850px) {
+        padding: 45px 0;
         @include marginMobile();
     }
 
@@ -17,7 +18,7 @@ section {
     }
 }
 
-p, a {
+p, a, li {
     font-family: "Josefin Sans", "sans serif";
     padding: 12px 0;
 }
@@ -46,13 +47,33 @@ color: $mint;
 font-size: 20px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 800px) {
     h1 {
-        font-size: 36px;
+        font-size: 40px;
     }
 
     h2 {
-        font-size: 30px;
+        font-size: 32px;
+        padding: 20px 0 20px 0;
+    }
+    
+    h3 {
+        font-size: 24px;
+        padding: 10px 0 10px 0;
+    }
+    
+    h4 {
+    font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
         padding: 18px 0 18px 0;
         text-align: start;
     }
@@ -63,7 +84,6 @@ font-size: 20px;
     }
     
     h4 {
-    color: $mint;
     font-size: 18px;
     }
 }
