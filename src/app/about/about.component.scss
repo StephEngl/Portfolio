@@ -30,10 +30,19 @@ section {
   .typing_img {
     width: 74px;
     height: 63px;
-    background-image: url("../../assets/icons/icon_location.svg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+
+    &.fade-in {
+      opacity: 1;
+    }
+
+    &.fade-out {
+      opacity: 0;
+    }
   }
 
   p, span {

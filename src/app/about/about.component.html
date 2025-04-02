@@ -1,19 +1,32 @@
 <section>
-  <h2 id="about">{{ "about-me.title" | translate}}</h2>
+  <h2 id="about">{{ "about-me.title" | translate }}</h2>
   <div class="content">
     <div class="typing_effect">
-      <ngx-typed-js [strings]="['Angular ist toll!', 'Angular ist Typed.js macht Spaß!']" [typeSpeed]="100" [backSpeed]="50" [loop]="true">
-        <h1 class="typing"></h1>
-      </ngx-typed-js>
-      <div class="typing_img"></div>
-      <p>
-        <span class="highlight">{{ "about-me.location1" | translate}}</span> {{ "about-me.location2" | translate}}
-      </p>
+      <div
+        class="typing_img" [ngClass]="fadeClass"
+        [ngStyle]="{ 'background-image': currentImage }"
+      ></div>
+      <ngx-typed-js
+        [strings]="['located near Stuttgart...', 'open to work remote...']"
+        [typeSpeed]="100"
+        [backSpeed]="50"
+        [backDelay]="1000"
+        [loop]="true"
+        (preStringTyped)="toggleIcon($event)"
+      >
+        <p>
+          <span class="highlight">{{ "about-me.location1" | translate }}</span
+          >&nbsp;<span class="typing">{{
+            "about-me.location2" | translate
+          }}</span>
+        </p></ngx-typed-js
+      >
     </div>
     <div class="about_me_text_and_btn">
-      <p class="about_me_text"> {{ "about-me.text" | translate}}
-      </p>
-      <button><a href="#contact">{{ "about-me.wantContact" | translate}}</a></button>
+      <p class="about_me_text">{{ "about-me.text" | translate }}</p>
+      <button>
+        <a href="#contact">{{ "about-me.wantContact" | translate }}</a>
+      </button>
     </div>
   </div>
 </section>
