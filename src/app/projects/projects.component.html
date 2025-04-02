@@ -86,7 +86,16 @@
         }
       </div>
     </div>
-    <div class="projects_information_wrapper_mobile">
+    <div
+      class="projects_information_wrapper_mobile"
+      [style.border-radius]="
+        selectedProject === 0
+          ? '0 30px 30px 30px'
+          : selectedProject === 3
+          ? '30px 0 30px 30px'
+          : '30px'
+      "
+    >
       <div class="project_information_mobile">
         <div class="project_information_head">
           <h2>{{ projects[selectedProject].name }}</h2>
@@ -94,7 +103,10 @@
             <p>Technologies:&nbsp;</p>
             @for (technology of projects[selectedProject].technologiesNames;
             track $index) {
-            <p>{{ technology }}@if ($index < projects[selectedProject].technologiesNames.length-1) {,&nbsp;}</p> 
+            <p>
+              {{ technology }}@if ($index <
+              projects[selectedProject].technologiesNames.length-1) {,&nbsp;}
+            </p>
             }
           </div>
           <p class="duration">
@@ -102,9 +114,9 @@
           </p>
           <div class="screenshot_container">
             <img
-            class="screenshot"
-            src="{{ projects[selectedProject].screenshot }}"
-            alt="Screenshot Project"
+              class="screenshot"
+              src="{{ projects[selectedProject].screenshot }}"
+              alt="Screenshot Project"
             />
           </div>
         </div>
