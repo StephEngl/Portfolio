@@ -12,7 +12,11 @@ section {
     @include dFlex();
     flex-direction: column;
     width: 100%;
-    display: none;
+
+    @media (max-width: 1200px) {
+      display: none;
+
+    }
   }
 
   .project_tabs_container {
@@ -63,7 +67,7 @@ section {
   }
 
   .project_information_right {
-    @include dFlex();
+    @include dFlex($jc: flex-start);
     flex-direction: column;
 
     .technologies {
