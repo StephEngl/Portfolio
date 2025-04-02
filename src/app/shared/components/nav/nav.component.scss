@@ -86,7 +86,9 @@ nav {
 
     @media (max-width: 800px) {
       @include marginMobile();
+    }
 
+    @media (max-width: 600px) {
       .nav_links,
       .change_language_btns {
         display: none;
@@ -104,9 +106,14 @@ a {
   font-size: 26px;
   font-family: "Josefin Sans";
   color: $bg_dark;
+
+  @media (max-width: 1000px) {
+      font-size: 20px;
+  }
 }
 
-@media (max-width: 800px) {
+
+@media (max-width: 600px) {
   nav {
     height: 120px;
     background-color: $bg_dark;
@@ -189,7 +196,7 @@ nav.menu_open {
       right: 20px;
 
       span {
-        background-color: $white; // Weiß für die Linien im Menü-Button
+        background-color: $white;
       }
     }
   }

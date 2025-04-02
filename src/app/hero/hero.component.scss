@@ -5,17 +5,26 @@
 .atf {
   margin-top: 40px;
   @include dFlex();
-  // height: 100vh;
 
-  > .hero {
+  .hero {
     position: relative;
     @include dFlex($jc: space-between);
     @include marginMaxWidth();
     max-width: 1440px;
     width: 100%;
     height: auto;
+  }
 
-    @media (max-width: 800px) {
+  @media (max-width: 800px) {
+    .hero {
+      @include marginMobile();
+    }
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 0;
+
+    .hero {
       flex-direction: column;
       @include marginMobile();
     }
@@ -74,7 +83,7 @@
   width: 50%;
   height: 100%;
 
-  > .hero_logo {
+  .hero_logo {
     height: 75px;
     width: 95px;
     background-image: url("../../assets/img/logo_default.png");
@@ -89,16 +98,16 @@
     }
   }
 
-  > .bouncing_link {
+  .bouncing_link {
     padding-top: 50px;
     display: inline-block;
 
     > svg {
+      animation: bounce 1s infinite alternate;
       rect {
         transition: fill 0.4s ease;
         fill: transparent;
       }
-      animation: bounce 1s infinite alternate;
 
       &:hover {
         rect {
@@ -110,6 +119,17 @@
         animation-play-state: paused;
       }
     }
+
+    @media (max-width: 800px) {
+      padding-top: 16px;
+
+      svg {
+        width: 25px;
+        height: 70px;
+        animation: none;
+      }
+    }
+
     @keyframes bounce {
       0% {
         transform: translateY(0);
@@ -213,13 +233,13 @@ h2 {
     }
   }
 
+  h1 {
+    padding-top: 0px;
+  }
+
   .social_media_buttons,
   .hero_logo {
     display: none;
-  }
-
-  .bouncing_link {
-    padding-top: 0;
   }
 }
 
@@ -231,5 +251,16 @@ h2 {
 
   h2 {
     font-size: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 24px;
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 20px;
   }
 }
