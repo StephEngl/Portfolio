@@ -6,11 +6,12 @@ import {
 } from "@ngx-translate/core";
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { NgxTypedJsModule } from 'ngx-typed-js';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FooterComponent, TranslatePipe, TranslateDirective],
+  imports: [RouterOutlet, FooterComponent, NgxTypedJsModule, TranslatePipe, TranslateDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

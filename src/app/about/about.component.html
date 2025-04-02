@@ -2,6 +2,9 @@
   <h2 id="about">{{ "about-me.title" | translate}}</h2>
   <div class="content">
     <div class="typing_effect">
+      <ngx-typed-js [strings]="['Angular ist toll!', 'Angular ist Typed.js macht Spaß!']" [typeSpeed]="100" [backSpeed]="50" [loop]="true">
+        <h1 class="typing"></h1>
+      </ngx-typed-js>
       <div class="typing_img"></div>
       <p>
         <span class="highlight">{{ "about-me.location1" | translate}}</span> {{ "about-me.location2" | translate}}
