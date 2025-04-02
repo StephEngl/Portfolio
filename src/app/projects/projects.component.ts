@@ -32,6 +32,7 @@ export class ProjectsComponent {
         '../../assets/icons/icon_project_typescript.svg',
         '../../assets/icons/icon_project_firebase.svg',
       ],
+      technologiesNames: ['Angular', 'TypeScript', 'Firebase'],
       screenshot: '../../assets/img/screenshot_dABubble.png',
       linkLiveTest: '',
       linkGitHub: '',
@@ -51,8 +52,10 @@ export class ProjectsComponent {
         '../../assets/icons/icon_project_javascript.svg',
         '../../assets/icons/icon_project_css.svg',
       ],
+      technologiesNames: ['JavScript', 'HTML', 'CSS'],
       screenshot: '../../assets/img/screenshot_elara.png',
-      linkLiveTest: 'https://stephanie-englberger.developerakademie.net/M12_Jump_n_Run/index.html',
+      linkLiveTest:
+        'https://stephanie-englberger.developerakademie.net/M12_Jump_n_Run/index.html',
       linkGitHub: 'https://github.com/StephEngl/Elara',
     },
     {
@@ -69,6 +72,7 @@ export class ProjectsComponent {
         '../../assets/icons/icon_project_typescript.svg',
         '../../assets/icons/icon_project_css.svg',
       ],
+      technologiesNames: ['Angular', 'TypeScript', 'CSS'],
       screenshot: '../../assets/img/screenshot_join.png',
       linkLiveTest: '',
       linkGitHub: '',
@@ -88,8 +92,10 @@ export class ProjectsComponent {
         '../../assets/icons/icon_project_javascript.svg',
         '../../assets/icons/icon_project_css.svg',
       ],
+      technologiesNames: ['JavaScript', 'HTML', 'CSS'],
       screenshot: '../../assets/img/screenshot_pokedex.png',
-      linkLiveTest: 'https://stephanie-englberger.developerakademie.net/M9_Pokedex/index.html',
+      linkLiveTest:
+        'https://stephanie-englberger.developerakademie.net/M9_Pokedex/index.html',
       linkGitHub: 'https://github.com/StephEngl/Pokedex',
     },
   ];

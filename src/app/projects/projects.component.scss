@@ -12,6 +12,7 @@ section {
     @include dFlex();
     flex-direction: column;
     width: 100%;
+    display: none;
   }
 
   .project_tabs_container {
@@ -19,10 +20,9 @@ section {
     height: 100px;
     width: 100%;
     max-width: 1440px;
-    
-    
+
     .project_tabs {
-      @include dFlex($jc: flex-start, $g:36px);
+      @include dFlex($jc: flex-start, $g: 36px);
       max-width: 1440px;
       padding-left: 120px;
     }
@@ -40,7 +40,6 @@ section {
     width: 100%;
     background-color: $bg_projects;
     @include dFlex();
-
   }
 
   .project_information {
@@ -88,18 +87,18 @@ section {
     .button_container {
       @include dFlex($g: 40px);
       padding-bottom: 28px;
-
-      .btn_live_test {
-        background-color: $mint;
-        > a {
-          color: $bg_dark;
-        }
-        &:hover {
-          background-color: $white;
-          border-color: $white;
-        }
-      }
     }
+  }
+}
+
+.btn_live_test {
+  background-color: $mint;
+  > a {
+    color: $bg_dark;
+  }
+  &:hover {
+    background-color: $white;
+    border-color: $white;
   }
 }
 
@@ -110,11 +109,160 @@ h3 {
   font-weight: 500;
 }
 
-p, span {
+p,
+span {
   font-family: "Josefin Sans";
   font-size: 18px;
 }
 
 .active {
   color: $white;
+}
+
+// Mobile Section
+.project_tabs_container_mobile {
+  display: flex;
+  align-items: center;
+  height: 50px;
+
+  .project_tabs_mobile {
+    @include dFlex($jc: flex-start, $g: 36px);
+    padding-left: 48px;
+
+    h3 {
+      font-size: 26px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .project_tabs_mobile {
+      padding-left: 20px;
+
+      h3 {
+        font-size: 24px;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    .project_tabs_mobile {
+      gap: 16px;
+
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media (max-width: 400px) {    
+    .project_tabs_mobile {
+      padding-left: 12px;
+      gap: 8px;
+
+      h3 {
+        font-size: 16px;
+      }
+    }
+    
+  }
+}
+
+.projects_information_wrapper_mobile {
+  width: 100%;
+  background-color: $bg_projects;
+  @include dFlex();
+  border-radius: 30px;
+
+  .project_information_mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px 56px;
+
+    .project_information_head {
+      p {
+        padding-bottom: 8px;
+      }
+    }
+
+    .technologies_mobile {
+      display: flex;
+    }
+
+    .screenshot_container {
+      @include dFlex();
+      width: 100%;
+      padding: 32px 0;
+
+      img {
+        max-width: 450px;
+        height: 100%;
+        border-radius: 30px;
+      }
+    }
+
+    h2 {
+      text-align: start;
+      font-size: 30px;
+      padding-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    .info_section {
+      .title {
+        @include dFlex($jc: flex-start, $g: 16px);
+        padding-bottom: 16px;
+      }
+
+      p {
+        font-family: "Josefin Sans", "sans-serif";
+        font-weight: 300;
+        padding-bottom: 36px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      padding: 24px 24px;
+    }
+
+    @media (max-width: 550px) {
+      h2 {
+        font-size: 24px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 300;
+      }
+
+      .screenshot_container {
+        @include dFlex();
+        width: 100%;
+        padding: 24px 0;
+
+        img {
+          width: 270px;
+          height: 170px;
+          border-radius: 30px;
+        }
+      }
+    }
+
+    @media (max-width: 400px) {
+      padding: 24px 12px;
+
+    }
+  }
+}
+
+.button_container_mobile {
+  @include dFlex();
+  gap: 16px;
 }

@@ -6,6 +6,7 @@ export interface Project {
   experience: string;
   groupExperience: string;
   technologies: string[],
+  technologiesNames: string[],
   screenshot: string,
   linkLiveTest: string,
   linkGitHub: string,

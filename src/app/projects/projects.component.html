@@ -22,17 +22,17 @@
               <img src="../../assets/img/ellipse_project_details.png" alt="" />
               <h3>
                 @if ($index === 2 && projects[selectedProject].experience) {
-                  What I have learned } @else {
-                    {{ label }}
-                  }
-                </h3>
-              </div>
-              <p>{{ getProjectInfo(selectedProject, $index) }}</p>
-              @if ($index === 0) {
-                <p class="duration">
-                  Duration: <span>{{ projects[selectedProject].duration }}</span>
-                </p>
-              }
+                What I have learned } @else {
+                {{ label }}
+                }
+              </h3>
+            </div>
+            <p>{{ getProjectInfo(selectedProject, $index) }}</p>
+            @if ($index === 0) {
+            <p class="duration">
+              Duration: <span>{{ projects[selectedProject].duration }}</span>
+            </p>
+            }
           </div>
           } }
         </div>
@@ -53,16 +53,91 @@
           />
           <div class="button_container">
             <button class="btn_live_test">
-              <a href="{{ projects[selectedProject].linkLiveTest }}" target="_blank"
+              <a
+                href="{{ projects[selectedProject].linkLiveTest }}"
+                target="_blank"
                 >Live Test</a
               >
             </button>
             <button>
-              <a href="{{ projects[selectedProject].linkGitHub }}" target="_blank"
+              <a
+                href="{{ projects[selectedProject].linkGitHub }}"
+                target="_blank"
                 >GitHub</a
               >
             </button>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Section -->
+  <div class="projects_wrapper_mobile">
+    <div class="project_tabs_container_mobile">
+      <div class="project_tabs_mobile">
+        @for (project of projects; track $index) {
+        <h3
+          [class.active]="selectedProject === $index"
+          (click)="selectedProject = $index"
+        >
+          {{ $index + 1 }}. Projekt
+        </h3>
+        }
+      </div>
+    </div>
+    <div class="projects_information_wrapper_mobile">
+      <div class="project_information_mobile">
+        <div class="project_information_head">
+          <h2>{{ projects[selectedProject].name }}</h2>
+          <div class="technologies_mobile">
+            <p>Technologies:&nbsp;</p>
+            @for (technology of projects[selectedProject].technologiesNames;
+            track $index) {
+            <p>{{ technology }}@if ($index < projects[selectedProject].technologiesNames.length-1) {,&nbsp;}</p> 
+            }
+          </div>
+          <p class="duration">
+            Duration: <span>{{ projects[selectedProject].duration }}</span>
+          </p>
+          <div class="screenshot_container">
+            <img
+            class="screenshot"
+            src="{{ projects[selectedProject].screenshot }}"
+            alt="Screenshot Project"
+            />
+          </div>
+        </div>
+        <div class="project_information_text">
+          @for (label of projectsInfoLabels; track $index) { @if ($index < 3) {
+          <div class="info_section">
+            <div class="title">
+              <img src="../../assets/img/ellipse_project_details.png" alt="" />
+              <h3>
+                @if ($index === 2 && projects[selectedProject].experience) {
+                What I have learned } @else {
+                {{ label }}
+                }
+              </h3>
+            </div>
+            <p>{{ getProjectInfo(selectedProject, $index) }}</p>
+          </div>
+          } }
+        </div>
+
+        <div class="button_container_mobile">
+          <button class="btn_live_test">
+            <a
+              href="{{ projects[selectedProject].linkLiveTest }}"
+              target="_blank"
+              >Live Test</a
+            >
+          </button>
+          <button>
+            <a href="{{ projects[selectedProject].linkGitHub }}" target="_blank"
+              >GitHub</a
+            >
+          </button>
         </div>
       </div>
     </div>
