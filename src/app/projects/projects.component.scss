@@ -23,7 +23,6 @@ section {
     height: 90px;
     width: 100%;
     max-width: 1440px;
-    position: relative;
 
     .project_tabs {
       @include dFlex($jc: flex-start, $g: 36px);
@@ -146,7 +145,6 @@ span {
 .project_tabs_container_mobile {
   height: 60px;
   @include dFlex($jc: flex-start);
-  position: relative;
 
   .project_tabs_mobile {
     @include dFlex($jc: flex-start);

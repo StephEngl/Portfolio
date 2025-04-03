@@ -82,7 +82,7 @@
         "CSS"
       ],
       "screenshot": "../../assets/img/screenshot_elara.png",
-      "linkLiveTest": "https://stephanie-englberger.developerakademie.net/M12_Jump_n_Run/index.html",
+      "linkLiveTest": "https://elara.stephanie-englberger.de/",
       "linkGitHub": "https://github.com/StephEngl/Elara"
     },
     "project3": {
@@ -124,7 +124,7 @@
         "CSS"
       ],
       "screenshot": "../../assets/img/screenshot_pokedex.png",
-      "linkLiveTest": "https://stephanie-englberger.developerakademie.net/M9_Pokedex/index.html",
+      "linkLiveTest": "https://pokedex.stephanie-englberger.de/",
       "linkGitHub": "https://github.com/StephEngl/Pokedex"
     }
   },
