@@ -33,6 +33,12 @@
   },
   "projects": {
     "title": "Projekte",
+    "labels": [
+      "Über dieses Projekt",
+      "Meine Arbeitsstruktur",
+      "Meine Team-Erfahrungen",
+      "Was ich gelernt habe"
+    ],
     "learned": "Was ich gelernt habe",
     "durationName": "Dauer: ",
     "technologiesTitle": "Programme",
