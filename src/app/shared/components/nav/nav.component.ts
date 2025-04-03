@@ -11,7 +11,6 @@ import { MenuStateService } from '../../services/menu-state.service';
   styleUrl: './nav.component.scss',
 })
 export class NavComponent {
-  isMenuOpen = false;
   currentLang: string = this.translate.currentLang;
 
   constructor(
@@ -20,14 +19,20 @@ export class NavComponent {
   ) {}
 
   toggleMenu() {
-    this.menuStateService.toggleMenu(); // Zustand über den Service ändern
+    this.menuStateService.toggleMenu();
+  }
+
+  closeMenu() {
+    if (this.menuStateService.isMenuOpen()) {
+      this.toggleMenu();
+    }
   }
 
   changeLanguage(lang: string) {
     this.translate.use(lang);
     this.currentLang = lang;
     this.saveToLocalStorage();
-    if (this.isMenuOpen) {
+    if (this.menuStateService.isMenuOpen()) {
       this.toggleMenu();
     }
   }
