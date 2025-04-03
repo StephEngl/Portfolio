@@ -15,7 +15,7 @@
   flex-direction: column;
   justify-content: center;
   padding-top: 0;
-  height: 100vh;
+  height: calc(100vh - 104px);
 }
 
 app-nav {
@@ -32,15 +32,17 @@ app-hero {
 
 @media (max-width: 600px) {
   .app-container {
-    flex-direction: column;
+    /* Reihenfolge ändern */
+    margin-top: 120px; 
+    height: calc(100vh - 120px)/* Abstand für die Navigation */
+  }
 
-    app-hero {
-      order: 2;
-    }
-
-    app-nav {
-      order: 1;
-    }
+  app-nav {
+    position: fixed; /* Sticky wird zu fixed */
+    top: 0; /* Fixierte Position oben */
+    width: 100%; /* Navigation über die gesamte Breite */
+    z-index: 500; /* Sicherstellen, dass die Navigation oben bleibt */
+    // background-color: white; /* Hintergrundfarbe für bessere Sichtbarkeit */
   }
 }
 

@@ -11,17 +11,9 @@ import { AppComponent } from '../../../app.component';
 })
 export class NavComponent {
   isMenuOpen = false;
-  currentLang: string = this.translate.getDefaultLang();
+  currentLang: string = this.translate.currentLang;
 
   constructor(private translate: TranslateService) {}
-
-  ngOnInit() {
-    this.currentLang = this.translate.currentLang;
-    this.getFromLocalStorage();
-    if (!this.currentLang) {
-      this.currentLang = this.translate.getDefaultLang();
-    }
-  }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -38,12 +30,5 @@ export class NavComponent {
 
   saveToLocalStorage() {
     localStorage.setItem('currentLanguage', this.currentLang);
-  }
-
-  getFromLocalStorage() {
-    let storedLanguage = localStorage.getItem('currentLanguage');
-    if (null != storedLanguage) {
-      this.currentLang = storedLanguage;
-    }
   }
 }
