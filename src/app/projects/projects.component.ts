@@ -1,22 +1,17 @@
 import { Component } from '@angular/core';
 import { Project } from '../../app/interfaces/project';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-  projectsInfoLabels: string[] = [
-    'About the project',
-    'How I organized my work process',
-    'My group work experience',
-    'What I have learned',
-  ];
-
+  projectsInfoLabels: string[] = [];
   projects: Project[] = [
     {
       name: 'DA Bubble',
@@ -28,7 +23,7 @@ export class ProjectsComponent {
       experience: '',
       groupExperience:
         'We worked together in a Team of  Describe your tasks in 1-2 sentences, for example: login form, dashboard or chat functionality. What technologies did you use? It is nice to mention good teamwork and cooperation.',
-      technologies: [
+      technologiesImages: [
         '../../assets/icons/icon_project_angular.svg',
         '../../assets/icons/icon_project_typescript.svg',
         '../../assets/icons/icon_project_firebase.svg',
@@ -48,7 +43,7 @@ export class ProjectsComponent {
       experience:
         'This project deepened my understanding of Object-Oriented Programming (OOP), introduced me to browser events, and significantly enhanced my JavaScript skills. I applied these concepts practically, gaining valuable hands-on experience in modern web development techniques.',
       groupExperience: '',
-      technologies: [
+      technologiesImages: [
         '../../assets/icons/icon_project_html.svg',
         '../../assets/icons/icon_project_javascript.svg',
         '../../assets/icons/icon_project_css.svg',
@@ -68,7 +63,7 @@ export class ProjectsComponent {
       experience: '',
       groupExperience:
         'I enhanced my skills in Angular, SCSS, and TypeScript. Additionally, I gained valuable insights into professional teamwork using Scrum methodology and industry-standard tools like Git for version control and Figma for design collaboration.',
-      technologies: [
+      technologiesImages: [
         '../../assets/icons/icon_project_angular.svg',
         '../../assets/icons/icon_project_typescript.svg',
         '../../assets/icons/icon_project_css.svg',
@@ -88,7 +83,7 @@ export class ProjectsComponent {
       experience:
         'This project enhanced my technical skills, particularly in system interoperability, data storage and processing, as well as control structures. I gained valuable experience in how systems communicate and refined my expertise in managing program flow and logic, preparing me for more complex challenges.',
       groupExperience: '',
-      technologies: [
+      technologiesImages: [
         '../../assets/icons/icon_project_html.svg',
         '../../assets/icons/icon_project_javascript.svg',
         '../../assets/icons/icon_project_css.svg',

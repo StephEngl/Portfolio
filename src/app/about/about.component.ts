@@ -1,18 +1,27 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [TranslatePipe, TranslateDirective, NgxTypedJsModule, CommonModule],
+  imports: [TranslatePipe, NgxTypedJsModule, CommonModule],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })
 export class AboutComponent {
   currentImage: string = 'url("../../assets/icons/icon_location.svg")';
   fadeClass: string = 'fade-in';
+  typedStrings: string[] = [];
+
+  constructor(private translate: TranslateService) {}
+
+  ngOnInit() {
+    this.translate.get(['about-me.location2', 'about-me.location3']).subscribe((translations) => {
+      this.typedStrings = [translations['about-me.location2'], translations['about-me.location3']];
+    });
+  }
 
   toggleIcon(index: number): void {
     this.fadeClass = 'fade-out';

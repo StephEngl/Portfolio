@@ -10,6 +10,7 @@
     "title": "Über mich",
     "location1": "Ich bin",
     "location2": "wohnhaft in Weinstadt...",
+    "location3": "offen für Homeoffice...",
     "text": "Als passionierte Entwicklerin gehe ich sehr struktuiert vor und liebe die endlosen Möglichkeiten des Programmierens. Durch meine Fähigkeit logisch und rational zu denken, entwickle ich mich stetig weiter. Meine Planungs- und analytischen Fähigkeiten helfen mir dabei, Herausforderungen zu bestehen. Ich bin eine loyale Partnerin und ehrliche Kommunikatorin, während ich die Herausforderungen des Lebens (und des Programmierens) meistere.",
     "wantContact": "Los geht's"
   },
@@ -29,6 +30,97 @@
     "text2": "Stephi war verantwortlich für die Entwicklung, Formatierung und Bereitstellung von Inhalten in enger Zusammenarbeit mit dem Team. Sie ist eine sehr zuverlässige und freundliche Mitarbeiterin.",
     "text3": "Stephi war verantwortlich für die Entwicklung, Formatierung und Bereitstellung von Inhalten in enger Zusammenarbeit mit dem Team. Sie ist eine sehr zuverlässige und freundliche Mitarbeiterin.",
     "profileLink": "Linked in Profil"
+  },
+  "projects": {
+    "title": "Projekte",
+    "learned": "Was ich gelernt habe",
+    "durationName": "Dauer: ",
+    "technologiesTitle": "Programme",
+    "project": ". Projekt",
+    "project1": {
+      "name": "DA Bubble",
+      "duration": "4 Wochen",
+      "about": "Diese App ist eine von Slack inspirierte Kommunikationsplattform, die die Zusammenarbeit im Team in professionellen Umgebungen verbessern soll. Sie bietet eine intuitive Benutzeroberfläche, Echtzeit-Messaging und eine robuste Kanalorganisation, wodurch Teams einfach verbunden bleiben und effizient arbeiten können.",
+      "organization": "Wie halten Sie Ihren Code sauber und wartbar? Haben Sie das Projekt in wiederverwendbare Module oder Komponenten unterteilt? Konzentrieren Sie sich auf Dokumentation, die Benennung von Dateien, Variablen, Klassen und Tests.",
+      "experience": "",
+      "groupExperience": "Wir haben in einem Team zusammengearbeitet. Beschreiben Sie Ihre Aufgaben in 1-2 Sätzen, zum Beispiel: Login-Formular, Dashboard oder Chat-Funktionalität. Welche Technologien haben Sie verwendet? Es ist schön, gute Teamarbeit und Kooperation zu erwähnen.",
+      "technologiesImages": [
+        "../../assets/icons/icon_project_angular.svg",
+        "../../assets/icons/icon_project_typescript.svg",
+        "../../assets/icons/icon_project_firebase.svg"
+      ],
+      "technologiesNames": [
+        "Angular",
+        "TypeScript",
+        "Firebase"
+      ],
+      "screenshot": "../../assets/img/screenshot_dABubble.png",
+      "linkLiveTest": "",
+      "linkGitHub": ""
+    },
+    "project2": {
+      "name": "Elara",
+      "duration": "3 Wochen",
+      "about": "Begleite Elara in einem einfachen, aber aufregenden Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf ihr, Feuerkristalle zu finden, um mächtige Feuerbälle freizuschalten und den mystischen Verzauberten Hain zu retten.",
+      "organization": "Ich habe meine Arbeit organisiert, indem ich eine grobe Struktur skizziert habe...",
+      "experience": "Dieses Projekt hat mein Verständnis für objektorientierte Programmierung vertieft...",
+      "groupExperience": "",
+      "technologiesImages": [
+        "../../assets/icons/icon_project_html.svg",
+        "../../assets/icons/icon_project_javascript.svg",
+        "../../assets/icons/icon_project_css.svg"
+      ],
+      "technologiesNames": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "screenshot": "../../assets/img/screenshot_elara.png",
+      "linkLiveTest": "https://stephanie-englberger.developerakademie.net/M12_Jump_n_Run/index.html",
+      "linkGitHub": "https://github.com/StephEngl/Elara"
+    },
+    "project3": {
+      "name": "Join",
+      "duration": "5 Wochen",
+      "about": "Ein Aufgabenmanager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+      "organization": "Ich habe alle Punkte der Checkliste systematisch umgesetzt und sichergestellt, dass jede Aufgabe mit sauberem und gut strukturiertem Code abgeschlossen wurde.",
+      "experience": "",
+      "groupExperience": "Ich habe meine Fähigkeiten in Angular, SCSS und TypeScript verbessert. Darüber hinaus habe ich wertvolle Einblicke in professionelle Teamarbeit mit der Scrum-Methodik sowie in den Einsatz von branchenüblichen Tools wie Git für Versionskontrolle und Figma für Design-Kollaboration gewonnen.",
+      "technologiesImages": [
+        "../../assets/icons/icon_project_angular.svg",
+        "../../assets/icons/icon_project_typescript.svg",
+        "../../assets/icons/icon_project_css.svg"
+      ],
+      "technologiesNames": [
+        "Angular",
+        "TypeScript",
+        "CSS"
+      ],
+      "screenshot": "../../assets/img/screenshot_join.png",
+      "linkLiveTest": "",
+      "linkGitHub": ""
+    },
+    "project4": {
+      "name": "Pokédex",
+      "duration": "1 Woche",
+      "about": "Der Pokédex ist eine Pokémon-Enzyklopädie, die mit der PokeAPI integragiert. Dieses Tool ermöglicht es, detaillierte Informationen über mehr als 1000 Pokémon zu erhalten. Das Projekt zeigt effektive API-Integration, Datenverarbeitung und UI-Design.",
+      "organization": "Ich habe alle Punkte der Checkliste systematisch umgesetzt und sichergestellt, dass jede Aufgabe mit sauberem und gut strukturiertem Code abgeschlossen wurde.",
+      "experience": "Dieses Projekt hat meine technischen Fähigkeiten verbessert, insbesondere in Systeminteroperabilität, Datenspeicherung und -verarbeitung sowie Kontrollstrukturen. Ich habe wertvolle Erfahrungen darüber gesammelt, wie Systeme miteinander kommunizieren, und meine Expertise im Umgang mit Programmfluss und Logik verfeinert, um mich auf komplexere Herausforderungen vorzubereiten.",
+      "groupExperience": "",
+      "technologiesImages": [
+        "../../assets/icons/icon_project_html.svg",
+        "../../assets/icons/icon_project_javascript.svg",
+        "../../assets/icons/icon_project_css.svg"
+      ],
+      "technologiesNames": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "screenshot": "../../assets/img/screenshot_pokedex.png",
+      "linkLiveTest": "https://stephanie-englberger.developerakademie.net/M9_Pokedex/index.html",
+      "linkGitHub": "https://github.com/StephEngl/Pokedex"
+    }
   },
   "contact": {
     "title": "Kontakt",

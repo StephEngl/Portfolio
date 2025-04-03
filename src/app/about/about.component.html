@@ -7,7 +7,7 @@
         [ngStyle]="{ 'background-image': currentImage }"
       ></div>
       <ngx-typed-js
-        [strings]="['located near Stuttgart...', 'open to work remote...']"
+        [strings]="typedStrings"
         [typeSpeed]="100"
         [backSpeed]="50"
         [backDelay]="1000"
@@ -16,9 +16,7 @@
       >
         <p>
           <span class="highlight">{{ "about-me.location1" | translate }}</span
-          >&nbsp;<span class="typing">{{
-            "about-me.location2" | translate
-          }}</span>
+          >&nbsp;<span class="typing"></span>
         </p></ngx-typed-js
       >
     </div>

@@ -5,7 +5,7 @@ export interface Project {
   organization: string;
   experience: string;
   groupExperience: string;
-  technologies: string[],
+  technologiesImages: string[],
   technologiesNames: string[],
   screenshot: string,
   linkLiveTest: string,

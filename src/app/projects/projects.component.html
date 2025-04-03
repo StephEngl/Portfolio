@@ -1,5 +1,5 @@
 <section>
-  <h2>My Projects</h2>
+  <h2>{{"projects.title" | translate}}</h2>
   <div class="projects_wrapper">
     <div class="project_tabs_container">
       <div class="project_tabs">
@@ -22,7 +22,7 @@
               <img src="../../assets/img/ellipse_project_details.png" alt="" />
               <h3>
                 @if ($index === 2 && projects[selectedProject].experience) {
-                What I have learned } @else {
+                  {{"projects.learned" | translate}} } @else {
                 {{ label }}
                 }
               </h3>
@@ -30,7 +30,7 @@
             <p>{{ getProjectInfo(selectedProject, $index) }}</p>
             @if ($index === 0) {
             <p class="duration">
-              Duration: <span>{{ projects[selectedProject].duration }}</span>
+              {{"projects.durationName" | translate}}<span>{{ projects[selectedProject].duration }}</span>
             </p>
             }
           </div>
@@ -38,9 +38,9 @@
         </div>
         <div class="project_information_right">
           <div class="technologies">
-            <p>Technologies</p>
+            <p>{{"projects.technologiesTitle" | translate}}</p>
             <div class="technology_icons">
-              @for (technology of projects[selectedProject].technologies; track
+              @for (technology of projects[selectedProject].technologiesImages; track
               $index) {
               <img src="{{ technology }}" alt="" />
               }
@@ -81,7 +81,7 @@
           [class.active]="selectedProject === $index"
           (click)="selectedProject = $index"
         >
-          {{ $index + 1 }}. Projekt
+          {{ $index + 1 }}{{"projects.project" | translate}}
         </h3>
         }
       </div>
@@ -100,7 +100,7 @@
         <div class="project_information_head">
           <h2>{{ projects[selectedProject].name }}</h2>
           <div class="technologies_mobile">
-            <p>Technologies:&nbsp;</p>
+            <p>{{"projects.technologiesTitle" | translate}}:&nbsp;</p>
             @for (technology of projects[selectedProject].technologiesNames;
             track $index) {
             <p>
@@ -110,7 +110,7 @@
             }
           </div>
           <p class="duration">
-            Duration: <span>{{ projects[selectedProject].duration }}</span>
+            {{"projects.durationName" | translate}} <span>{{ projects[selectedProject].duration }}</span>
           </p>
           <div class="screenshot_container">
             <img
@@ -127,7 +127,7 @@
               <img src="../../assets/img/ellipse_project_details.png" alt="" />
               <h3>
                 @if ($index === 2 && projects[selectedProject].experience) {
-                What I have learned } @else {
+                  {{"projects.learned" | translate}} } @else {
                 {{ label }}
                 }
               </h3>
