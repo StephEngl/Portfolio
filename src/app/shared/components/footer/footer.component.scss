@@ -59,6 +59,9 @@ footer {
   }
 
   @media (max-width: 400px) {
+    gap: 18px;
+    padding: 20px 0;
+
     .footer_info {
       flex-direction: column;
       gap: 8px;

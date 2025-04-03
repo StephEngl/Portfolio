@@ -14,10 +14,28 @@
 
 h1 {
   padding-bottom: 32px;
+
+  @media (max-width: 900px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 450px) {
+    padding-bottom: 16px;
+    font-size: 30px;
+  }
 }
 
 h2 {
   padding-top: 40px;
+  font-size: 40px;
+
+  @media (max-width: 900px) {
+    padding: 20px 0 20px 0;
+  }
+  @media (max-width: 450px) {
+    padding-bottom: 16px;
+    font-size: 24px;
+  }
 }
 
 p {
@@ -26,9 +44,9 @@ p {
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 
-    &:hover {
-        color: $mint;
-    }
+  &:hover {
+    color: $mint;
+  }
 }
