@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Project } from '../../app/interfaces/project';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -13,7 +13,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 export class ProjectsComponent {
   projectsInfoLabels: string[] = [];
   projects: Project[] = [];
-
+  isSmartphoneScreen: boolean = window.innerWidth < 420;
   selectedProject: number = 0;
 
   constructor(private translate: TranslateService) {}
@@ -51,5 +51,10 @@ export class ProjectsComponent {
       default:
         return '';
     }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.isSmartphoneScreen = window.innerWidth < 420;
   }
 }

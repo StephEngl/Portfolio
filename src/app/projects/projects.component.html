@@ -77,7 +77,8 @@
           [class.active]="selectedProject === $index"
           (click)="selectedProject = $index"
         >
-          {{ $index + 1 }}{{ "projects.project" | translate }}
+          {{ $index + 1 }}. @if (!isSmartphoneScreen){
+          {{ "projects.project" | translate }} }
         </h3>
         }
       </div>
