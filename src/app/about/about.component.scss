@@ -26,6 +26,7 @@ section {
 
 .typing_effect {
   @include dFlex($g: 8px);
+  width: 50%;
 
   .typing_img {
     width: 74px;
@@ -45,8 +46,13 @@ section {
     }
   }
 
-  p, span {
-    font-size: 26px;
+  .typing_text {
+    width: 100%;
+  }
+
+  p,
+  span {
+    font-size: 24px;
     font-family: "Josefin Sans";
   }
 
@@ -55,24 +61,31 @@ section {
     font-weight: 700;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     .typing_img {
       width: 42px;
       height: 50px;
     }
 
-    p, span {
-      font-size: 24px;
+    p,
+    span {
+      font-size: 20px;
     }
   }
 
+  @media (max-width: 900px) {
+  width: 70%;
+  }
+  
   @media (max-width: 650px) {
+    width: 300px;
     .typing_img {
       width: 32px;
       height: 40px;
     }
 
-    p, span {
+    p,
+    span {
       font-size: 18px;
     }
   }
