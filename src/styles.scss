@@ -15,10 +15,10 @@ $color_alert: #e44c36;
 
 body {
   background-color: $bg_dark;
+}
 
-  & + .menu_open {
-    overflow: hidden;
-  }
+html body.menu_open {
+  overflow: hidden !important;
 }
 
 h1 {

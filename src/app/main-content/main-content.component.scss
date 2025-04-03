@@ -2,10 +2,10 @@
 
 .main-wrapper {
   @include dFlex();
-  padding-top: 90px;
+  padding-top: 110px;
 
-  @media (max-width: 800px) {
-    padding-top: 80px;
+  @media (max-width: 650px) {
+    padding-top: 110px;
   }
 }
 
@@ -32,7 +32,7 @@ app-hero {
   flex: 1;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .app-container {
     /* change order of appearance */
     margin-top: 120px; 

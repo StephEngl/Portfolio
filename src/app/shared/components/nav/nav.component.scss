@@ -84,12 +84,9 @@ nav {
     @media (max-width: 800px) {
       @include marginMobile();
     }
-
-    @media (max-width: 600px) {
-    }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     height: 100px;
     background-color: $bg_dark;
 
@@ -127,7 +124,7 @@ nav.menu_open {
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); // Dunkler Hintergrund für das Overlay
+  // background-color: rgba(0, 0, 0, 0.7); // Dunkler Hintergrund für das Overlay
   z-index: 1000;
 
   .nav_container {
