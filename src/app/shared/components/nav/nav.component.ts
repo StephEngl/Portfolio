@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { AppComponent } from '../../../app.component';
+import { MenuStateService } from '../../services/menu-state.service';
 
 @Component({
   selector: 'app-nav',
@@ -13,10 +14,13 @@ export class NavComponent {
   isMenuOpen = false;
   currentLang: string = this.translate.currentLang;
 
-  constructor(private translate: TranslateService) {}
+  constructor(
+    private translate: TranslateService,
+    public menuStateService: MenuStateService
+  ) {}
 
   toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
+    this.menuStateService.toggleMenu(); // Zustand über den Service ändern
   }
 
   changeLanguage(lang: string) {

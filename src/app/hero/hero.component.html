@@ -1,11 +1,16 @@
 <div class="atf">
   <div class="hero">
     <div class="hero_img_container">
+      @if (!menuStateService.isMenuOpen()) {
       <div class="hero_img_bg"></div>
       <div class="hero_img">
-        <img src="../assets/img/profile_placeholder.png" alt="" />
+        <img src="../assets/img/profile_placeholder.png"/>
       </div>
+      } @else {
+      <div class="nav_container"></div>
+      }
     </div>
+
     <div class="infos">
       <div class="hero_logo"></div>
       <h1>Stephanie Englberger</h1>
@@ -30,12 +35,17 @@
             height="88"
             rx="18.5"
             stroke="#6DBFB8"
-          /></svg>
-        </a>
+          />
+        </svg>
+      </a>
       <div class="social_media_buttons">
         <a href="https://github.com/StephEngl" target="_blank"> </a>
         <a href="mailto:stephanie.englberger@icloud.com" target="_blank"> </a>
-        <a href="https://www.linkedin.com/in/stephanie-englberger" target="_blank"> </a>
+        <a
+          href="https://www.linkedin.com/in/stephanie-englberger"
+          target="_blank"
+        >
+        </a>
       </div>
     </div>
   </div>

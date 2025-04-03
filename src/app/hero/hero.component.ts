@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuStateService } from '../shared/services/menu-state.service';
 
 @Component({
   selector: 'app-hero',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
-
+  constructor(public menuStateService: MenuStateService) {}
 }
