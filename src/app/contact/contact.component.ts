@@ -17,7 +17,6 @@ export class ContactComponent {
   http = inject(HttpClient);
   isPrivacyAccepted = false;
   formSubmitted = false;
-  mailTest = false;
 
   contactData: ContactData= {
     name: '',
@@ -38,11 +37,11 @@ export class ContactComponent {
 
   onSubmit(ngForm: NgForm) {
     this.formSubmitted = true;
-    if (ngForm.submitted && ngForm.form.valid && this.isPrivacyAccepted && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid && this.isPrivacyAccepted) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            console.log(this.post, this.contactData)
+            this.formSubmitted = false;
             ngForm.resetForm();
           },
           error: (error) => {
@@ -50,12 +49,6 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } 
-  //   else if (ngForm.submitted && ngForm.form.valid && this.isPrivacyAccepted && this.mailTest) {
-  // console.log("Mail versendet");
-
-  //     ngForm.resetForm();
-  //   }
+    }
   }
-
 }
