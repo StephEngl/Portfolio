@@ -98,6 +98,7 @@ section {
         @include dFlex($g: 16px);
         font-family: "Josefin Sans", sans-serif;
         font-size: 20px;
+        cursor: pointer;
       }
 
       @media (max-width: 1150px) {

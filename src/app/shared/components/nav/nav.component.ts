@@ -12,6 +12,7 @@ import { MenuStateService } from '../../services/menu-state.service';
 })
 export class NavComponent {
   currentLang: string = this.translate.currentLang;
+  activeLink: string = '';
 
   constructor(
     private translate: TranslateService,
@@ -28,13 +29,15 @@ export class NavComponent {
     }
   }
 
+  setActiveLink(link: string): void {
+    this.activeLink = link;
+  }
+
   changeLanguage(lang: string) {
     this.translate.use(lang);
     this.currentLang = lang;
     this.saveToLocalStorage();
-    if (this.menuStateService.isMenuOpen()) {
-      this.toggleMenu();
-    }
+    this.closeMenu();
   }
 
   saveToLocalStorage() {

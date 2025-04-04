@@ -1,11 +1,37 @@
 <nav [class.menu_open]="menuStateService.isMenuOpen()">
   <div class="nav_container">
-    <img class="logo" src="../../assets/img/logo_mobile_dark.png" alt="Logo" />
+    <a href="/">
+      <img
+        class="logo"
+        src="../../assets/img/logo_mobile_dark.png"
+        alt="Logo"
+      />
+    </a>
     <div class="nav_links">
-      <a href="#about" (click)="closeMenu()">{{ "nav.link1" | translate }}</a>
-      <a href="#skills" (click)="closeMenu()">{{ "nav.link2" | translate }}</a>
-      <a href="#projects" (click)="closeMenu()">{{ "nav.link3" | translate }}</a>
-      <a href="#contact" (click)="closeMenu()">{{ "nav.link4" | translate }}</a>
+      <a
+        href="#about"
+        (click)="setActiveLink('about'); closeMenu()"
+        [class.active]="activeLink === 'about'"
+        >{{ "nav.link1" | translate }}</a
+      >
+      <a
+        href="#skills"
+        (click)="setActiveLink('skills'); closeMenu()"
+        [class.active]="activeLink === 'skills'"
+        >{{ "nav.link2" | translate }}</a
+      >
+      <a
+        href="#projects"
+        (click)="setActiveLink('projects'); closeMenu()"
+        [class.active]="activeLink === 'projects'"
+        >{{ "nav.link3" | translate }}</a
+      >
+      <a
+        href="#contact"
+        (click)="setActiveLink('contact'); closeMenu()"
+        [class.active]="activeLink === 'contact'"
+        >{{ "nav.link4" | translate }}</a
+      >
     </div>
     <div class="change_language_btns">
       <p [class.active]="currentLang === 'de'" (click)="changeLanguage('de')">
@@ -19,7 +45,7 @@
     <button class="burger_menu" (click)="toggleMenu()">
       @if (!menuStateService.isMenuOpen()) {
       <span class="burger_icon">☰</span>
-    } @else { 
+      } @else {
       <span class="menu_icon">✖</span>
       }
     </button>

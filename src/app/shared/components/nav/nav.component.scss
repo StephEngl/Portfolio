@@ -17,19 +17,31 @@ nav {
     @include dFlex($jc: space-between);
 
     .nav_links {
-      @include dFlex($g: 80px);
+      @include dFlex($g: 60px);
 
       @media (max-width: 1050px) {
-        gap: 40px;
+        gap: 30px;
       }
-      @media (max-width: 860px) {
-        gap: 20px;
+      @media (max-width: 920px) {
+        gap: 4px;
       }
 
       a {
-        transition: all 0.3s;
+        transition: all 125ms;
+        padding: 12px 8px;
+        cursor: pointer;
+        text-align: center;
+
         &:hover {
           color: $white;
+        }
+
+        &.active {
+          color: $white;
+          background-image: url(../../../../assets/img/ellipse_menu_button.png);
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
         }
       }
     }
@@ -54,7 +66,8 @@ nav {
         &:not(.active):hover {
           color: $white;
 
-          & + .active {
+          & + .active,
+          & ~ .active {
             color: $bg_dark;
             background-image: none;
           }
@@ -81,7 +94,7 @@ nav {
       }
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
       @include marginMobile();
     }
   }
@@ -124,7 +137,6 @@ nav.menu_open {
   right: 0;
   width: 100%;
   height: 100%;
-  // background-color: rgba(0, 0, 0, 0.7); // Dunkler Hintergrund für das Overlay
   z-index: 1000;
 
   .nav_container {
@@ -141,13 +153,14 @@ nav.menu_open {
     .nav_links {
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 15px;
 
       a {
         font-size: 24px;
+        font-weight: 600;
         color: $bg_dark;
         text-decoration: none;
-        transition: color 0.3s;
+        transition: color 125ms;
 
         &:hover {
           color: $white;
@@ -166,7 +179,7 @@ nav.menu_open {
 
     .change_language_btns {
       display: flex;
-      margin-top: 40px;
+      margin-top: 30px;
 
       p {
         font-size: 18px;
@@ -191,11 +204,15 @@ nav.menu_open {
 
     @media (max-width: 400px) {
       .nav_links {
-        gap: 20px;
+        gap: 10px;
+
+        a {
+          font-size: 18px;
+        }
       }
 
       .change_language_btns {
-        margin-top: 24px;
+        margin-top: 12px;
       }
     }
   }
