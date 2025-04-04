@@ -183,7 +183,7 @@
             {{ "contact.privacyNotAccepted" | translate }}
           </p>
         </label>
-        <button type="submit">Send</button>
+        <button type="submit" [disabled]="!isPrivacyAccepted || !fname.valid || !email.valid || !message.valid">Send</button>
       </div>
     </form>
   </div>

@@ -42,7 +42,7 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            console.log(this.post)
+            console.log(this.post, this.contactData)
             ngForm.resetForm();
           },
           error: (error) => {

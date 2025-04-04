@@ -93,10 +93,18 @@ section {
       flex-direction: column;
       width: 50%;
 
-      p {
-        @include dFlex($g: 20px);
+      p,
+      a {
+        @include dFlex($g: 16px);
         font-family: "Josefin Sans", sans-serif;
         font-size: 20px;
+      }
+
+      @media (max-width: 1150px) {
+        p,
+        a {
+          font-size: 18px;
+        }
       }
 
       @media (max-width: 500px) {
@@ -108,7 +116,7 @@ section {
         }
 
         // Text "E-Mail:" and "Tel:" fade out
-        // SVG and links show
+        // SVG and links shown
         .email_container p,
         .phone_container p {
           font-size: 0;
@@ -117,10 +125,10 @@ section {
           a {
             font-size: 18px;
             opacity: 1;
-          
-          @media (max-width: 400px) {
-            font-size: 16px;
-          }
+
+            @media (max-width: 400px) {
+              font-size: 16px;
+            }
           }
         }
       }
@@ -153,7 +161,7 @@ a {
 @media (max-width: 1050px) {
   .contact_information_wrapper,
   .contact_wrapper {
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 100%;
   }
 
