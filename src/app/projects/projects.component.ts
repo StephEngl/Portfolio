@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Project } from '../../app/interfaces/project';
 import { CommonModule } from '@angular/common';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 interface ProjectTech {
   name: string,
@@ -48,7 +48,7 @@ export class ProjectsComponent {
       technologiesNames: ['JavaScript', 'HTML', 'CSS'],
       screenshot: '../../assets/img/screenshot_elara.png',
       linkLiveTest:
-        'https://stephanie-englberger.developerakademie.net/M12_Jump_n_Run/index.html',
+        'https://elara.stephanie-englberger.de/',
       linkGitHub: 'https://github.com/StephEngl/Elara',
     },
     {
@@ -80,12 +80,22 @@ export class ProjectsComponent {
   constructor(private translate: TranslateService) {}
 
   ngOnInit() {
+    this.loadTranslations();
+
+    // listen to language changes
+    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.loadTranslations();
+    });
+  }
+
+  loadTranslations() {
     // get and translate labels
     this.translate.get('projects.labels').subscribe((labels: string[]) => {
       this.projectsInfoLabels = labels;
     });
 
     // get and translate projects information
+    this.projects = []; 
     this.translate.get('projects.project1').subscribe((project1) => {
       this.projects.push(project1);
     });
@@ -98,8 +108,6 @@ export class ProjectsComponent {
     this.translate.get('projects.project4').subscribe((project4) => {
       this.projects.push(project4);
     });
-    console.log(this.projects);
-
   }
 
   getProjectInfo(projectIndex: number, labelIndex: number): string {

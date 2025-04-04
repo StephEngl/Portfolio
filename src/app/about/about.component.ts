@@ -24,7 +24,6 @@ export class AboutComponent {
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.loadTranslations();
     });
-
   }
   
   loadTranslations() {
