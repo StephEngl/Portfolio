@@ -17,6 +17,8 @@ export class ContactComponent {
   http = inject(HttpClient);
   isPrivacyAccepted = false;
   formSubmitted = false;
+  showToast = false;
+  toastMessage = '';
 
   contactData: ContactData= {
     name: '',
@@ -43,12 +45,23 @@ export class ContactComponent {
           next: (response) => {
             this.formSubmitted = false;
             ngForm.resetForm();
+            this.showFeedback('contact.successMessage');
           },
           error: (error) => {
             console.error(error);
+            this.showFeedback('contact.errorMessage');
           },
           complete: () => console.info('send post complete'),
         });
     }
+  }
+
+  showFeedback(translationKey: string) {
+    this.toastMessage = translationKey; 
+    this.showToast = true;
+    setTimeout(() => {
+      this.showToast = false;
+      this.toastMessage = '';
+    }, 5000);
   }
 }
