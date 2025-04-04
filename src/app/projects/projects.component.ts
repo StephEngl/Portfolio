@@ -3,6 +3,15 @@ import { Project } from '../../app/interfaces/project';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
+interface ProjectTech {
+  name: string,
+  technologiesImages: string[];
+  technologiesNames: string[];
+  screenshot: string;
+  linkLiveTest: string;
+  linkGitHub: string;
+}
+
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -15,6 +24,58 @@ export class ProjectsComponent {
   projects: Project[] = [];
   isSmartphoneScreen: boolean = window.innerWidth < 420;
   selectedProject: number = 0;
+
+  projectsTech: ProjectTech[] = [
+    {
+      name: "DA Bubble",
+      technologiesImages: [
+        '../../assets/icons/icon_project_angular.svg',
+        '../../assets/icons/icon_project_typescript.svg',
+        '../../assets/icons/icon_project_firebase.svg',
+      ],
+      technologiesNames: ['Angular', 'TypeScript', 'Firebase'],
+      screenshot: '../../assets/img/screenshot_dABubble.png',
+      linkLiveTest: '',
+      linkGitHub: '',
+    },
+    {
+      name: "Elara",
+      technologiesImages: [
+        '../../assets/icons/icon_project_html.svg',
+        '../../assets/icons/icon_project_javascript.svg',
+        '../../assets/icons/icon_project_css.svg',
+      ],
+      technologiesNames: ['JavaScript', 'HTML', 'CSS'],
+      screenshot: '../../assets/img/screenshot_elara.png',
+      linkLiveTest:
+        'https://stephanie-englberger.developerakademie.net/M12_Jump_n_Run/index.html',
+      linkGitHub: 'https://github.com/StephEngl/Elara',
+    },
+    {
+      name: "Join",
+      technologiesImages: [
+        '../../assets/icons/icon_project_angular.svg',
+        '../../assets/icons/icon_project_typescript.svg',
+        '../../assets/icons/icon_project_css.svg',
+      ],
+      technologiesNames: ['Angular', 'TypeScript', 'CSS'],
+      screenshot: '../../assets/img/screenshot_join.png',
+      linkLiveTest: '',
+      linkGitHub: '',
+    },
+    {
+      name: "Pokédex",
+      technologiesImages: [
+        '../../assets/icons/icon_project_html.svg',
+        '../../assets/icons/icon_project_javascript.svg',
+        '../../assets/icons/icon_project_css.svg',
+      ],
+      technologiesNames: ['JavaScript', 'HTML', 'CSS'],
+      screenshot: '../../assets/img/screenshot_pokedex.png',
+      linkLiveTest: 'https://pokedex.stephanie-englberger.de/',
+      linkGitHub: 'https://github.com/StephEngl/Pokedex',
+    },
+  ];
 
   constructor(private translate: TranslateService) {}
 
@@ -37,6 +98,8 @@ export class ProjectsComponent {
     this.translate.get('projects.project4').subscribe((project4) => {
       this.projects.push(project4);
     });
+    console.log(this.projects);
+
   }
 
   getProjectInfo(projectIndex: number, labelIndex: number): string {

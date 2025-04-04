@@ -17,7 +17,7 @@ export class ContactComponent {
   http = inject(HttpClient);
   isPrivacyAccepted = false;
   formSubmitted = false;
-  mailTest = true;
+  mailTest = false;
 
   contactData: ContactData= {
     name: '',
@@ -26,7 +26,7 @@ export class ContactComponent {
   };
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://stephanie-englberger.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -42,7 +42,7 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
+            console.log(this.post)
             ngForm.resetForm();
           },
           error: (error) => {
@@ -50,10 +50,12 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.isPrivacyAccepted && this.mailTest) {
+    } 
+  //   else if (ngForm.submitted && ngForm.form.valid && this.isPrivacyAccepted && this.mailTest) {
+  // console.log("Mail versendet");
 
-      ngForm.resetForm();
-    }
+  //     ngForm.resetForm();
+  //   }
   }
 
 }
