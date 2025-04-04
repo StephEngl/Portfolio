@@ -40,11 +40,4 @@ export class ReferencesComponent implements OnInit {
       },
     ];
   }
-
-  onPointerMove(event: PointerEvent): void {
-    const container = event.currentTarget as HTMLElement;
-    if (event.pressure > 0) {
-      container.scrollLeft -= event.movementX * 40;
-    }
-  }
 }

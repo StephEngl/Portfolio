@@ -20,9 +20,11 @@ section {
   @include dFlex($jc: space-between, $g: 16px);
   width: 100%;
   max-width: 1440px;
-  overflow-x: hidden;
-  touch-action: none;
-  user-select: none;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .reference {
     min-width: 290px;

@@ -3,18 +3,18 @@
     <span class="title_part1">{{ "references.title1" | translate }}</span>
     <span class="title_part2">{{ "references.title2" | translate }}</span>
   </h3>
-  <div class="references"
-  (pointermove)="onPointerMove($event)">
+  <div class="references">
     @for (reference of references; track $index) {
     <div class="reference">
       <div class="reference_text">
         <h3>{{ reference.name }}</h3>
         <p class="reference_project">
-          {{
-            "references.project" | translate
-          }}: <a href="">{{ reference.project }}</a>
+          {{ "references.project" | translate }}:
+          <a href="">{{ reference.project }}</a>
         </p>
-        <p class="text">"{{ "references." + reference.translationKey | translate}}"</p>
+        <p class="text">
+          "{{ "references." + reference.translationKey | translate }}"
+        </p>
         <a href="{{ reference.linkedInPath }}">{{
           "references.profileLink" | translate
         }}</a>
