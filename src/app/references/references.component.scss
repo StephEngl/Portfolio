@@ -125,19 +125,19 @@ section {
 
 .arrow {
   position: absolute;
-  top: 50%; /* Zentriert den Pfeil vertikal */
-  transform: translateY(-50%); /* Korrigiert die vertikale Zentrierung */
-  width: 24px; /* Breite des Pfeils */
-  height: 24px; /* Höhe des Pfeils */
-  background-color: $mint; /* Farbe des Pfeils */
-  clip-path: polygon(100% 50%, 0% 0%, 0% 100%); /* Erstellt einen dreieckigen Pfeil */
-  cursor: pointer; /* Zeigt an, dass der Pfeil interaktiv ist */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px; 
+  background-color: $mint;
+  clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
+  cursor: pointer;
 }
 
 .arrow-left {
-  left: -12px; /* Positioniert den linken Pfeil leicht außerhalb des Containers */
+  left: -12px;
 }
 
 .arrow-right {
-  right: -12px; /* Positioniert den rechten Pfeil leicht außerhalb des Containers */
+  right: -12px;
 }
