@@ -3,7 +3,6 @@ import { TranslateService } from '@ngx-translate/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { NgxTypedJsModule } from 'ngx-typed-js';
-import { NavComponent } from './shared/components/nav/nav.component';
 
 /**
  * AppComponent serves as the root component of the Angular application.
@@ -12,7 +11,7 @@ import { NavComponent } from './shared/components/nav/nav.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FooterComponent, NgxTypedJsModule, NavComponent],
+  imports: [RouterOutlet, FooterComponent, NgxTypedJsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

@@ -72,7 +72,12 @@ button {
 app-imprint {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   height: calc(100vh - 214px);
+
+  @media (max-width: 600px) {
+    height: calc(100vh - 225px);
+  }
 }
 
 app-privacy-policy {

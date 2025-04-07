@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
+import { HeaderComponent } from '../shared/components/header/header.component';
 
 /**
  * ImprintComponent is a standalone Angular component that displays legal imprint information.
@@ -8,7 +9,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 @Component({
   selector: 'app-imprint',
   standalone: true,
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, HeaderComponent],
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss',
 })
