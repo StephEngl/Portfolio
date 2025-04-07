@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 
 /**
@@ -9,7 +8,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 @Component({
   selector: 'app-imprint',
   standalone: true,
-  imports: [RouterOutlet, TranslatePipe],
+  imports: [TranslatePipe],
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss',
 })

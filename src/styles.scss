@@ -11,6 +11,7 @@ $color_alert: #e44c36;
   color: $white;
   font-family: "Anta";
   box-sizing: border-box;
+  overscroll-behavior: contain;
 }
 
 body {
