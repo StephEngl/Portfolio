@@ -105,7 +105,8 @@
               id="fname"
               name="fullname"
               required
-              pattern="\b\w{2,}\b\s+\b\w{2,}\b"
+              pattern="^[a-zA-ZäöüßÄÖÜáéíóúýÁÉÍÓÚÝàèìòùÀÈÌÒÙâêîôûÂÊÎÔÛãñõÃÑÕ\s-]+$"
+              (input)="contactData.name = contactData.name.trim()"
             />
             <span class="valid-icon"></span>
           </div>
@@ -173,7 +174,9 @@
           ></span>
           <p>
             {{ "contact.privacy1" | translate
-            }}<a routerLink="/privacy-policy">{{ "contact.privacy2" | translate }}</a
+            }}<a routerLink="/privacy-policy">{{
+              "contact.privacy2" | translate
+            }}</a
             >{{ "contact.privacy3" | translate }}
           </p>
           <p
@@ -183,13 +186,20 @@
             {{ "contact.privacyNotAccepted" | translate }}
           </p>
         </label>
-        <button type="submit" [disabled]="!isPrivacyAccepted || !fname.valid || !email.valid || !message.valid">Send</button>
+        <button
+          type="submit"
+          [disabled]="
+            !isPrivacyAccepted || !fname.valid || !email.valid || !message.valid
+          "
+        >
+          Send
+        </button>
       </div>
     </form>
   </div>
   @if (showToast) {
-    <div class="toast">
-      {{ toastMessage | translate }}
-    </div>
+  <div class="toast">
+    {{ toastMessage | translate }}
+  </div>
   }
 </section>

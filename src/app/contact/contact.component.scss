@@ -257,6 +257,7 @@ form {
     textarea {
       padding: 25px 55px 0 25px !important;
       word-break: break-word;
+      resize: none;
     }
 
     textarea + .valid-icon {
