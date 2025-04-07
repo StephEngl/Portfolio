@@ -71,7 +71,6 @@ button {
 
 app-imprint {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   height: calc(100vh - 214px);
 
@@ -83,5 +82,4 @@ app-imprint {
 app-privacy-policy {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
