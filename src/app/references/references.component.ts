@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Reference } from '../interfaces/reference';
 
