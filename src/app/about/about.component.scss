@@ -10,7 +10,6 @@ section {
 
   > .content {
     @include dFlex($jc: space-between, $ai: flex-start, $g: 50px);
-    width: 860px;
 
     @media (max-width: 900px) {
       flex-direction: column;
@@ -25,8 +24,8 @@ section {
 }
 
 .typing_effect {
-  @include dFlex($g: 8px);
-  width: 50%;
+  @include dFlex($jc: flex-start, $g: 8px);
+  width: 450px;
 
   .typing_img {
     width: 74px;
@@ -47,7 +46,10 @@ section {
   }
 
   .typing_text {
-    width: 100%;
+    width: 400px;
+    display: inline-block;  /* Verhindert Layout-Shifts */
+    white-space: nowrap;    /* Zeilenumbrüche vermeiden */
+    overflow: hidden; 
   }
 
   p,

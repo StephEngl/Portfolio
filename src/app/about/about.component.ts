@@ -19,6 +19,7 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
   styleUrl: './about.component.scss',
 })
 export class AboutComponent {
+
   currentImage: string = 'url("../../assets/icons/icon_location.svg")';
   fadeClass: string = 'fade-in';
   typedStrings: string[] = [];
