@@ -8,7 +8,7 @@
 
   .hero {
     position: relative;
-    @include dFlex($jc: space-between);
+    @include dFlex($jc: space-between, $ai: flex-end);
     @include marginMaxWidth();
     max-width: 1440px;
     width: 100%;
@@ -196,7 +196,6 @@ h2 {
   }
 
   .hero_img_container {
-    margin-bottom: 36px;
     min-height: 370px;
   }
 }

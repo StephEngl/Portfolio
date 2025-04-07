@@ -40,4 +40,11 @@ export class ReferencesComponent implements OnInit {
       },
     ];
   }
+
+  onWheel(event: WheelEvent): void {
+    const container = event.currentTarget as HTMLElement;
+    event.preventDefault(); // Verhindert das vertikale Scrollen der Seite
+    const scrollSpeed = 1.5; // Multiplikator für sanfteres Scrollen
+    container.scrollLeft += event.deltaY * scrollSpeed; // Wandelt vertikale Bewegung in horizontales Scrollen um
+  }
 }
