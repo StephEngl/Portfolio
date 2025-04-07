@@ -12,10 +12,14 @@ app-header {
 }
 
 section {
-//   width: 100%;
   max-width: 1440px;
   padding: 76px 0;
-  @include marginMaxWidth();
+  margin: 0 auto;
+  flex-grow: 1;
+
+  @media (max-width: 1664px) {
+    @include marginMaxWidth();
+  }
 
   @media (max-width: 850px) {
     padding: 45px 0;
@@ -80,12 +84,12 @@ h4 {
 
 @media (max-width: 400px) {
   h1 {
-    font-size: 32px;
+    font-size: 26px;
     text-align: start;
   }
 
   h2 {
-    font-size: 26px;
+    font-size: 24px;
     padding: 18px 0 18px 0;
     text-align: start;
   }
