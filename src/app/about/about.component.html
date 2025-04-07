@@ -6,7 +6,7 @@
         class="typing_img" [ngClass]="fadeClass"
         [ngStyle]="{ 'background-image': currentImage }"
       ></div>
-      <ngx-typed-js class="typing_text"
+      <ngx-typed-js #typedJs class="typing_text"
         [strings]="typedStrings"
         [typeSpeed]="100"
         [backSpeed]="50"
