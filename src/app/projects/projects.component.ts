@@ -1,17 +1,17 @@
 import { Component, HostListener } from '@angular/core';
 import { Project } from '../../app/interfaces/project';
+import { ProjectTech } from '../../app/interfaces/project-tech';
 import { CommonModule } from '@angular/common';
-import { TranslatePipe, TranslateService, LangChangeEvent } from '@ngx-translate/core';
+import {
+  TranslatePipe,
+  TranslateService,
+  LangChangeEvent,
+} from '@ngx-translate/core';
 
-interface ProjectTech {
-  name: string,
-  technologiesImages: string[];
-  technologiesNames: string[];
-  screenshot: string;
-  linkLiveTest: string;
-  linkGitHub: string;
-}
-
+/**
+ * ProjectsComponent displays a portfolio of technical projects with dynamic translations.
+ * Handles responsive layout adjustments and provides detailed project information.
+ */
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -27,7 +27,7 @@ export class ProjectsComponent {
 
   projectsTech: ProjectTech[] = [
     {
-      name: "DA Bubble",
+      name: 'DA Bubble',
       technologiesImages: [
         '../../assets/icons/icon_project_angular.svg',
         '../../assets/icons/icon_project_typescript.svg',
@@ -39,7 +39,7 @@ export class ProjectsComponent {
       linkGitHub: '',
     },
     {
-      name: "Elara",
+      name: 'Elara',
       technologiesImages: [
         '../../assets/icons/icon_project_html.svg',
         '../../assets/icons/icon_project_javascript.svg',
@@ -47,12 +47,11 @@ export class ProjectsComponent {
       ],
       technologiesNames: ['JavaScript', 'HTML', 'CSS'],
       screenshot: '../../assets/img/screenshot_elara.png',
-      linkLiveTest:
-        'https://elara.stephanie-englberger.de/',
+      linkLiveTest: 'https://elara.stephanie-englberger.de/',
       linkGitHub: 'https://github.com/StephEngl/Elara',
     },
     {
-      name: "Join",
+      name: 'Join',
       technologiesImages: [
         '../../assets/icons/icon_project_angular.svg',
         '../../assets/icons/icon_project_typescript.svg',
@@ -64,7 +63,7 @@ export class ProjectsComponent {
       linkGitHub: '',
     },
     {
-      name: "Pokédex",
+      name: 'Pokédex',
       technologiesImages: [
         '../../assets/icons/icon_project_html.svg',
         '../../assets/icons/icon_project_javascript.svg',
@@ -79,37 +78,40 @@ export class ProjectsComponent {
 
   constructor(private translate: TranslateService) {}
 
+  /**
+   * Initializes component, loads translations, and sets up language change listener.
+   */
   ngOnInit() {
     this.loadTranslations();
 
-    // listen to language changes
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.loadTranslations();
     });
   }
 
+  /**
+   * Loads translated content for project labels and descriptions.
+   * Maintains synchronization between technical data and translated content.
+   */
   loadTranslations() {
-    // get and translate labels
     this.translate.get('projects.labels').subscribe((labels: string[]) => {
       this.projectsInfoLabels = labels;
     });
 
-    // get and translate projects information
-    this.projects = []; 
-    this.translate.get('projects.project1').subscribe((project1) => {
-      this.projects.push(project1);
-    });
-    this.translate.get('projects.project2').subscribe((project2) => {
-      this.projects.push(project2);
-    });
-    this.translate.get('projects.project3').subscribe((project3) => {
-      this.projects.push(project3);
-    });
-    this.translate.get('projects.project4').subscribe((project4) => {
-      this.projects.push(project4);
-    });
+    this.projects = [];
+    for (let i = 1; i <= 4; i++) {
+      this.translate.get(`projects.project${i}`).subscribe((project) => {
+        this.projects.push(project);
+      });
+    }
   }
 
+  /**
+   * Retrieves specific information for a project based on label index.
+   * @param projectIndex Index of the project in projects array
+   * @param labelIndex Type of information requested (0=about, 1=organization, 2=experience)
+   * @returns Requested information string or empty string for invalid indices
+   */
   getProjectInfo(projectIndex: number, labelIndex: number): string {
     const project = this.projects[projectIndex];
     switch (labelIndex) {
@@ -124,6 +126,10 @@ export class ProjectsComponent {
     }
   }
 
+  /**
+   * Handles window resize events to update mobile layout detection.
+   * @param event Browser resize event
+   */
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.isSmartphoneScreen = window.innerWidth < 420;

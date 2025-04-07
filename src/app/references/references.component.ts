@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Reference } from '../interfaces/reference';
 
+/**
+ * ReferencesComponent displays a collection of professional references with horizontal scrolling capability.
+ * Integrates translation support for multilingual content display.
+ */
 @Component({
   selector: 'app-references',
   standalone: true,
@@ -9,42 +13,39 @@ import { Reference } from '../interfaces/reference';
   templateUrl: './references.component.html',
   styleUrl: './references.component.scss',
 })
-export class ReferencesComponent implements OnInit {
-  references: Reference[] = [];
+export class ReferencesComponent {
+  references: Reference[] = [
+    {
+      name: 'Mia Mausezahn',
+      project: 'Join',
+      translationKey: 'text1',
+      linkedInPath: '',
+    },
+    {
+      name: 'Leo Löwenherz',
+      project: 'Kochwelt',
+      translationKey: 'text2',
+      linkedInPath: '',
+    },
+    {
+      name: 'Lara Lockenhaupt',
+      project: 'DA Bubble',
+      translationKey: 'text3',
+      linkedInPath: '',
+    },
+  ];
 
   constructor(private translate: TranslateService) {}
 
-  ngOnInit() {
-    this.initializeReferences();
-  }
-
-  initializeReferences() {
-    this.references = [
-      {
-        name: 'Mia Mausezahn',
-        project: 'Join',
-        translationKey: 'text1',
-        linkedInPath: '',
-      },
-      {
-        name: 'Leo Löwenherz',
-        project: 'Kochwelt',
-        translationKey: 'text2',
-        linkedInPath: '',
-      },
-      {
-        name: 'Lara Lockenhaupt',
-        project: 'DA Bubble',
-        translationKey: 'text3',
-        linkedInPath: '',
-      },
-    ];
-  }
-
+  /**
+   * Handles wheel events for horizontal scrolling of the reference container.
+   * Converts vertical wheel movement to horizontal scrolling and prevents page scroll.
+   * @param {WheelEvent} event - The wheel event object containing scroll data
+   */
   onWheel(event: WheelEvent): void {
     const container = event.currentTarget as HTMLElement;
-    event.preventDefault(); // Verhindert das vertikale Scrollen der Seite
-    const scrollSpeed = 1.5; // Multiplikator für sanfteres Scrollen
-    container.scrollLeft += event.deltaY * scrollSpeed; // Wandelt vertikale Bewegung in horizontales Scrollen um
+    event.preventDefault();
+    const scrollSpeed = 1.5;
+    container.scrollLeft += event.deltaY * scrollSpeed;
   }
 }
