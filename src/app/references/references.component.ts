@@ -16,13 +16,13 @@ import { Reference } from '../interfaces/reference';
 export class ReferencesComponent {
   references: Reference[] = [
     {
-      name: 'Mia Mausezahn',
+      name: 'Patrick Frey',
       project: 'Join',
       translationKey: 'text1',
       linkedInPath: '',
     },
     {
-      name: 'Leo Löwenherz',
+      name: 'Jon Michutta',
       project: 'Kochwelt',
       translationKey: 'text2',
       linkedInPath: '',
