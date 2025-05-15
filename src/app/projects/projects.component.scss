@@ -6,16 +6,12 @@ section {
   @include dFlex();
   flex-direction: column;
   width: 100%;
-  padding-top: 110px;
+  padding-top: $padding_top_section;
 
   .projects_wrapper {
     @include dFlex();
     flex-direction: column;
     width: 100%;
-
-    @media (max-width: 1200px) {
-      display: none;
-    }
   }
 
   .project_tabs_container {
@@ -102,6 +98,16 @@ section {
       padding-bottom: 28px;
     }
   }
+
+  @media (max-width: 1200px) {
+    .projects_wrapper {
+      display: none;
+    }
+  }
+
+  @media (max-width: 400px) {
+    padding-top: $padding_top_section_mobile;
+  }
 }
 
 .btn_live_test {
@@ -174,7 +180,6 @@ span {
       }
     }
   }
-
 
   @media (max-width: 550px) {
     height: 50px;

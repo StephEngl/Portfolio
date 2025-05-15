@@ -1,11 +1,12 @@
 @import "../styles/mixins.scss";
+@import "../../styles.scss";
 
 .main-wrapper {
   @include dFlex();
-  padding-top: 110px;
+  padding-top: $padding_top_section;
 
   @media (max-width: 650px) {
-    padding-top: 110px;
+    padding-top: $padding_top_section_mobile;
   }
 }
 
