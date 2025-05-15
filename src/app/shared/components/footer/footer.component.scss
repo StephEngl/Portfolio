@@ -12,7 +12,7 @@ footer {
   justify-content: center;
 
   @media (max-width: 600px) {
-  height: auto;
+    height: auto;
   }
 }
 
@@ -30,7 +30,7 @@ footer {
   @media (max-width: 800px) {
     @include marginMobile();
   }
-  
+
   @media (max-width: 600px) {
     height: 225px;
     padding: 30px 0;
@@ -60,8 +60,9 @@ footer {
   }
 
   @media (max-width: 400px) {
-    gap: 18px;
-    padding: 20px 0;
+    gap: 12px;
+    padding: 12px 0;
+    height: auto;
 
     .footer_info {
       flex-direction: column;

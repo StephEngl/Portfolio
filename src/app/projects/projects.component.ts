@@ -35,8 +35,8 @@ export class ProjectsComponent {
       ],
       technologiesNames: ['Angular', 'TypeScript', 'Firebase'],
       screenshot: '../../assets/img/screenshot_dABubble.png',
-      linkLiveTest: '',
-      linkGitHub: '',
+      linkLiveTest: 'https://dabubble.stephanie-englberger.de/',
+      linkGitHub: 'https://github.com/StephEngl/DABubble',
     },
     {
       name: 'Elara',
@@ -59,8 +59,8 @@ export class ProjectsComponent {
       ],
       technologiesNames: ['Angular', 'TypeScript', 'CSS'],
       screenshot: '../../assets/img/screenshot_join.png',
-      linkLiveTest: '',
-      linkGitHub: '',
+      linkLiveTest: 'https://join.stephanie-englberger.de/',
+      linkGitHub: 'https://github.com/StephEngl/Join',
     },
     {
       name: 'Pokédex',
