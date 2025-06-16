@@ -55,7 +55,7 @@ export class ProjectsComponent {
       technologiesImages: [
         '../../assets/icons/icon_project_angular.svg',
         '../../assets/icons/icon_project_typescript.svg',
-        '../../assets/icons/icon_project_css.svg',
+        '../../assets/icons/icon_project_firebase.svg',
       ],
       technologiesNames: ['Angular', 'TypeScript', 'CSS'],
       screenshot: '../../assets/img/screenshot_join.png',
@@ -67,7 +67,7 @@ export class ProjectsComponent {
       technologiesImages: [
         '../../assets/icons/icon_project_html.svg',
         '../../assets/icons/icon_project_javascript.svg',
-        '../../assets/icons/icon_project_css.svg',
+        '../../assets/icons/icon_project_api.svg',
       ],
       technologiesNames: ['JavaScript', 'HTML', 'CSS'],
       screenshot: '../../assets/img/screenshot_pokedex.png',

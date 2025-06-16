@@ -82,6 +82,7 @@ section {
       .technology_icons {
         display: flex;
         gap: 32px;
+        padding-bottom: 24px;
       }
     }
 
@@ -89,13 +90,13 @@ section {
       width: 450px;
       height: 312px;
       object-fit: cover;
+      object-position: top;
       border-radius: 30px;
-      padding: 16px 0;
     }
 
     .button_container {
       @include dFlex($g: 40px);
-      padding-bottom: 28px;
+      padding: 16px 0 28px 0;
     }
   }
 
