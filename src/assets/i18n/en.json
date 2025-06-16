@@ -44,31 +44,30 @@
     "technologiesTitle": "Technologies",
     "project": "Project",
     "project1": {
-      "duration": "4 weeks",
+      "duration": "3.5 weeks",
       "about": "This app is a Slack-inspired communication platform designed to enhance team collaboration in professional settings. It features an intuitive interface, real-time messaging, and robust channel organization, making it easy for teams to stay connected and work efficiently.",
-      "organization": "How do you keep your code clean and maintainable? Have you broken the project down into reusable modules or components? Focus on documentation, naming files, variables, classes and testing.",
-      "experience": "",
-      "groupExperience": "We worked together in a Team of  Describe your tasks in 1-2 sentences, for example: login form, dashboard or chat functionality. What technologies did you use? It is nice to mention good teamwork and cooperation."
+      "organization": "I structured the login area into clearly organized, reusable Angular components and services, paying close attention to consistent naming. Best practices in form validation, error handling, and the integration of Signals and Firebase for secure password management were a central focus. This ensures the code remains clear, maintainable, and easy to understand.",
+      "groupExperience": "I was responsible for developing the entire login area in the team, including registration, login, and password management using Angular and Firebase. Close coordination and mutual support within the team contributed to a smooth and efficient development process."
     },
     "project2": {
       "duration": "3 weeks",
-      "about": "Join Elara in a simple but exciting Jump-and-Run game based on an object-oriented approach. Help her find fire crystals to unlock powerful fireballs and rescue the mystical Enchanted Grove.",
+      "about": "Elara is accompanied in a simple yet exciting jump-and-run game based on an object-oriented approach. The goal is to find fire crystals to unlock powerful fireballs and save the mystical Enchanted Grove.",
       "organization": "I organized my work by outlining a rough structure...",
-      "experience": "This project deepened my understanding of Object-Oriented Programming...",
+      "experience": "In this project, I learned a lot about object-oriented programming and working with multiple parallel intervals. Debugging was particularly challenging, as the many concurrent processes caused complex errors. As a result, I was able to significantly improve my skills in structured testing and problem-solving.",
       "groupExperience": ""
     },
     "project3": {
-      "duration": "5 weeks",
-      "about": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-      "organization": "I systematically implemented all checklist items, ensuring that each task was completed with clean and well-structured code.",
+      "duration": "4 weeks",
+      "about": "A task manager inspired by the Kanban system. Tasks can be created and organized using drag-and-drop functionality. Users and categories can also be assigned.",
+      "organization": "I improved my skills in Angular, SCSS, and TypeScript, and gained experience with Git and Figma while using Scrum methodology for efficient teamwork. I consistently ensured clean and well-structured code for each task.",
       "experience": "",
-      "groupExperience": "I enhanced my skills in Angular, SCSS, and TypeScript. Additionally, I gained valuable insights into professional teamwork using Scrum methodology and industry-standard tools like Git for version control and Figma for design collaboration."
+      "groupExperience": "Within the team, I was responsible for the add task section as well as the various dialogs that interacted with this component. I also handled both user and guest login functionality with firebase."
     },
     "project4": {
       "duration": "1 week",
       "about": "The Pokedex is a Pokémon trainer register that integrates with the PokeAPI. This interactive tool allows users to explore detailed information about over 1000 Pokemon. The project showcases effective API integration, data handling, and UI design, creating an engaging Pokémon encyclopedia.",
-      "organization": "I systematically implemented all checklist items, ensuring that each task was completed with clean and well-structured code.",
-      "experience": "This project enhanced my technical skills, particularly in system interoperability, data storage and processing, as well as control structures. I gained valuable experience in how systems communicate and refined my expertise in managing program flow and logic, preparing me for more complex challenges.",
+      "organization": "It is important to me to write efficient and clean code that is maintainable and easily understandable for other developers. I focused on clear structuring, meaningful naming, and comprehensible documentation so that the project can be easily extended and maintained.",
+      "experience": "This project strengthened my technical skills in system interoperability, data storage, and control structures. I learned how systems communicate effectively and further developed my competence in program flow and logic.",
       "groupExperience": ""
     }
   },
@@ -87,7 +86,7 @@
     "privacy3": "and agree to the processing of my data as outlined.",
     "privacyNotAccepted": "Please accept the privacy policy.",
     "successMessage": "Message sent!",
-   "errorMessage": "Sorry, something went wrong."
+    "errorMessage": "Sorry, something went wrong."
   },
   "imprint": {
     "title": "Imprint",
