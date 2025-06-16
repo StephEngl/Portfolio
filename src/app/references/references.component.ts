@@ -19,19 +19,19 @@ export class ReferencesComponent {
       name: 'Patrick Frey',
       project: 'Join',
       translationKey: 'text1',
-      linkedInPath: '',
+      linkedInPath: 'https://www.linkedin.com/in/patrick-frey-690000164/',
     },
     {
       name: 'Jon Michutta',
       project: 'Kochwelt',
       translationKey: 'text2',
-      linkedInPath: '',
+      linkedInPath: 'https://www.linkedin.com/in/jonathan-michutta-527722210/',
     },
     {
-      name: 'Lara Lockenhaupt',
+      name: 'Jennifer Thomas',
       project: 'DA Bubble',
       translationKey: 'text3',
-      linkedInPath: '',
+      linkedInPath: 'https://www.linkedin.com/in/jennifer-thomas-595735360/',
     },
   ];
 
