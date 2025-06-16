@@ -12,7 +12,7 @@ h3,
 section {
   @include dFlex($g: 56px);
   flex-direction: column;
-  overflow: hidden;
+  width: 100%;
   margin: 0 24px;
 
   @media screen and (max-width: 350px) {
@@ -26,15 +26,7 @@ section {
   width: 100%;
   max-width: 1440px;
   overflow-x: auto;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  @media (min-width: 965px) {
-    overflow-x: hidden;
-    pointer-events: none;
-  }
+  padding-bottom: 24px;
 
   .reference {
     min-width: 290px;
@@ -59,14 +51,12 @@ section {
 
     @media (max-width: 1100px) {
       height: 290px;
-      // padding: 0 30px 0 60px;
       background-image: url("../../assets/img/ellipse_references_mobile.png");
     }
 
     .reference_text {
-      @include dFlex($g: 19px);
+      @include dFlex($g: 8px);
       flex-direction: column;
-      // overflow-y: auto;
 
       .reference_project,
       .reference_project > a {
@@ -97,7 +87,6 @@ section {
       }
 
       @media (max-width: 1100px) {
-        // align-items: flex-start;
         height: 100%;
         gap: 8px;
 
@@ -108,10 +97,40 @@ section {
         .text {
           margin: 8px 0;
           overflow-y: auto;
+          padding-right: 12px;
         }
       }
     }
   }
+}
+
+.references,
+.reference-text {
+  &::-webkit-scrollbar {
+    height: 10px;
+    background: $bg_light;
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $mint;
+    border-radius: 8px;
+    border: 2px solid $bg_light;
+    transition: background-color 0.3s;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: darken($mint, 10%);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $bg_projects;
+    border-radius: 8px;
+  }
+
+  // For Firefox
+  scrollbar-color: $mint $bg_projects;
+  scrollbar-width: thin;
 }
 
 @media (max-width: 950px) {
