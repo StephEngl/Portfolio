@@ -52,7 +52,7 @@
     },
     "project2": {
       "duration": "3 Wochen",
-      "about": "Elara wird in einem einfachen, aber aufregenden Jump-and-Run-Spiel begleitet, das auf einem objektorientierten Ansatz basiert. Es gilt, Feuerkristalle zu finden, um mächtige Feuerbälle freizuschalten und den mystischen Verzauberten Hain zu retten.",
+      "about": "Elara wird in einem einfachen, aber aufregenden Jump-and-Run-Spiel begleitet, das auf einem objektorientierten Ansatz basiert. Es gilt, Feuerkristalle zu finden, um mächtige Feuerbälle freizuschalten und den mystischen verzauberten Hain zu retten.",
       "organization": "Ich habe von Anfang an eine durchdachte Klassenstruktur entwickelt, um den Code übersichtlich und wartbar zu gestalten. Zunächst habe ich die zentralen Komponenten wie Hintergrund und Spielfigur umgesetzt und das Spiel anschließend Schritt für Schritt um weitere Funktionen und Details erweitert.",
       "experience": "In diesem Projekt habe ich einiges über objektorientierte Programmierung und die Arbeit mit mehreren parallel laufenden Intervallen gelernt. Besonders herausfordernd war das Debugging, da die vielen parallelen Abläufe komplexe Fehler verursacht haben. Dadurch konnte ich meine Fähigkeiten im strukturierten Testen und Lösen von Problemen deutlich verbessern.",
       "groupExperience": ""

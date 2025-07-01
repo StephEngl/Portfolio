@@ -51,7 +51,7 @@
     },
     "project2": {
       "duration": "3 weeks",
-      "about": "Elara is accompanied in a simple yet exciting jump-and-run game based on an object-oriented approach. The goal is to find fire crystals to unlock powerful fireballs and save the mystical Enchanted Grove.",
+      "about": "Elara is accompanied in a simple yet exciting jump-and-run game based on an object-oriented approach. The goal is to find fire crystals to unlock powerful fireballs and save the mystical enchanted Grove.",
       "organization": "From the very beginning, I developed a sophisticated class structure to keep the code organized and maintainable. First, I implemented the core components such as the background and the main character, and then gradually expanded the game with additional features and details.",
       "experience": "In this project, I learned a lot about object-oriented programming and working with multiple parallel intervals. Debugging was particularly challenging, as the many concurrent processes caused complex errors. As a result, I was able to significantly improve my skills in structured testing and problem-solving.",
       "groupExperience": ""
