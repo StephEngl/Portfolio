@@ -37,7 +37,6 @@
       "Description",
       "Highlights"
     ],
-    "learned": "Was ich gelernt habe",
     "durationName": "Dauer: ",
     "technologiesTitle": "Technologien",
     "project": "Projekt",
@@ -75,6 +74,15 @@
         "Reibungslose Integration der PokeAPI",
         "Responsives, benutzerfreundliches UI",
         "Gut strukturierte, erweiterbare Codebasis"
+      ]
+    },
+    "project5": {
+      "duration": "2 Wochen",
+      "description": "Backend für ein Kanban-Projektmanagement-Tool. Bereitstellung einer RESTful API mit Python, Django und DRF für Boards, Aufgaben und Teamzusammenarbeit.",
+      "highlights": [
+        "Komplett umgesetzt mit Python, Django und Django REST Framework",
+        "RESTful API für Boards, Aufgabenmanagement und Kommentare",
+        "Sichere Authentifizierung und Benutzerverwaltung integriert"
       ]
     }
   },
