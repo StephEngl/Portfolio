@@ -1,7 +1,6 @@
 export interface Project {
+  type: 'Frontend' | 'Backend' | 'Fullstack';
   duration: string;
-  about: string;
-  organization: string;
-  experience: string;
-  groupExperience: string;
+  description: string;
+  highlights: string[];
 }
