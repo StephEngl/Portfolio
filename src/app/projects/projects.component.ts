@@ -22,10 +22,14 @@ import {
 export class ProjectsComponent {
   projectsInfoLabels: string[] = [];
   projects: Project[] = [];
+  projectsFrontend: Project[] = [];
+  projectsBackend: Project[] = [];
+  techStack: string[] = ['Frontend', 'Backend'];
+  selectedStack: string = 'Frontend';
   isSmartphoneScreen: boolean = window.innerWidth < 420;
   selectedProject: number = 0;
 
-  projectsTech: ProjectTech[] = [
+  projectsTechFrontend: ProjectTech[] = [
     {
       name: 'DA Bubble',
       technologiesImages: [
@@ -76,6 +80,27 @@ export class ProjectsComponent {
     },
   ];
 
+  projectsTechBackend: ProjectTech[] = [
+    {
+      name: 'KanMind',
+      technologiesImages: [
+        '../../assets/icons/icon_project_html.svg',
+        '../../assets/icons/icon_project_javascript.svg',
+        '../../assets/icons/icon_project_api.svg',
+      ],
+      technologiesNames: ['Python', 'Django', 'DRF'],
+      screenshot: '../../assets/img/screenshot_pokedex.png',
+      linkLiveTest: 'https://pokedex.stephanie-englberger.de/',
+      linkGitHub: 'https://github.com/StephEngl/KanMind',
+    },
+  ];
+
+  get projectsTech(): ProjectTech[] {
+    return this.selectedStack === 'Frontend'
+      ? this.projectsTechFrontend
+      : this.projectsTechBackend;
+  }
+
   constructor(private translate: TranslateService) {}
 
   /**
@@ -89,6 +114,13 @@ export class ProjectsComponent {
     });
   }
 
+  switchStack() {
+    this.selectedStack =
+      this.selectedStack === 'Frontend' ? 'Backend' : 'Frontend';
+    this.selectedProject = 0;
+    this.loadTranslations();
+  }
+
   /**
    * Loads translated content for project labels and descriptions.
    * Maintains synchronization between technical data and translated content.
@@ -98,12 +130,23 @@ export class ProjectsComponent {
       this.projectsInfoLabels = labels;
     });
 
-    this.projects = [];
+    if (this.selectedStack === 'Frontend') {
+    this.projectsFrontend = [];
     for (let i = 1; i <= 4; i++) {
       this.translate.get(`projects.project${i}`).subscribe((project) => {
-        this.projects.push(project);
+        this.projectsFrontend.push(project);
       });
     }
+    this.projects = this.projectsFrontend;
+  } else {
+    this.projectsBackend = [];
+    for (let i = 5; i <= 8; i++) {
+      this.translate.get(`projects.project${i}`).subscribe((project) => {
+        this.projectsBackend.push(project);
+      });
+    }
+    this.projects = this.projectsBackend;
+  }
   }
 
   /**

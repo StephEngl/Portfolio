@@ -1,5 +1,8 @@
 <section>
   <h2>{{ "projects.title" | translate }}</h2>
+  <button class="tech_stack" (click)="switchStack()">
+    {{ selectedStack === 'Frontend' ? 'Backend anzeigen' : 'Frontend anzeigen' }}
+  </button>
   <div class="projects_wrapper">
     <div class="project_tabs_container">
       <div class="project_tabs">
@@ -24,7 +27,14 @@
               </div>
               @if ($index === 0) {
                 <p class="duration">{{ "projects.durationName" | translate}}
-                  <span>{{"projects.project" + (selectedProject + 1) + ".duration" | translate}}</span>
+                  <span>{{"projects.project" + 
+                    (
+                      selectedStack === 'Frontend'
+                        ? selectedProject + 1
+                        : selectedProject + 5
+                    ) 
+                    + ".duration" | translate}}
+                  </span>
                 </p>
                 <p>{{ getProjectInfo(selectedProject, $index) }}</p>
               } @else if ($index === 1){
@@ -91,37 +101,19 @@
     </div>
     <div
       class="projects_information_wrapper_mobile"
-      [style.border-radius]="
-        selectedProject === 0
-          ? '0 30px 30px 30px'
-          : selectedProject === 3
-            ? '30px 0 30px 30px'
-            : '30px'
-      "
+      [style.border-radius]="selectedProject === 0 ? '0 30px 30px 30px' : '30px' "
     >
       <div class="project_information_mobile">
         <div class="project_information_head">
           <h2>{{ projectsTech[selectedProject].name }}</h2>
           <div class="technologies_mobile">
-            <p>{{ "projects.technologiesTitle" | translate }}:&nbsp;</p>
-            @for (
-              technology of projectsTech[selectedProject].technologiesNames;
-              track $index
-            ) {
-              <p>
-                {{ technology }}
-                @if ($index < projectsTech[selectedProject].technologiesNames.length - 1) {
-                  ,&nbsp;
-                }
+            <p>{{ "projects.technologiesTitle" | translate }}:&nbsp;
+                {{ projectsTech[selectedProject].technologiesNames.join(', ') }}
               </p>
-            }
           </div>
           <p class="duration">
             {{ "projects.durationName" | translate }}
-            <span>{{
-              "projects.project" + (selectedProject + 1) + ".duration"
-                | translate
-            }}</span>
+            <span>{{ "projects.project" + (selectedProject + 1) + ".duration" | translate }}</span>
           </p>
           <div class="screenshot_container">
             <img
@@ -140,9 +132,17 @@
                     src="../../assets/img/ellipse_project_details.png"
                     alt=""
                   />
-                  <h3>{{ "projects.highlights" | translate }}</h3>
+                  <h3>{{ label }}</h3>
                 </div>
+                @if ($index === 0) {
                 <p>{{ getProjectInfo(selectedProject, $index) }}</p>
+                } @else if ($index === 1){
+                  <ul>
+                    @for (highlight of projects[selectedProject].highlights; track $index) {
+                      <li>{{ highlight }}</li>
+                    }
+                  </ul>
+                }
               </div>
             }
           }
