@@ -45,7 +45,7 @@
       "duration": "3.5 weeks",
       "description": "A Slack-inspired communication platform designed to enhance team collaboration in professional settings. It features an intuitive interface, real-time messaging, and robust channel organization, making it easy for teams to stay connected and work efficiently.",
       "highlights": [
-        "Group project - Collaborated in a team",
+        "Group project - Collaborated in a team using Scrum, Figma & Git",
         "Developed secure authentication with Angular & Firebase",
         "Implemented real-time messaging"
       ]
@@ -63,9 +63,9 @@
       "duration": "4 weeks",
       "description": "Join is a collaborative Kanban-style task manager with drag-and-drop for tasks, user and category assignment. Built as a team with focus on a user-friendly UI and clean, modular code.",
       "highlights": [
-        "Independently developed the entire login area (registration, sign-in) with Angular and Firebase",
-        "Responsible for the add-task functionality and related dialogs",
-        "Teamwork using Scrum methodology, plus daily use of Figma, Git, Angular, SCSS, and TypeScript"
+        "Group project - Teamwork using Scrum, Figma & Git",
+        "Independently developed the login area (registration, sign-in) with Angular & Firebase",
+        "Responsible for add-task functionality & dialogs"
       ]
     },
     "project4": {

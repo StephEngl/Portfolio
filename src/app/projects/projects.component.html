@@ -27,7 +27,7 @@
                   <span>{{"projects.project" + (selectedProject + 1) + ".duration" | translate}}</span>
                 </p>
                 <p>{{ getProjectInfo(selectedProject, $index) }}</p>
-              } @else {
+              } @else if ($index === 1){
                 <ul>
                   @for (highlight of projects[selectedProject].highlights; track $index) {
                     <li>{{ highlight }}</li>

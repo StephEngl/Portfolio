@@ -34,10 +34,8 @@
   "projects": {
     "title": "Projekte",
     "labels": [
-      "Über dieses Projekt",
-      "Meine Arbeitsstruktur",
-      "Meine Team-Erfahrungen",
-      "Was ich gelernt habe"
+      "Description",
+      "Highlights"
     ],
     "learned": "Was ich gelernt habe",
     "durationName": "Dauer: ",
@@ -45,16 +43,18 @@
     "project": "Projekt",
     "project1": {
       "duration": "3,5 Wochen",
-      "about": "Diese App ist eine von Slack inspirierte Kommunikationsplattform, die die Zusammenarbeit im Team in professionellen Umgebungen verbessern soll. Sie bietet eine intuitive Benutzeroberfläche, Echtzeit-Messaging und eine robuste Kanalorganisation, wodurch Teams einfach verbunden bleiben und effizient arbeiten können.",
-      "organization": "Ich habe den Login-Bereich in klar strukturierte, wiederverwendbare Angular-Komponenten und Services unterteilt und auf konsistente Benennung geachtet. Best Practices bei Formularvalidierung, Fehlerbehandlung und der Integration von Signals und Firebase für die sichere Passwortverwaltung standen dabei im Fokus. Dadurch bleibt der Code übersichtlich, wartbar und gut nachvollziehbar.",
-      "experience": "",
-      "groupExperience": "Im Team war ich für die Entwicklung des gesamten Login-Bereichs inklusive Registrierung, Anmeldung und Passwortverwaltung mit Angular und Firebase zuständig. Die enge Abstimmung und gegenseitige Unterstützung im Team haben zu einem reibungslosen und effizienten Entwicklungsprozess beigetragen."
+      "description": "Eine von Slack inspirierte Kommunikationsplattform, die die Zusammenarbeit im Team in einem professionellen Umfeld verbessert. Sie bietet eine intuitive Benutzeroberfläche, Echtzeit-Nachrichten und eine übersichtliche Kanalstruktur, sodass Teams einfach in Kontakt bleiben und effizient arbeiten können.",
+      "highlights": [
+        "Gruppenprojekt - Zusammenarbeit im Team mit Scrum, Figma & Git",
+        "Sichere Authentifizierung mit Angular & Firebase entwickelt",
+        "Echtzeit-Nachrichten implementiert"
+      ]
     },
     "project2": {
       "duration": "3 Wochen",
       "description": "Elara ist ein spannendes 2D Jump'n'Run mit modularer Layer-Struktur, Entity-Komponenten-Ansatz und Event-System. Sammle Feuerkristalle, entfessele Feuerbälle und rette den verzauberten Hain.",
       "highlights": [
-        "Objektorientierte JavaScript-Engine für Physik, Kollisionen und Rendering",
+        "Objektorientierte JavaScript-Engine für Physik, Kollisionen & Rendering",
         "Parallele Intervalle für synchrone, flüssige Spielmechaniken",
         "Multiple parallel intervals for game mechanics"
       ]
@@ -63,9 +63,9 @@
       "duration": "4 Wochen",
       "description": "Join ist ein kollaborativer Aufgabenmanager im Kanban-Stil mit Drag-and-drop für Aufgaben, Benutzer- und Kategorien-Zuweisung. Entwickelt im Team mit Fokus auf nutzerfreundlicher UI und sauberer, modularer Codebasis.",
       "highlights": [
-        "Eigenständige Entwicklung des kompletten Login-Bereichs (Registrierung, Anmeldung) mit Angular und Firebase",
-        "Verantwortlich für Add-Task-Funktionalität und die Dialoge",
-        "Teamarbeit mit Scrum-Methodik, sowie täglichem Einsatz von Figma, Git, Angular, SCSS und TypeScript"
+        "Gruppenprojekt - Teamarbeit mit Scrum, Figma & Git",
+        "Eigenständige Entwicklung des Login-Bereich (Registrierung, Anmeldung) mit Angular & Firebase",
+        "Verantwortlich für Add-Task-Funktionalität & Dialoge"
       ]
     },
     "project4": {
