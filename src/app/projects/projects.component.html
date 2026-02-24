@@ -4,47 +4,48 @@
     <div class="project_tabs_container">
       <div class="project_tabs">
         @for (project of projectsTech; track $index) {
-        <h3
-          [class.active]="selectedProject === $index"
-          (click)="selectedProject = $index"
-        >
-          {{ $index + 1 }}. {{ project.name }}
-        </h3>
+          <h3
+            [class.active]="selectedProject === $index"
+            (click)="selectedProject = $index"
+          >
+            {{ $index + 1 }}. {{ project.name }}
+          </h3>
         }
       </div>
     </div>
     <div class="projects_information_wrapper">
       <div class="project_information">
         <div class="project_information_left">
-          @for (label of projectsInfoLabels; track $index) { @if ($index < 3) {
-          <div class="info_section">
-            <div class="title">
-              <img src="../../assets/img/ellipse_project_details.png" alt="" />
-              <h3>@if ($index === 2 && projects[selectedProject].experience) {
-                {{ "projects.learned" | translate }} } @else {
-                {{ label }}
-                }</h3>
+          @for (label of projectsInfoLabels; track $index) {
+            <div class="info_section">
+              <div class="title">
+                <img src="../../assets/img/ellipse_project_details.png" alt=""/>
+                <h3>{{ label }}</h3>
+              </div>
+              @if ($index === 0) {
+                <p class="duration">{{ "projects.durationName" | translate}}
+                  <span>{{"projects.project" + (selectedProject + 1) + ".duration" | translate}}</span>
+                </p>
+                <p>{{ getProjectInfo(selectedProject, $index) }}</p>
+              } @else {
+                <ul>
+                  @for (highlight of projects[selectedProject].highlights; track $index) {
+                    <li>{{ highlight }}</li>
+                  }
+                </ul>
+              }
             </div>
-            <p>{{ getProjectInfo(selectedProject, $index) }}</p>
-            @if ($index === 0) {
-            <p class="duration">
-              {{ "projects.durationName" | translate
-              }}<span>{{
-                "projects.project" + (selectedProject + 1) + ".duration"
-                  | translate
-              }}</span>
-            </p>
-            }
-          </div>
-          } }
+          }
         </div>
         <div class="project_information_right">
           <div class="technologies">
             <p>{{ "projects.technologiesTitle" | translate }}</p>
             <div class="technology_icons">
-              @for (technology of
-              projectsTech[selectedProject].technologiesImages; track $index) {
-              <img src="{{ technology }}" alt="" />
+              @for (
+                technology of projectsTech[selectedProject].technologiesImages;
+                track $index
+              ) {
+                <img src="{{ technology }}" alt="" />
               }
             </div>
           </div>
@@ -79,13 +80,12 @@
     <div class="project_tabs_container_mobile">
       <div class="project_tabs_mobile">
         @for (project of projects; track $index) {
-        <h3
-          [class.active]="selectedProject === $index"
-          (click)="selectedProject = $index"
-        >
-          {{ $index + 1 }}. @if (!isSmartphoneScreen){
-          {{ "projects.project" | translate }} }
-        </h3>
+          <h3 [class.active]="selectedProject === $index"(click)="selectedProject = $index">
+            {{ $index + 1 }}.
+            @if (!isSmartphoneScreen) {
+              {{ "projects.project" | translate }}
+            }
+          </h3>
         }
       </div>
     </div>
@@ -95,8 +95,8 @@
         selectedProject === 0
           ? '0 30px 30px 30px'
           : selectedProject === 3
-          ? '30px 0 30px 30px'
-          : '30px'
+            ? '30px 0 30px 30px'
+            : '30px'
       "
     >
       <div class="project_information_mobile">
@@ -104,13 +104,16 @@
           <h2>{{ projectsTech[selectedProject].name }}</h2>
           <div class="technologies_mobile">
             <p>{{ "projects.technologiesTitle" | translate }}:&nbsp;</p>
-            @for (technology of projectsTech[selectedProject].technologiesNames;
-            track $index) {
-            <p>
-              {{ technology }}@if ($index <
-              projectsTech[selectedProject].technologiesNames.length-1)
-              {,&nbsp;}
-            </p>
+            @for (
+              technology of projectsTech[selectedProject].technologiesNames;
+              track $index
+            ) {
+              <p>
+                {{ technology }}
+                @if ($index < projectsTech[selectedProject].technologiesNames.length - 1) {
+                  ,&nbsp;
+                }
+              </p>
             }
           </div>
           <p class="duration">
@@ -129,20 +132,20 @@
           </div>
         </div>
         <div class="project_information_text">
-          @for (label of projectsInfoLabels; track $index) { @if ($index < 3) {
-          <div class="info_section">
-            <div class="title">
-              <img src="../../assets/img/ellipse_project_details.png" alt="" />
-              <h3>
-                @if ($index === 2 && projects[selectedProject].experience) {
-                {{ "projects.learned" | translate }} } @else {
-                {{ label }}
-                }
-              </h3>
-            </div>
-            <p>{{ getProjectInfo(selectedProject, $index) }}</p>
-          </div>
-          } }
+          @for (label of projectsInfoLabels; track $index) {
+            @if ($index < 3) {
+              <div class="info_section">
+                <div class="title">
+                  <img
+                    src="../../assets/img/ellipse_project_details.png"
+                    alt=""
+                  />
+                  <h3>{{ "projects.highlights" | translate }}</h3>
+                </div>
+                <p>{{ getProjectInfo(selectedProject, $index) }}</p>
+              </div>
+            }
+          }
         </div>
 
         <div class="button_container_mobile">

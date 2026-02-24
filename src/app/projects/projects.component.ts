@@ -112,15 +112,13 @@ export class ProjectsComponent {
    * @param labelIndex Type of information requested (0=about, 1=organization, 2=experience)
    * @returns Requested information string or empty string for invalid indices
    */
-  getProjectInfo(projectIndex: number, labelIndex: number): string {
+  getProjectInfo(projectIndex: number, labelIndex: number): string | string[] {
     const project = this.projects[projectIndex];
     switch (labelIndex) {
       case 0:
-        return project.about;
+        return project.description;
       case 1:
-        return project.organization;
-      case 2:
-        return project.groupExperience || project.experience;
+        return project.highlights;
       default:
         return '';
     }
