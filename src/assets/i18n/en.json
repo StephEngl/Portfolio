@@ -1,13 +1,13 @@
 {
   "nav": {
-    "link1": "Why me",
+    "link1": "Why Me",
     "link2": "Skills",
     "link3": "Projects",
     "link4": "Contact"
   },
   "about-me": {
     "hello": "Good morning, {{name}}",
-    "title": "Why me",
+    "title": "Why Me",
     "location1": "I am",
     "location2": "located in Weinstadt...",
     "location3": "open to work remote...",
@@ -15,7 +15,7 @@
     "wantContact": "Let's talk"
   },
   "skills": {
-    "title": "My skills",
+    "title": "My Skills",
     "learning": "I am currently learning:",
     "learningMobile": "What I am currently learning",
     "lookingFor": "Looking for ",
@@ -23,7 +23,7 @@
     "button": "Get in touch"
   },
   "references": {
-    "title1": "Need a teamplayer? ",
+    "title1": "Need a Teamplayer? ",
     "title2": "Here what my colleagues said about me",
     "project": "Project",
     "text1": "Stephanie always had a good sense for where we could get even more out of the project. With her ideas and eye for detail, she often started the next step. She took on complex tasks with joy and did a great job. Especially nice: communication was relaxed, direct, and often really funny. I really enjoyed working with her.",
@@ -87,7 +87,7 @@
     }
   },
   "contact": {
-    "title": "Contact me",
+    "title": "Contact Me",
     "text": "Interested in collaborating? I look forward to hearing from you and developing innovative solutions together.",
     "claim": "Let us work together!",
     "name": "Your Name",
