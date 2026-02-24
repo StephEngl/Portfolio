@@ -2,7 +2,7 @@
   "nav": {
     "link1": "Why me",
     "link2": "Skills",
-    "link3": "Projekts",
+    "link3": "Projects",
     "link4": "Contact"
   },
   "about-me": {
@@ -34,10 +34,8 @@
   "projects": {
     "title": "My Projects",
     "labels": [
-      "About the project",
-      "How I organized my work process",
-      "My group work experience",
-      "What I have learned"
+      "Description",
+      "Highlights"
     ],
     "learned": "What I have learned",
     "durationName": "Duration: ",
@@ -45,30 +43,39 @@
     "project": "Project",
     "project1": {
       "duration": "3.5 weeks",
-      "about": "This app is a Slack-inspired communication platform designed to enhance team collaboration in professional settings. It features an intuitive interface, real-time messaging, and robust channel organization, making it easy for teams to stay connected and work efficiently.",
-      "organization": "I structured the login area into clearly organized, reusable Angular components and services, paying close attention to consistent naming. Best practices in form validation, error handling, and the integration of Signals and Firebase for secure password management were a central focus. This ensures the code remains clear, maintainable, and easy to understand.",
-      "groupExperience": "I was responsible for developing the entire login area in the team, including registration, login, and password management using Angular and Firebase. Close coordination and mutual support within the team contributed to a smooth and efficient development process."
+      "description": "A Slack-inspired communication platform designed to enhance team collaboration in professional settings. It features an intuitive interface, real-time messaging, and robust channel organization, making it easy for teams to stay connected and work efficiently.",
+      "highlights": [
+        "Group project - Collaborated in a team",
+        "Developed secure authentication with Angular & Firebase",
+        "Implemented real-time messaging"
+      ]
     },
     "project2": {
       "duration": "3 weeks",
-      "about": "Elara is accompanied in a simple yet exciting jump-and-run game based on an object-oriented approach. The goal is to find fire crystals to unlock powerful fireballs and save the mystical enchanted Grove.",
-      "organization": "From the very beginning, I developed a sophisticated class structure to keep the code organized and maintainable. First, I implemented the core components such as the background and the main character, and then gradually expanded the game with additional features and details.",
-      "experience": "In this project, I learned a lot about object-oriented programming and working with multiple parallel intervals. Debugging was particularly challenging, as the many concurrent processes caused complex errors. As a result, I was able to significantly improve my skills in structured testing and problem-solving.",
-      "groupExperience": ""
+      "description": "Elara is an exciting 2D jump'n'run featuring a modular layer structure, entity-component system, and an event-driven architecture. Collect fire crystals, unleash fireballs, and save the enchanted grove.",
+      "highlights": [
+        "Object-oriented JavaScript engine for physics, collisions, and rendering",
+        "Parallel intervals enable synchronized and smooth game mechanics",
+        "Multiple parallel intervals for game mechanics"
+      ]
     },
     "project3": {
       "duration": "4 weeks",
-      "about": "A task manager inspired by the Kanban system. Tasks can be created and organized using drag-and-drop functionality. Users and categories can also be assigned.",
-      "organization": "I improved my skills in Angular, SCSS, and TypeScript, and gained experience with Git and Figma while using Scrum methodology for efficient teamwork. I consistently ensured clean and well-structured code for each task.",
-      "experience": "",
-      "groupExperience": "Within the team, I was responsible for the add task section as well as the various dialogs that interacted with this component. I also handled both user and guest login functionality with firebase."
+      "description": "Join is a collaborative Kanban-style task manager with drag-and-drop for tasks, user and category assignment. Built as a team with focus on a user-friendly UI and clean, modular code.",
+      "highlights": [
+        "Independently developed the entire login area (registration, sign-in) with Angular and Firebase",
+        "Responsible for the add-task functionality and related dialogs",
+        "Teamwork using Scrum methodology, plus daily use of Figma, Git, Angular, SCSS, and TypeScript"
+      ]
     },
     "project4": {
       "duration": "1 week",
-      "about": "The Pokedex is a Pokémon trainer register that integrates with the PokeAPI. This interactive tool allows users to explore detailed information about over 1000 Pokemon. The project showcases effective API integration, data handling, and UI design, creating an engaging Pokémon encyclopedia.",
-      "organization": "It is important to me to write efficient and clean code that is maintainable and easily understandable for other developers. I focused on clear structuring, meaningful naming, and comprehensible documentation so that the project can be easily extended and maintained.",
-      "experience": "This project strengthened my technical skills in system interoperability, data storage, and control structures. I learned how systems communicate effectively and further developed my competence in program flow and logic.",
-      "groupExperience": ""
+      "description": "The Pokédex is an interactive Pokémon encyclopedia featuring PokeAPI integration. This tool lets users access detailed information on over 1,000 Pokémon. The project demonstrates efficient API integration, modern UI design, and a well-structured, maintainable codebase.",
+      "highlights": [
+        "Seamless integration of the PokeAPI",
+        "Responsive, user-friendly UI",
+        "Well-structured and extensible codebase"
+      ]
     }
   },
   "contact": {

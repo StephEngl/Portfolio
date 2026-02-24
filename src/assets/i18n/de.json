@@ -52,24 +52,30 @@
     },
     "project2": {
       "duration": "3 Wochen",
-      "about": "Elara wird in einem einfachen, aber aufregenden Jump-and-Run-Spiel begleitet, das auf einem objektorientierten Ansatz basiert. Es gilt, Feuerkristalle zu finden, um mächtige Feuerbälle freizuschalten und den mystischen verzauberten Hain zu retten.",
-      "organization": "Ich habe von Anfang an eine durchdachte Klassenstruktur entwickelt, um den Code übersichtlich und wartbar zu gestalten. Zunächst habe ich die zentralen Komponenten wie Hintergrund und Spielfigur umgesetzt und das Spiel anschließend Schritt für Schritt um weitere Funktionen und Details erweitert.",
-      "experience": "In diesem Projekt habe ich einiges über objektorientierte Programmierung und die Arbeit mit mehreren parallel laufenden Intervallen gelernt. Besonders herausfordernd war das Debugging, da die vielen parallelen Abläufe komplexe Fehler verursacht haben. Dadurch konnte ich meine Fähigkeiten im strukturierten Testen und Lösen von Problemen deutlich verbessern.",
-      "groupExperience": ""
+      "description": "Elara ist ein spannendes 2D Jump'n'Run mit modularer Layer-Struktur, Entity-Komponenten-Ansatz und Event-System. Sammle Feuerkristalle, entfessele Feuerbälle und rette den verzauberten Hain.",
+      "highlights": [
+        "Objektorientierte JavaScript-Engine für Physik, Kollisionen und Rendering",
+        "Parallele Intervalle für synchrone, flüssige Spielmechaniken",
+        "Multiple parallel intervals for game mechanics"
+      ]
     },
     "project3": {
       "duration": "4 Wochen",
-      "about": "Ein Aufgabenmanager, inspiriert vom Kanban-System.  Es können Aufgaben mithilfe von Drag-and-Drop-Funktionen erstellt und organisiert werden. Zudem können Benutzer und Kategorien zugewiesen werden.",
-      "organization": "Ich habe meine Fähigkeiten in Angular, SCSS und TypeScript verbessert und Erfahrung mit Git und Figma gesammelt, während wir die Scrum-Methodik für eine effiziente Teamarbeit genutzt haben. Bei jeder Aufgabe habe ich stets auf sauberen und gut strukturierten Code geachtet.",
-      "experience": "",
-      "groupExperience": "Im Team war ich für den Add-Task-Bereich sowie die verschiedenen Dialoge zuständig, die auf diese Komponente zugreifen. Außerdem habe ich sowohl den Benutzer- als auch den Gäste-Login mit Firebase umgesetzt."
+      "description": "Join ist ein kollaborativer Aufgabenmanager im Kanban-Stil mit Drag-and-drop für Aufgaben, Benutzer- und Kategorien-Zuweisung. Entwickelt im Team mit Fokus auf nutzerfreundlicher UI und sauberer, modularer Codebasis.",
+      "highlights": [
+        "Eigenständige Entwicklung des kompletten Login-Bereichs (Registrierung, Anmeldung) mit Angular und Firebase",
+        "Verantwortlich für Add-Task-Funktionalität und die Dialoge",
+        "Teamarbeit mit Scrum-Methodik, sowie täglichem Einsatz von Figma, Git, Angular, SCSS und TypeScript"
+      ]
     },
     "project4": {
       "duration": "1 Woche",
-      "about": "Der Pokédex ist eine Pokémon-Enzyklopädie, die mit der PokeAPI integragiert. Dieses Tool ermöglicht es, detaillierte Informationen über mehr als 1000 Pokémon zu erhalten. Das Projekt zeigt effektive API-Integration, Datenverarbeitung und UI-Design.",
-      "organization": "Mir ist wichtig, effizienten und sauberen Code zu schreiben, der gut wartbar und für andere Entwickler leicht verständlich ist. Ich habe auf eine klare Strukturierung, sinnvolle Benennung und nachvollziehbare Dokumentation geachtet, sodass das Projekt einfach erweitert und gepflegt werden kann.",
-      "experience": "Dieses Projekt hat meine technischen Fähigkeiten in Systeminteroperabilität, Datenspeicherung und Kontrollstrukturen gestärkt. Ich habe gelernt, wie Systeme effektiv kommunizieren und meine Kompetenz im Umgang mit Programmfluss und Logik weiterentwickelt.",
-      "groupExperience": ""
+      "description": "Der Pokédex ist eine interaktive Pokémon-Enzyklopädie mit PokeAPI-Integration. Dieses Tool ermöglicht es, detaillierte Informationen über mehr als 1000 Pokémon zu erhalten. Das Projekt zeigt effiziente API-Anbindung, modernes UI-Design und strukturierten, wartbaren Code.",
+      "highlights": [
+        "Reibungslose Integration der PokeAPI",
+        "Responsives, benutzerfreundliches UI",
+        "Gut strukturierte, erweiterbare Codebasis"
+      ]
     }
   },
   "contact": {
