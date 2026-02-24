@@ -89,8 +89,8 @@ export class ProjectsComponent {
         '../../assets/icons/icon_project_api.svg',
       ],
       technologiesNames: ['Python', 'Django', 'DRF'],
-      screenshot: '../../assets/img/screenshot_pokedex.png',
-      linkLiveTest: 'https://pokedex.stephanie-englberger.de/',
+      screenshot: '../../assets/img/screenshot_kanmind.png',
+      linkLiveTest: 'https://kanmind.stephanie-englberger.de/',
       linkGitHub: 'https://github.com/StephEngl/KanMind',
     },
   ];
