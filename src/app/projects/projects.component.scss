@@ -22,7 +22,7 @@ section {
 
     .project_tabs {
       @include dFlex($jc: flex-start, $g: 36px);
-      padding-left: 120px;
+      // padding-left: 120px;
       height: 100%;
     }
 
@@ -67,6 +67,11 @@ section {
 
       .duration {
         padding-bottom: 16px;
+      }
+
+      ul {
+        padding-inline-start: 62px;
+        padding-inline-end: 32px;
       }
     }
   }
@@ -199,7 +204,7 @@ span {
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 495px) {
     .project_tabs_mobile {
       h3 {
         font-size: 16px;
@@ -214,9 +219,9 @@ span {
 }
 
 .projects_information_wrapper_mobile {
+  @include dFlex();
   width: 100%;
   background-color: $bg_projects;
-  @include dFlex();
   border-radius: 30px;
 
   .project_information_mobile {
@@ -264,9 +269,18 @@ span {
       }
 
       p {
-        font-family: "Josefin Sans", "sans-serif";
-        font-weight: 300;
+        // font-family: "Josefin Sans", "sans-serif";
+        // font-weight: 300;
         padding-bottom: 36px;
+      }
+
+      li {
+        line-height: 24px;
+      }
+
+      ul {
+        padding-bottom: 36px;
+        padding-inline-start: 18px;
       }
     }
 
@@ -283,9 +297,12 @@ span {
         font-size: 18px;
       }
 
-      p {
+      p,
+      li,
+      span {
         font-size: 16px;
-        font-weight: 300;
+        line-height: 20px;
+        // font-weight: 300;
       }
 
       .screenshot_container {
