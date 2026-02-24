@@ -8,6 +8,31 @@ section {
   width: 100%;
   padding-top: $padding_top_section;
 
+  h2 {
+    padding-bottom: 32px;
+  }
+
+  .tech_stack_selection {
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+
+    .tech_stack_selection_button {
+      margin-top: 0;
+
+      &.active {
+        cursor: default;
+        background-color: $bg_light;
+        border-radius: 30px;
+        color: $white;
+      }
+      &:hover {
+        background-color: $bg_light;
+      }
+    }
+  }
+
   .projects_wrapper {
     @include dFlex();
     flex-direction: column;

@@ -1,8 +1,21 @@
 <section>
   <h2>{{ "projects.title" | translate }}</h2>
-  <button class="tech_stack" (click)="switchStack()">
-    {{ selectedStack === 'Frontend' ? 'Backend anzeigen' : 'Frontend anzeigen' }}
-  </button>
+
+    <div class="tech_stack_selection">
+      <button class="tech_stack_selection_button"
+        [class.active]="selectedStack === 'Frontend'"
+        (click)="selectedStack = 'Frontend'"
+      >
+        Frontend
+      </button>
+      <button class="tech_stack_selection_button"
+        [class.active]="selectedStack === 'Backend'"
+        (click)="selectedStack = 'Backend'"
+      >
+        Backend
+      </button>
+    </div>
+
   <div class="projects_wrapper">
     <div class="project_tabs_container">
       <div class="project_tabs">
