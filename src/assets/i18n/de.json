@@ -34,7 +34,7 @@
   "projects": {
     "title": "Projekte",
     "labels": [
-      "Description",
+      "Beschreibung",
       "Highlights"
     ],
     "durationName": "Dauer: ",
@@ -77,12 +77,39 @@
       ]
     },
     "project5": {
-      "duration": "2 Wochen",
+      "duration": "240 Stunden (2 Wochen)",
       "description": "Backend für ein Kanban-Projektmanagement-Tool. Bereitstellung einer RESTful API mit Python, Django und DRF für Boards, Aufgaben und Teamzusammenarbeit.",
       "highlights": [
         "Komplett umgesetzt mit Python, Django und Django REST Framework",
         "RESTful API für Boards, Aufgabenmanagement und Kommentare",
         "Sichere Authentifizierung und Benutzerverwaltung integriert"
+      ]
+    },
+    "project6": {
+      "duration": "480 Stunden (4 Wochen)",
+      "description": "Backend für eine Freelancer-Plattform. Sichere, skalierbare API für Entwickler- und Kundendaten mit Authentifizierung und Dokumentation.",
+      "highlights": [
+        "Komplett umgesetzt mit Python, Django und Django REST Framework",
+        "Sichere Authentifizierung und umfassende Tests integriert",
+        "Umfangreiche RESTful API und automatische Dokumentation (Swagger, Redoc)"
+      ]
+    },
+    "project7": {
+      "duration": "240 Stunden (2 Wochen)",
+      "description": "Backend für eine KI-basierte Quiz-Plattform: Wandelt YouTube-Videos in 10 interaktive Quizfragen mit automatisierter Auswertung und Nutzerverwaltung um.",
+      "highlights": [
+        "AI-basierte Quiz-Generierung aus YouTube-Transkripten (Gemini AI, Whisper, yt-dlp)",
+        "Sichere Authentifizierung per JWT und personalisierte Quizverwaltung",
+        "RESTful API und automatische Dokumentation (Swagger, Redoc)"
+      ]
+    },
+    "project8": {
+      "duration": "600 Stunden (5 Wochen)",
+      "description": "Video-Streaming-Plattform im Netflix-Stil: Ermöglicht Video-Upload, automatische Konvertierung, HLS-Streaming und sichere Userdaten-Verwaltung.",
+      "highlights": [
+        "Videoupload & automatische HLS-Konvertierung mit FFmpeg (mehrere Auflösungen)",
+        "RESTful API, JWT-basierte Authentifizierung und Access-Control",
+        "Docker-Containerisierung für einfache Entwicklung und Deployment"
       ]
     }
   },
@@ -106,7 +133,7 @@
   "imprint": {
     "title": "Impressum",
     "contact": "Kontakt",
-    "source": "Quelle:"
+    "source": "Quelle Icons:"
   },
   "privacyPolicy": {
     "title": "Datenschutzerklärung",

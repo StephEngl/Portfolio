@@ -84,6 +84,33 @@
         "RESTful API for boards, task management, and comments",
         "Implemented secure authentication and user management"
       ]
+    },
+    "project6": {
+      "duration": "480 hours (4 weeks)",
+      "description": "Backend for a freelancer platform. Secure, scalable API for developers’ and clients’ data with authentication and documentation.",
+      "highlights": [
+        "Built entirely with Python, Django, and Django REST Framework",
+        "Includes secure authentication and thorough testing",
+        "Comprehensive RESTful API with auto-generated docs (Swagger, Redoc)"
+      ]
+    },
+    "project7": {
+      "duration": "240 hours (2 weeks)",
+      "description": "Backend for an AI-powered quiz platform: Turns YouTube videos into 10 interactive quiz questions with automated scoring and user management.",
+      "highlights": [
+        "AI-generated quizzes from YouTube transcripts (Gemini AI, Whisper, yt-dlp)",
+        "Secure JWT authentication and personalized quiz management",
+        "RESTful API with auto documentation (Swagger, Redoc)"
+      ]
+    },
+    "project8": {
+      "duration": "600 hours (5 weeks)",
+      "description": "Netflix-style video streaming platform: Supports video upload, automatic conversion, HLS streaming, and secure user data management.",
+      "highlights": [
+        "Video upload & automatic HLS conversion with FFmpeg (multiple resolutions)",
+        "RESTful API, JWT-based authentication, and access control",
+        "Dockerized for easy development and deployment"
+      ]
     }
   },
   "contact": {
@@ -106,7 +133,7 @@
   "imprint": {
     "title": "Imprint",
     "contact": "Contact",
-    "source": "Source:"
+    "source": "Source Icons:"
   },
   "privacyPolicy": {
     "title": "Privacy Policy",
