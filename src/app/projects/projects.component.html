@@ -4,13 +4,13 @@
     <div class="tech_stack_selection">
       <button class="tech_stack_selection_button"
         [class.active]="selectedStack === 'Frontend'"
-        (click)="selectedStack = 'Frontend'"
+        (click)="switchStack()"
       >
         Frontend
       </button>
       <button class="tech_stack_selection_button"
         [class.active]="selectedStack === 'Backend'"
-        (click)="selectedStack = 'Backend'"
+        (click)="switchStack()"
       >
         Backend
       </button>
@@ -63,7 +63,7 @@
         <div class="project_information_right">
           <div class="technologies">
             <p>{{ "projects.technologiesTitle" | translate }}</p>
-            <div class="technology_icons">
+            <div class="technology_icons" [class.backend]="selectedStack === 'Backend'">
               @for (
                 technology of projectsTech[selectedProject].technologiesImages;
                 track $index
