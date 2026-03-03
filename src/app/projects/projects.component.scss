@@ -113,6 +113,14 @@ section {
         display: flex;
         gap: 32px;
         padding-bottom: 24px;
+
+        &.backend {
+          gap: 16px;
+        }
+
+        img {
+          height: 36px;
+        }
       }
     }
 
