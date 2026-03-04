@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Project } from '../../app/interfaces/project';
 import { ProjectTech } from '../../app/interfaces/project-tech';
+import { SelectTechStackComponent } from '../shared/components/select-tech-stack/select-tech-stack.component';
 import { CommonModule } from '@angular/common';
 import {
   TranslatePipe,
@@ -15,7 +16,7 @@ import {
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule, TranslatePipe, SelectTechStackComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
@@ -165,6 +166,12 @@ export class ProjectsComponent {
     this.selectedProject = 0;
     this.loadTranslations();
   }
+
+  onTechStackSelected(stack: string) {
+  this.selectedStack = stack;
+  this.selectedProject = 0;
+  this.loadTranslations();
+}
 
   /**
    * Loads translated content for project labels and descriptions.

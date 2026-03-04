@@ -1,20 +1,6 @@
 <section>
   <h2>{{ "projects.title" | translate }}</h2>
-
-    <div class="tech_stack_selection">
-      <button class="tech_stack_selection_button"
-        [class.active]="selectedStack === 'Frontend'"
-        (click)="switchStack()"
-      >
-        Frontend
-      </button>
-      <button class="tech_stack_selection_button"
-        [class.active]="selectedStack === 'Backend'"
-        (click)="switchStack()"
-      >
-        Backend
-      </button>
-    </div>
+    <app-select-tech-stack [columnLayout]="false" [stackLabels]="['Frontend', 'Backend']" (selectedStack)="onTechStackSelected($event)"></app-select-tech-stack>
 
   <div class="projects_wrapper">
     <div class="project_tabs_container">
