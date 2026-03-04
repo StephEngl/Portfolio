@@ -47,8 +47,8 @@ section {
 
   .typing_text {
     width: 400px;
-    display: inline-block;  /* Verhindert Layout-Shifts */
-    white-space: nowrap;    /* Zeilenumbrüche vermeiden */
+    display: inline-block;
+    white-space: nowrap;
     overflow: hidden; 
   }
 
@@ -100,7 +100,7 @@ section {
   align-items: flex-end;
   gap: 16px;
 
-  p {
+  .about_me_text {
     font-family: "Josefin Sans";
     font-size: 18px;
     text-align: start;
