@@ -2,34 +2,11 @@
   <h2>{{ "skills.title" | translate }}</h2>
   <div class="content">
     <div class="skill_set">
+      <app-select-tech-stack [columnLayout]="buttonsMobile" [stackLabels]="['Frontend', 'Backend', 'Tools']" (selectedStack)="onTechStackSelected($event)"></app-select-tech-stack>
       <div class="image_wrapper">
-        <img
-          src="../../assets/icons/skill_icon_angular.svg"
-          alt="Icon Angular"
-        />
-        <img
-          src="../../assets/icons/skill_icon_typescript.svg"
-          alt="Icon Typescript"
-        />
-        <img
-          src="../../assets/icons/skill_icon_javascript.svg"
-          alt="Icon JavaScript"
-        />
-        <img src="../../assets/icons/skill_icon_html.svg" alt="Icon HTML" />
-        <img src="../../assets/icons/skill_icon_css.svg" alt="Icon CSS" />
-        <img src="../../assets/icons/skill_icon_api.svg" alt="Icon API" />
-        <img
-          src="../../assets/icons/skill_icon_firebase.svg"
-          alt="Icon Firebase"
-        />
-        <img src="../../assets/icons/skill_icon_git.svg" alt="Icon GIT" />
-        <img src="../../assets/icons/skill_icon_bootstrap.png" alt="Icon " />
-        <img
-          src="../../assets/icons/skill_icon_md.svg"
-          alt="Icon Material Design"
-        />
-        <img src="../../assets/icons/skill_icon_vb.png" alt="Icon VB" />
-        <img src="../../assets/icons/skill_icon_scrum.svg" alt="Icon Scrum" />
+        @for (skill of selectedSkillSet; track skill) {
+          <img [src]="isMobile ? skill.mobileSrc : skill.src" [alt]="skill.alt" />
+        }
       </div>
     </div>
     <div class="currently_learning">
@@ -44,6 +21,7 @@
         <a href="#contact">{{ "skills.button" | translate }}</a>
       </button>
     </div>
+
     <div class="currently_learning_mobile">
       <p>{{ "skills.learningMobile" | translate }}</p>
       <div class="bg_img">

@@ -12,7 +12,8 @@ section {
     .skill_set {
       width: 410px;
       height: 380px;
-      @include dFlex();
+      @include dFlex($jc: flex-start);
+      flex-direction: column;
 
       .image_wrapper {
         @include dFlex($jc: space-between, $ai: flex-start, $g: 24px);
@@ -20,6 +21,7 @@ section {
       }
 
       img {
+        height: 100px;
         transition: transform 0.3s ease; // Smooth transition for the bounce effect
 
         &:hover {
@@ -124,56 +126,14 @@ section {
 @media (max-width: 550px) {
   .skill_set {
     img {
-      &:nth-child(1) {
-        content: url("../../assets/icons/icon_project_angular.svg");
-      }
-
-      &:nth-child(2) {
-        content: url("../../assets/icons/icon_project_typescript.svg");
-      }
-
-      &:nth-child(3) {
-        content: url("../../assets/icons/icon_project_javascript.svg");
-      }
-
-      &:nth-child(4) {
-        content: url("../../assets/icons/icon_project_html.svg");
-      }
-
-      &:nth-child(5) {
-        content: url("../../assets/icons/icon_project_css.svg");
-      }
-
-      &:nth-child(6) {
-        content: url("../../assets/icons/icon_project_api.svg");
-      }
-
-      &:nth-child(7) {
-        content: url("../../assets/icons/icon_project_firebase.svg");
-      }
-
-      &:nth-child(8) {
-        content: url("../../assets/icons/icon_project_git.svg");
-      }
-
-      &:nth-child(9) {
-        content: url("../../assets/icons/icon_project_bootstrap.svg");
-      }
-
-      &:nth-child(10) {
-        content: url("../../assets/icons/icon_project_md.svg");
-      }
-
-      &:nth-child(11) {
-        content: url("../../assets/icons/icon_project_vb.svg");
-      }
-
-      &:nth-child(12) {
-        content: url("../../assets/icons/icon_project_scrum.svg");
-      }
-
       width: 45px;
       height: 45px;
     }
+  }
+}
+
+@media (max-width: 450px) {
+  .skills-stack-selection .tech_stack_selection {
+    flex-direction: column;
   }
 }
