@@ -1,4 +1,7 @@
 {
+  "hero": {
+    "title": "FULLSTACK DEVELOPER"
+  },
   "nav": {
     "link1": "Why Me",
     "link2": "Skills",
@@ -6,12 +9,12 @@
     "link4": "Contact"
   },
   "about-me": {
-    "hello": "Good morning, {{name}}",
     "title": "Why Me",
     "location1": "I am",
     "location2": "located in Weinstadt...",
     "location3": "open to work remote...",
-    "text": "I'm a passionate coder with a structured approach, loving the endless possibilities of programming. As a lifelong learner and rational thinker, I constantly seek knowledge and self-improvement. My analytical skills and planning help me grow personally. I'm a loyal partner and honest communicator, while solving life's (coding) challenges",
+    "text": "I work in a structured and solution-oriented way and love turning creative ideas into code. Logical thinking and good planning help me tackle complex tasks efficiently. Honesty, empathy, and reliability are especially important to me when working with others.",
+    "text2": "In my free time, I enjoy listening to knowledge podcasts, reading, and spending time with my family.",
     "wantContact": "Let's talk"
   },
   "skills": {
@@ -77,7 +80,7 @@
       ]
     },
     "project5": {
-      "duration": "2 weeks",
+      "duration": "240 hours (2 weeks)",
       "description": "Backend for a Kanban project management tool. Provided a RESTful API using Python, Django, and DRF for boards, tasks, and team collaboration.",
       "highlights": [
         "Built entirely with Python, Django, and Django REST Framework",

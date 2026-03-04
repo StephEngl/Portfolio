@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuStateService } from '../shared/services/menu-state.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 /**
  * HeroComponent is a standalone Angular component that displays the hero section.
@@ -8,7 +9,7 @@ import { MenuStateService } from '../shared/services/menu-state.service';
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })

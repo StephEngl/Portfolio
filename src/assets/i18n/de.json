@@ -1,4 +1,7 @@
 {
+  "hero": {
+    "title": "FULLSTACK ENTWICKLERIN"
+  },
   "nav": {
     "link1": "Über mich",
     "link2": "Kentnisse",
@@ -6,12 +9,12 @@
     "link4": "Kontakt"
   },
   "about-me": {
-    "hello": "Guten Morgen, {{name}}",
     "title": "Über mich",
     "location1": "Ich bin",
     "location2": "wohnhaft in Weinstadt...",
     "location3": "offen für Homeoffice...",
-    "text": "Als passionierte Entwicklerin gehe ich sehr struktuiert vor und liebe die endlosen Möglichkeiten des Programmierens. Durch meine Fähigkeit logisch und rational zu denken, entwickle ich mich stetig weiter. Meine Planungs- und analytischen Fähigkeiten helfen mir dabei, Herausforderungen zu bestehen. Ich bin eine loyale Partnerin und ehrliche Kommunikatorin, während ich die Herausforderungen des Lebens (und des Programmierens) meistere.",
+    "text": "Ich arbeite strukturiert und lösungsorientiert und liebe es, kreative Ideen in Code umzusetzen. Logisches Denken und gute Planung helfen mir, komplexe Aufgaben gezielt anzugehen. Ehrlichkeit, Empathie und Zuverlässigkeit sind mir im Umgang mit Menschen besonders wichtig.",
+    "text2": "In meiner Freizeit höre ich gern Wissenspodcasts, lese und verbringe Zeit mit meiner Familie.",
     "wantContact": "Los geht's"
   },
   "skills": {
