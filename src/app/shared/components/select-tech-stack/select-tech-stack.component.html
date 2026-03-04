@@ -1,0 +1,11 @@
+<div class="tech_stack_selection" [class.column]="columnLayout">
+  @for (label of stackLabels; track label) {
+    <button
+      class="tech_stack_selection_button"
+      [class.active]="activeStack === label"
+      (click)="select(label)"
+    >
+      {{ label }}
+    </button>
+  }
+</div>

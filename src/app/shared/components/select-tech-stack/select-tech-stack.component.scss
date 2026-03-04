@@ -1,0 +1,26 @@
+@import "../../../styles/fonts.scss";
+@import "../../../../styles.scss";
+@import "../../../styles/mixins.scss";
+
+.tech_stack_selection {
+    @include dFlex($jc: space-between, $g: 16px);
+    padding-bottom: 30px;
+
+    .tech_stack_selection_button {
+      margin-top: 0;
+
+      &.active {
+        cursor: default;
+        background-color: $bg_light;
+        border-radius: 30px;
+        color: $white;
+      }
+      &:hover {
+        background-color: $bg_light;
+      }
+    }
+  }
+
+.tech_stack_selection.column {
+  flex-direction: column;
+}
