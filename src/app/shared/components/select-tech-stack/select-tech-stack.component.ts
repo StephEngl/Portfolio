@@ -9,9 +9,9 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
 })
 export class SelectTechStackComponent {
   @Input() stackLabels: string[] = ['Frontend', 'Backend', 'Tools'];
+  @Input() activeStack: string = 'Frontend';
   @Input() columnLayout = false;
   @Output() selectedStack = new EventEmitter<string>();
-  activeStack: string = 'Frontend';
 
   select(stack: string) {
     this.activeStack = stack;
