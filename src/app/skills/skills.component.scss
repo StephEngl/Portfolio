@@ -8,10 +8,11 @@ section {
   .content {
     @include dFlex($g: 80px);
     width: 100%;
+    height: 400px;
 
     .skill_set {
       width: 410px;
-      height: 380px;
+      height: 100%;
       @include dFlex($jc: flex-start);
       flex-direction: column;
 
@@ -22,10 +23,14 @@ section {
 
       img {
         height: 100px;
-        transition: transform 0.3s ease; // Smooth transition for the bounce effect
+        transition: transform 0.3s ease;
 
         &:hover {
           transform: translateY(-10px);
+        }
+        @media (max-width: 550px) {
+          width: 45px;
+          height: 45px;
         }
       }
 
@@ -42,6 +47,7 @@ section {
     @media (max-width: 900px) {
       flex-direction: column;
       align-items: center;
+      height: auto;
       width: 100%;
       gap: 40px;
     }
@@ -55,7 +61,7 @@ section {
     }
 
     .currently_learning {
-      height: 390px;
+      height: 100%;
       width: 375px;
       background-image: url("../../assets/img/ellipse_skills.png");
       background-position: center;
@@ -76,6 +82,10 @@ section {
       .highlight {
         color: $mint;
         font-weight: 700;
+      }
+
+      @media (max-width: 900px) {
+        height: 390px;
       }
 
       @media (max-width: 450px) {
@@ -120,15 +130,6 @@ section {
 
   @media (max-width: 350px) {
     display: flex;
-  }
-}
-
-@media (max-width: 550px) {
-  .skill_set {
-    img {
-      width: 45px;
-      height: 45px;
-    }
   }
 }
 
