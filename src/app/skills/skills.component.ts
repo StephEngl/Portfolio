@@ -1,4 +1,6 @@
 import { Component, HostListener } from '@angular/core';
+import { trigger, transition, style, animate } from '@angular/animations';
+import { interval, Subscription } from 'rxjs';
 import { TranslatePipe } from '@ngx-translate/core';
 import { SelectTechStackComponent } from '../shared/components/select-tech-stack/select-tech-stack.component';
 
@@ -12,9 +14,20 @@ import { SelectTechStackComponent } from '../shared/components/select-tech-stack
   imports: [TranslatePipe, SelectTechStackComponent],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
+  animations: [
+    trigger('slideInOut', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('1300ms cubic-bezier(0.25, 0.46, 0.45, 0.94)', style({ opacity: 1 }))
+      ]),
+      transition(':leave', [
+        animate('800ms cubic-bezier(0.25, 0.46, 0.45, 0.94)', style({ opacity: 0 }))
+      ])
+    ]),
+  ],
 })
 export class SkillsComponent {
-  skillSet: string[] = ['frontendSkills', 'backendSkills', 'toolsSkills'];
+  intervalSub: Subscription | null = null;
   isMobile: boolean = window.innerWidth < 550;
   buttonsMobile: boolean = window.innerWidth < 450;
   
@@ -46,8 +59,35 @@ export class SkillsComponent {
     { src: '../../assets/icons/skill_icon_linux.svg', mobileSrc:'../../assets/icons/icon_project_linux.svg', alt: 'Icon Linux' },
     { src: '../../assets/icons/skill_icon_postman.svg', mobileSrc:'../../assets/icons/icon_project_postman.svg', alt: 'Icon Postman' },
   ];
+  skillSets : {label:string; skills:{ src: string; mobileSrc:string; alt: string }[]}[] = [
+    { label: 'Frontend', skills: this.frontendSkills },
+    { label: 'Backend', skills: this.backendSkills },
+    { label: 'Tools', skills: this.toolsSkills },
+  ];
+  selectedIndex : number = 0;
+  selectedSkillSet : { src: string; mobileSrc: string; alt: string }[] = this.skillSets[this.selectedIndex].skills;
 
-  selectedSkillSet : { src: string; mobileSrc: string; alt: string }[] = this.frontendSkills;
+  constructor() {
+    this.startAutoSwitch();
+  }
+
+  startAutoSwitch() {
+    this.intervalSub?.unsubscribe();
+    this.intervalSub = interval(5000).subscribe(() => this.nextSkillSet());
+  }
+
+  nextSkillSet() {
+    this.selectedIndex = (this.selectedIndex + 1) % this.skillSets.length;
+    this.selectedSkillSet = this.skillSets[this.selectedIndex].skills;
+  }
+
+  onTechStackSelected(stack: string) {
+    const found = this.skillSets.find(s => s.label === stack);
+    if (found) {
+      this.selectedSkillSet = found.skills;
+      this.startAutoSwitch();
+    }
+  }
 
   @HostListener('window:resize')
   onResize() {
@@ -55,13 +95,7 @@ export class SkillsComponent {
     this.buttonsMobile = window.innerWidth < 450;
   }
 
-  onTechStackSelected(stack: string) {
-    if (stack === 'Frontend') {
-      this.selectedSkillSet = this.frontendSkills;
-    } else if (stack === 'Backend') {
-      this.selectedSkillSet = this.backendSkills;
-    } else if (stack === 'Tools') {
-      this.selectedSkillSet = this.toolsSkills;
-    }
+  ngOnDestroy() {
+    this.intervalSub?.unsubscribe();
   }
 }

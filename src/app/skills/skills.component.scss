@@ -12,13 +12,17 @@ section {
 
     .skill_set {
       width: 410px;
-      height: 100%;
+      min-height: 400px;
       @include dFlex($jc: flex-start);
       flex-direction: column;
+      position: relative;
 
       .image_wrapper {
         @include dFlex($jc: space-between, $ai: flex-start, $g: 24px);
         flex-wrap: wrap;
+        position: absolute;
+        left: 0;
+        top: 75px;
       }
 
       img {

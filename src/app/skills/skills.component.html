@@ -2,12 +2,29 @@
   <h2>{{ "skills.title" | translate }}</h2>
   <div class="content">
     <div class="skill_set">
-      <app-select-tech-stack [columnLayout]="buttonsMobile" [stackLabels]="['Frontend', 'Backend', 'Tools']" (selectedStack)="onTechStackSelected($event)"></app-select-tech-stack>
-      <div class="image_wrapper">
+      <app-select-tech-stack 
+        [columnLayout]="buttonsMobile" 
+        [stackLabels]="['Frontend', 'Backend', 'Tools']" 
+        [activeStack]="skillSets[selectedIndex].label"
+        (selectedStack)="onTechStackSelected($event)">
+      </app-select-tech-stack>
+
+      <div class="slide-container">
+        @for (skillSet of skillSets; track skillSet.label) {
+          @if (skillSet.label === skillSets[selectedIndex].label) {
+            <div class="image_wrapper" [@slideInOut]>
+              @for (skill of skillSet.skills; track skill) {
+                <img [src]="isMobile ? skill.mobileSrc : skill.src" [alt]="skill.alt" />
+              }
+            </div>
+          }
+        }
+      </div>
+      <!-- <div class="image_wrapper" [@slideInOut]>
         @for (skill of selectedSkillSet; track skill) {
           <img [src]="isMobile ? skill.mobileSrc : skill.src" [alt]="skill.alt" />
         }
-      </div>
+      </div> -->
     </div>
     <div class="currently_learning">
       <p>{{ "skills.learning" | translate }}</p>
