@@ -63,7 +63,7 @@ export class ProjectsComponent {
         '../../assets/icons/icon_project_firebase.svg',
       ],
       technologiesNames: ['Angular', 'TypeScript', 'CSS'],
-      screenshot: '../../assets/img/screenshot_join.png',
+      screenshot: '../../assets/img/mockup_join.png',
       linkLiveTest: 'https://join.stephanie-englberger.de/',
       linkGitHub: 'https://github.com/StephEngl/Join',
     },
@@ -91,7 +91,7 @@ export class ProjectsComponent {
         '../../assets/icons/icon_project_api.svg',
         '../../assets/icons/icon_project_postman.svg',
       ],
-      technologiesNames: ['Python', 'Django', 'DRF', 'SQLite', 'RestAPI','Postman'],
+      technologiesNames: ['Python', 'DRF', 'SQLite', 'RestAPI','Postman'],
       screenshot: '../../assets/img/mockup_kanmind.png',
       linkLiveTest: 'https://kanmind.stephanie-englberger.de/',
       linkGitHub: 'https://github.com/StephEngl/KanMind',
@@ -105,8 +105,8 @@ export class ProjectsComponent {
         '../../assets/icons/icon_project_api.svg',
         '../../assets/icons/icon_project_postman.svg',
       ],
-      technologiesNames: ['Python', 'Django', 'DRF', 'SQLite', 'RestAPI','Postman'],
-      screenshot: '../../assets/img/screenshot_coderr.png',
+      technologiesNames: ['Python', 'DRF', 'SQLite', 'RestAPI','Postman'],
+      screenshot: '../../assets/img/mockup_coderr.png',
       linkLiveTest: 'https://coderr.stephanie-englberger.de/',
       linkGitHub: 'https://github.com/StephEngl/Coderr',
     },
@@ -119,8 +119,8 @@ export class ProjectsComponent {
         '../../assets/icons/icon_project_api.svg',
         '../../assets/icons/icon_project_gemini-ai.svg',
       ],
-      technologiesNames: ['Python', 'Django', 'DRF', 'SQLite', 'RestAPI', 'Gemini AI'],
-      screenshot: '../../assets/img/screenshot_quizly.png',
+      technologiesNames: ['Python', 'DRF', 'SQLite', 'RestAPI', 'Gemini AI'],
+      screenshot: '../../assets/img/mockup_quizly.png',
       linkLiveTest: 'https://quizly.stephanie-englberger.de/',
       linkGitHub: 'https://github.com/StephEngl/Quizly',
     },
@@ -131,13 +131,13 @@ export class ProjectsComponent {
         '../../assets/icons/icon_project_django.svg',
         '../../assets/icons/icon_project_redis.svg',
         '../../assets/icons/icon_project_postgresql.svg',
-        '../../assets/icons/icon_project_pytest.svg',
         '../../assets/icons/icon_project_docker.svg',
       ],
-      technologiesNames: ['Python', 'Django', 'DRF', 'Redis', 'PostgreSQL', 'pytest', 'Docker'],
+      technologiesNames: ['Python', 'DRF', 'Redis', 'PostgreSQL', 'Docker'],
       screenshot: '../../assets/img/mockup_videoflix.png',
       linkLiveTest: 'https://videoflix.stephanie-englberger.de/',
       linkGitHub: 'https://github.com/StephEngl/Videoflix',
+      linkDokumentation: 'https://videoflix-docs.stephanie-englberger.de/',
     },
   ];
 
@@ -225,6 +225,6 @@ export class ProjectsComponent {
    */
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
-    this.isSmartphoneScreen = window.innerWidth < 420;
+    this.isSmartphoneScreen = window.innerWidth < 495;
   }
 }

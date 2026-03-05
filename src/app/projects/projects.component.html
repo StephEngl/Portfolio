@@ -60,6 +60,7 @@
           </div>
           <img
             class="screenshot"
+            [class.backend]="selectedStack === 'Backend'"
             src="{{ projectsTech[selectedProject].screenshot }}"
             alt="Screenshot Project"
           />
@@ -114,7 +115,7 @@
             {{ "projects.durationName" | translate }}
             <span>{{ "projects.project" + (selectedProject + 1) + ".duration" | translate }}</span>
           </p>
-          <div class="screenshot_container">
+          <div class="screenshot_container" [class.backend]="selectedStack === 'Backend'">
             <img
               class="screenshot"
               src="{{ projectsTech[selectedProject].screenshot }}"

@@ -3,6 +3,7 @@ export interface ProjectTech {
     technologiesImages: string[];
     technologiesNames: string[];
     screenshot: string;
-    linkLiveTest: string;
+    linkLiveTest?: string;
     linkGitHub: string;
+    linkDokumentation?: string;
 }
