@@ -4,9 +4,11 @@
 .main-wrapper {
   @include dFlex();
   padding-top: $padding_top_section;
+  margin-top: -10px;
 
   @media (max-width: 650px) {
     padding-top: $padding_top_section_mobile;
+    margin-top: -20px;
   }
 }
 

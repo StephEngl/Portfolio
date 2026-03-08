@@ -6,7 +6,6 @@ section {
   @include dFlex();
   flex-direction: column;
   width: 100%;
-  padding-top: $padding_top_section;
 
   h2 {
     padding-bottom: 32px;
@@ -146,10 +145,6 @@ section {
     .projects_wrapper {
       display: none;
     }
-  }
-
-  @media (max-width: 400px) {
-    padding-top: $padding_top_section_mobile;
   }
 }
 
