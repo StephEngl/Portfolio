@@ -11,7 +11,7 @@ import { MenuStateService } from '../../services/menu-state.service';
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [AppComponent, TranslatePipe],
+  imports: [TranslatePipe],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
 })
