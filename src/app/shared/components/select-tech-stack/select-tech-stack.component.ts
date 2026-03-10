@@ -13,7 +13,7 @@ export class SelectTechStackComponent {
   @Input() columnLayout = false;
   @Output() selectedStack = new EventEmitter<string>();
 
-  select(stack: string) {
+  selectStack(stack: string) {
     this.activeStack = stack;
     this.selectedStack.emit(stack);
   }
