@@ -1,13 +1,16 @@
 import { Component, HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Project } from '../../app/interfaces/project';
 import { ProjectTech } from '../../app/interfaces/project-tech';
 import { SelectTechStackComponent } from '../shared/components/select-tech-stack/select-tech-stack.component';
-import { CommonModule } from '@angular/common';
+import { AutoSwitchService } from '../shared/services/auto-switch.service';
 import {
   TranslatePipe,
   TranslateService,
   LangChangeEvent,
 } from '@ngx-translate/core';
+import { trigger, transition, style, animate } from '@angular/animations';
+import { interval, Subscription } from 'rxjs';
 
 /**
  * ProjectsComponent displays a portfolio of technical projects with dynamic translations.
@@ -19,8 +22,27 @@ import {
   imports: [CommonModule, TranslatePipe, SelectTechStackComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
+  providers: [AutoSwitchService],
+  animations: [
+    trigger('slideInOut', [
+      transition(':enter', [
+        style({ transform: 'translateX(100%)', opacity: 0 }),
+        animate(
+          '800ms cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+          style({ transform: 'translateX(0)', opacity: 1 }),
+        ),
+      ]),
+      transition(':leave', [
+        animate(
+          '800ms cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+          style({ transform: 'translateX(-100%)', opacity: 0 }),
+        ),
+      ]),
+    ]),
+  ],
 })
 export class ProjectsComponent {
+  intervalSub: Subscription | null = null;
   projectsInfoLabels: string[] = [];
   projects: Project[] = [];
   projectsFrontend: Project[] = [];
@@ -91,7 +113,7 @@ export class ProjectsComponent {
         '../../assets/icons/icon_project_api.svg',
         '../../assets/icons/icon_project_postman.svg',
       ],
-      technologiesNames: ['Python', 'DRF', 'SQLite', 'RestAPI','Postman'],
+      technologiesNames: ['Python', 'DRF', 'SQLite', 'RestAPI', 'Postman'],
       screenshot: '../../assets/img/mockup_kanmind.png',
       linkLiveTest: 'https://kanmind.stephanie-englberger.de/',
       linkGitHub: 'https://github.com/StephEngl/KanMind',
@@ -105,7 +127,7 @@ export class ProjectsComponent {
         '../../assets/icons/icon_project_api.svg',
         '../../assets/icons/icon_project_postman.svg',
       ],
-      technologiesNames: ['Python', 'DRF', 'SQLite', 'RestAPI','Postman'],
+      technologiesNames: ['Python', 'DRF', 'SQLite', 'RestAPI', 'Postman'],
       screenshot: '../../assets/img/mockup_coderr.png',
       linkLiveTest: 'https://coderr.stephanie-englberger.de/',
       linkGitHub: 'https://github.com/StephEngl/Coderr',
@@ -147,17 +169,34 @@ export class ProjectsComponent {
       : this.projectsTechBackend;
   }
 
-  constructor(private translate: TranslateService) {}
+  constructor(
+    private translate: TranslateService,
+    private autoSwitch: AutoSwitchService,
+  ) {}
 
   /**
    * Initializes component, loads translations, and sets up language change listener.
    */
   ngOnInit() {
+    this.autoSwitch.startAutoSwitch(() => this.nextProject(), 5000);
     this.loadTranslations();
 
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.loadTranslations();
     });
+  }
+
+  nextProject() {
+    this.selectedProject =
+      (this.selectedProject + 1) % this.projectsTech.length;
+  }
+
+  pauseAutoSwitch() {
+    this.autoSwitch.stopAutoSwitch();
+  }
+
+  resumeAutoSwitch() {
+    this.autoSwitch.startAutoSwitch(() => this.nextProject(), 5000);
   }
 
   switchStack() {
@@ -168,10 +207,10 @@ export class ProjectsComponent {
   }
 
   onTechStackSelected(stack: string) {
-  this.selectedStack = stack;
-  this.selectedProject = 0;
-  this.loadTranslations();
-}
+    this.selectedStack = stack;
+    this.selectedProject = 0;
+    this.loadTranslations();
+  }
 
   /**
    * Loads translated content for project labels and descriptions.
@@ -183,22 +222,22 @@ export class ProjectsComponent {
     });
 
     if (this.selectedStack === 'Frontend') {
-    this.projectsFrontend = [];
-    for (let i = 1; i <= 4; i++) {
-      this.translate.get(`projects.project${i}`).subscribe((project) => {
-        this.projectsFrontend.push(project);
-      });
+      this.projectsFrontend = [];
+      for (let i = 1; i <= 4; i++) {
+        this.translate.get(`projects.project${i}`).subscribe((project) => {
+          this.projectsFrontend.push(project);
+        });
+      }
+      this.projects = this.projectsFrontend;
+    } else {
+      this.projectsBackend = [];
+      for (let i = 5; i <= 8; i++) {
+        this.translate.get(`projects.project${i}`).subscribe((project) => {
+          this.projectsBackend.push(project);
+        });
+      }
+      this.projects = this.projectsBackend;
     }
-    this.projects = this.projectsFrontend;
-  } else {
-    this.projectsBackend = [];
-    for (let i = 5; i <= 8; i++) {
-      this.translate.get(`projects.project${i}`).subscribe((project) => {
-        this.projectsBackend.push(project);
-      });
-    }
-    this.projects = this.projectsBackend;
-  }
   }
 
   /**
@@ -226,5 +265,9 @@ export class ProjectsComponent {
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.isSmartphoneScreen = window.innerWidth < 495;
+  }
+
+  ngOnDestroy() {
+    this.autoSwitch?.stopAutoSwitch();
   }
 }

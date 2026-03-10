@@ -15,8 +15,11 @@
         }
       </div>
     </div>
-    <div class="projects_information_wrapper">
-      <div class="project_information">
+    <div 
+    class="projects_information_wrapper"
+    (mouseenter)="pauseAutoSwitch()"
+    (mouseleave)="resumeAutoSwitch()">
+      <div class="project_information" [@slideInOut]>
         <div class="project_information_left">
           @for (label of projectsInfoLabels; track $index) {
             <div class="info_section">
@@ -102,6 +105,8 @@
     <div
       class="projects_information_wrapper_mobile"
       [style.border-radius]="selectedProject === 0 ? '0 30px 30px 30px' : '30px' "
+      (mouseenter)="pauseAutoSwitch()"
+      (mouseleave)="resumeAutoSwitch()"
     >
       <div class="project_information_mobile">
         <div class="project_information_head">
