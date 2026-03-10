@@ -1,8 +1,8 @@
 import { Component, HostListener } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
-import { interval, Subscription } from 'rxjs';
 import { TranslatePipe } from '@ngx-translate/core';
 import { SelectTechStackComponent } from '../shared/components/select-tech-stack/select-tech-stack.component';
+import { AutoSwitchService } from '../shared/services/auto-switch.service';
 
 /**
  * SkillsComponent displays a section showcasing technical skills and competencies.
@@ -14,8 +14,9 @@ import { SelectTechStackComponent } from '../shared/components/select-tech-stack
   imports: [TranslatePipe, SelectTechStackComponent],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
+  providers: [AutoSwitchService],
   animations: [
-    trigger('slideInOut', [
+    trigger('fadeInOut', [
       transition(':enter', [
         style({ opacity: 0 }),
         animate('1300ms cubic-bezier(0.25, 0.46, 0.45, 0.94)', style({ opacity: 1 }))
@@ -27,7 +28,6 @@ import { SelectTechStackComponent } from '../shared/components/select-tech-stack
   ],
 })
 export class SkillsComponent {
-  intervalSub: Subscription | null = null;
   isMobile: boolean = window.innerWidth < 550;
   buttonsMobile: boolean = window.innerWidth < 450;
   
@@ -66,14 +66,12 @@ export class SkillsComponent {
   ];
   selectedIndex : number = 0;
   selectedSkillSet : { src: string; mobileSrc: string; alt: string }[] = this.skillSets[this.selectedIndex].skills;
+  
+  constructor(private autoSwitch: AutoSwitchService) {}
 
-  constructor() {
-    this.startAutoSwitch();
-  }
 
-  startAutoSwitch() {
-    this.intervalSub?.unsubscribe();
-    this.intervalSub = interval(5000).subscribe(() => this.nextSkillSet());
+  ngOnInit() {
+    this.autoSwitch.startAutoSwitch(() => this.nextSkillSet(), 5000);
   }
 
   nextSkillSet() {
@@ -81,11 +79,20 @@ export class SkillsComponent {
     this.selectedSkillSet = this.skillSets[this.selectedIndex].skills;
   }
 
+  pauseAutoSwitch() {
+    this.autoSwitch.stopAutoSwitch();
+  }
+
+  resumeAutoSwitch() {
+    this.autoSwitch.startAutoSwitch(() => this.nextSkillSet(), 5000);
+  }
+
   onTechStackSelected(stack: string) {
-    const found = this.skillSets.find(s => s.label === stack);
-    if (found) {
-      this.selectedSkillSet = found.skills;
-      this.startAutoSwitch();
+    const foundIndex = this.skillSets.findIndex(set => set.label === stack);
+    if (foundIndex !== -1) {
+    this.selectedIndex = foundIndex;
+    this.selectedSkillSet = this.skillSets[foundIndex].skills;
+    this.autoSwitch.startAutoSwitch(() => this.nextSkillSet(), 5000);
     }
   }
 
@@ -96,6 +103,6 @@ export class SkillsComponent {
   }
 
   ngOnDestroy() {
-    this.intervalSub?.unsubscribe();
+    this.autoSwitch?.stopAutoSwitch();
   }
 }

@@ -9,10 +9,12 @@
         (selectedStack)="onTechStackSelected($event)">
       </app-select-tech-stack>
 
-      <div class="slide-container">
+      <div class="slide-container"
+      (mouseenter)="pauseAutoSwitch()"
+      (mouseleave)="resumeAutoSwitch()">
         @for (skillSet of skillSets; track skillSet.label) {
           @if (skillSet.label === skillSets[selectedIndex].label) {
-            <div class="image_wrapper" [@slideInOut]>
+            <div class="image_wrapper" [@fadeInOut]>
               @for (skill of skillSet.skills; track skill) {
                 <img [src]="isMobile ? skill.mobileSrc : skill.src" [alt]="skill.alt" />
               }
@@ -20,11 +22,6 @@
           }
         }
       </div>
-      <!-- <div class="image_wrapper" [@slideInOut]>
-        @for (skill of selectedSkillSet; track skill) {
-          <img [src]="isMobile ? skill.mobileSrc : skill.src" [alt]="skill.alt" />
-        }
-      </div> -->
     </div>
     <div class="currently_learning">
       <p>{{ "skills.learning" | translate }}</p>
