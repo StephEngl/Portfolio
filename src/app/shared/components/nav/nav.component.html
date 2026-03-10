@@ -8,30 +8,22 @@
       />
     </a>
     <div class="nav_links">
-      <a
-        href="#about"
-        (click)="setActiveLink('about'); closeMenu()"
-        [class.active]="activeLink === 'about'"
-        >{{ "nav.link1" | translate }}</a
-      >
-      <a
-        href="#skills"
-        (click)="setActiveLink('skills'); closeMenu()"
-        [class.active]="activeLink === 'skills'"
-        >{{ "nav.link2" | translate }}</a
-      >
-      <a
-        href="#projects"
-        (click)="setActiveLink('projects'); closeMenu()"
-        [class.active]="activeLink === 'projects'"
-        >{{ "nav.link3" | translate }}</a
-      >
-      <a
-        href="#contact"
-        (click)="setActiveLink('contact'); closeMenu()"
-        [class.active]="activeLink === 'contact'"
-        >{{ "nav.link4" | translate }}</a
-      >
+      @for (link of links; track link.id) {
+        <a
+          href="#{{ link.id }}"
+          class="nav_link"
+          [class.active]="activeLink === link.id"
+          [class.hide_active]="
+            activeLink === link.id && hoveredLink && hoveredLink !== link.id
+          "
+          (click)="setActiveLink(link.id); closeMenu()"
+          (mouseover)="onHover(link.id)"
+          (mouseleave)="onLeave()"
+        >
+          <span class="nav_bg"></span>
+          <span class="nav_text">{{ link.label | translate }}</span>
+        </a>
+      }
     </div>
     <div class="change_language_btns">
       <p [class.active]="currentLang === 'de'" (click)="changeLanguage('de')">
@@ -44,9 +36,9 @@
 
     <button class="burger_menu" (click)="toggleMenu()">
       @if (!menuStateService.isMenuOpen()) {
-      <span class="burger_icon">☰</span>
+        <span class="burger_icon">☰</span>
       } @else {
-      <span class="menu_icon">✖</span>
+        <span class="menu_icon">✖</span>
       }
     </button>
   </div>

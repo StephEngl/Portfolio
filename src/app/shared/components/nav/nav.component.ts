@@ -17,7 +17,14 @@ import { MenuStateService } from '../../services/menu-state.service';
 })
 export class NavComponent {
   currentLang: string = this.translate.currentLang;
+  links: {id:string, label:string}[] = [
+    { id: 'about', label: 'nav.link1' },
+    { id: 'skills', label: 'nav.link2' },
+    { id: 'projects', label: 'nav.link3' },
+    { id: 'contact', label: 'nav.link4' }
+  ];
   activeLink: string = '';
+  hoveredLink: string | null = null;
 
   constructor(
     private translate: TranslateService,
@@ -46,6 +53,14 @@ export class NavComponent {
    */
   setActiveLink(link: string): void {
     this.activeLink = link;
+  }
+
+  onHover(link: string) {
+    this.hoveredLink = link;
+  }
+
+  onLeave() {
+    this.hoveredLink = null;
   }
 
   /**
