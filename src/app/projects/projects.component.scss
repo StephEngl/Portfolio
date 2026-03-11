@@ -125,14 +125,10 @@ section {
 
     .screenshot {
       width: 450px;
-      height: 312px;
-      object-fit: cover;
+      height: 300px;
+      object-fit: contain;
       object-position: top;
       border-radius: 30px;
-
-      &.backend {
-        object-fit: contain;
-      }
     }
 
     .button_container {
@@ -269,11 +265,7 @@ span {
     .screenshot_container {
       @include dFlex();
       width: 100%;
-      padding: 32px 0;
-
-      &.backend {
-        padding: 0;
-      }
+      padding: 24px 0;
 
       img {
         max-width: 450px;
@@ -335,11 +327,7 @@ span {
       .screenshot_container {
         @include dFlex();
         width: 100%;
-        padding: 24px 0;
-
-        &.backend {
-          padding: 0;
-        }
+        padding: 16px 0;
 
         img {
           width: 270px;
