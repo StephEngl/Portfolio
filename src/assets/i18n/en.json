@@ -136,6 +136,8 @@
   "imprint": {
     "title": "Imprint",
     "contact": "Contact",
+    "phone": "Phone",
+    "email": "Email",
     "source": "Source Icons:"
   },
   "privacyPolicy": {
@@ -164,7 +166,7 @@
     "dataProtectionText3": "We would like to point out that data transmission over the Internet (e.g., communication via email) may have security vulnerabilities. Complete protection of data from third-party access is not possible.",
     "responsibleTitle": "Notice Regarding the Responsible Party",
     "responsibleText1": "The responsible party for data processing on this website is:",
-    "responsibleAddress1": "Phone: 01627119349",
+    "responsibleAddress1": "Phone: +49 (0) 162 71 19 349",
     "responsibleAddress2": "Email: stephanie.englberger@icloud.com",
     "responsibleText2": "The responsible party is the natural or legal person who alone or jointly with others determines the purposes and means of processing personal data (e.g., names, email addresses).",
     "retentionPeriodTitle": "Retention Period",

@@ -136,6 +136,8 @@
   "imprint": {
     "title": "Impressum",
     "contact": "Kontakt",
+    "phone": "Telefon",
+    "email": "E-Mail",
     "source": "Quelle Icons:"
   },
   "privacyPolicy": {
@@ -164,7 +166,7 @@
     "dataProtectionText3": "Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.",
     "responsibleTitle": "Hinweis zur verantwortlichen Stelle",
     "responsibleText1": "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:",
-    "responsibleAddress1": "Telefon: 01627119349",
+    "responsibleAddress1": "Telefon: +49 (0) 162 71 19 349",
     "responsibleAddress2": "E-Mail: stephanie.englberger@icloud.com",
     "responsibleText2": "Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.",
     "retentionPeriodTitle": "Speicherdauer",
