@@ -68,13 +68,15 @@
             alt="Screenshot Project"
           />
           <div class="button_container">
-            <button class="btn_live_test">
-              <a
-                href="{{ projectsTech[selectedProject].linkLiveTest }}"
-                target="_blank"
-                >Live Test</a
-              >
-            </button>
+            @if (projectsTech[selectedProject].linkLiveTest) {
+              <button class="btn_live_test">
+                <a
+                  href="{{ projectsTech[selectedProject].linkLiveTest }}"
+                  target="_blank"
+                  >Live Test</a
+                >
+              </button>
+            }
             <button>
               <a
                 href="{{ projectsTech[selectedProject].linkGitHub }}"
@@ -154,13 +156,15 @@
         </div>
 
         <div class="button_container_mobile">
-          <button class="btn_live_test">
-            <a
-              href="{{ projectsTech[selectedProject].linkLiveTest }}"
-              target="_blank"
-              >Live Test</a
-            >
-          </button>
+          @if (projectsTech[selectedProject].linkLiveTest) {
+            <button class="btn_live_test">
+              <a
+                href="{{ projectsTech[selectedProject].linkLiveTest }}"
+                target="_blank"
+                >Live Test</a
+              >
+            </button>
+          }
           <button>
             <a
               href="{{ projectsTech[selectedProject].linkGitHub }}"

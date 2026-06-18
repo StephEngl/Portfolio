@@ -143,7 +143,6 @@ export class ProjectsComponent {
       ],
       technologiesNames: ['Python', 'DRF', 'SQLite', 'RestAPI', 'Gemini AI'],
       screenshot: '../../assets/img/mockup_quizly.png',
-      linkLiveTest: 'https://quizly.stephanie-englberger.de/',
       linkGitHub: 'https://github.com/StephEngl/Quizly',
     },
     {
@@ -157,7 +156,6 @@ export class ProjectsComponent {
       ],
       technologiesNames: ['Python', 'DRF', 'Redis', 'PostgreSQL', 'Docker'],
       screenshot: '../../assets/img/mockup_videoflix.png',
-      linkLiveTest: 'https://videoflix.stephanie-englberger.de/',
       linkGitHub: 'https://github.com/StephEngl/Videoflix',
       linkDokumentation: 'https://videoflix-docs.stephanie-englberger.de/',
     },
